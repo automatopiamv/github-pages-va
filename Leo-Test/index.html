@@ -4,10 +4,29 @@
     <title>My Website</title>
     <style>
         .header {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 10px;
             background-color: #4355f9;
             color: white;
+        }
+        .logo {
+            max-height: 50px;
+            max-width: 150px;
+            background-color: white;
+            padding: 5px;  /* Adding some padding to create space around the logo */
+        }
+        .button {
+            background-color: #f1f1f1;
+            color: #4355f9;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
         }
         .footer {
             position: fixed;
@@ -47,7 +66,9 @@
 </head>
 <body>
     <div class="header">
-        <h1>My Website</h1>
+        <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e70c84dd3aac06fb2ac2b6_topia-logo-blue-2x.png" alt="Logo" class="logo">
+        <h1 style="display: none;">My Website</h1>
+        <button class="button">Create World</button>
     </div>
 
     <div class="menu">
