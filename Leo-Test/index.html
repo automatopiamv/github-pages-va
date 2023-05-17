@@ -3,7 +3,7 @@
 <head>
     <title>My Website</title>
     <style>
-       .header {
+        .header {
             text-align: center;
             padding: 10px;
             background-color: #4355f9;
@@ -27,6 +27,21 @@
         .content {
             margin-left: 210px;
             padding: 15px;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .menu {
+                width: 100%;
+                position: static;
+                display: block;
+            }
+            .content {
+                margin-left: 0;
+            }
+            .footer {
+                position: static;
+            }
         }
     </style>
 </head>
