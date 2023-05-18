@@ -5,16 +5,15 @@
   <style>
     /* Add your CSS styling here */
     header {
-      background-color: rgb(255, 255, 255);
+      background-color: #f1f1f1;
       padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-     
     }
 
     footer {
-      background-color: #f1f1f1;
+      background-color: rgb(65,88,208);
       padding: 10px;
       text-align: center;
     }
@@ -30,19 +29,26 @@
       margin-right: 10px;
     }
 
-   .logo {
-            max-height: 50px;
-            max-width: 150px;
-            background-color: white;
-            padding: 5px;  /* Adding some padding to create space around the logo */
-           
-        }
+    .logo {
+      width: 100px;
+      height: 100px;
+      /* Add your logo image URL or replace with actual code */
+      background-image: url('logo.png');
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      color: #32a0a8;
+      text-transform: uppercase;
+
     }
 
-   .button {
+    .button {
       padding: 10px 20px;
-      background-color: rgb(255, 255, 255);
-      color:#337ab7;
+      background-color: rgb(65,88,208);
+      color: #fff;
       border: none;
       font-size: 16px;
       cursor: pointer;
@@ -51,8 +57,9 @@
 </head>
 <body>
   <header>
-   <div class="header">
+   <div class="header">  
         <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+        <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="Logo" class="logo">
         <h1 style="display: none;">My Website</h1>
     </div>
     <nav>
