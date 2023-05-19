@@ -13,7 +13,7 @@
     }
 
     footer {
-      background-color: rgb(65,88,208);
+      background-color: rgb(65, 88, 208);
       padding: 10px;
       text-align: center;
     }
@@ -41,15 +41,16 @@
       background-size: cover;
       display: flex;
     }
-    
+
     .logo-topia{
       width: 150px;
-      height:120px;
+      height: 120px;
+      background-image: url('logo-topia.png');
       background-size: cover;
       display: flex;
       align-items: right;
-      margin-top:-70px;
-      margin-left:30px;
+      margin-top: -70px;
+      margin-left: 30px;
     }
 
     .button {
@@ -60,24 +61,41 @@
       font-size: 16px;
       cursor: pointer;
     }
+
+    /* Additional CSS */
+    .nav-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container ul {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .nav-container li {
+      margin-left: 10px;
+    }
   </style>
 </head>
 <body>
   <header>
-   <div class="header">  
-        <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
-        <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
-        <h1 style="display: none;">My Website</h1>
+    <div class="header">  
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+      <h1 style="display: none;">My Website</h1>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Demo</a></li>
-        <li><a href="#">Sign In</a></li>
-      </ul>
-    </nav>
-    <button class="button">Create World</button>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Demo</a></li>
+          <li><a href="#">Sign In</a></li>
+        </ul>
+      </nav>
+      <button class="button">Create World</button>
+    </div>
   </header>
 
   <!-- Add your website content here -->
