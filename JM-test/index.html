@@ -27,16 +27,20 @@
 
     nav li {
       margin-left: 10px;
-      color: #37343d;
-      font-family: Helvetica, Arial, sans-serif; /* Updated font-family */
+      color: black; /* Updated menu font color */
+      font-family: serif;
       font-size: 16px;
+      font-weight: bold;
       line-height: 1.5;
+    }
+
+    nav li a {
+      text-decoration: none;
     }
 
     .logo {
       width: 60px;
       height: 60px;
-      /* Add your logo image URL or replace with actual code */
       background-image: url('logo.png');
       background-size: cover;
       display: flex;
@@ -53,13 +57,16 @@
       margin-left: 30px;
     }
 
-  .button {
-        width: 100px;
-        height: 50px;
-        border-radius: 12px;
-        background-color: rgb(65, 88, 208);
-        border-bottom: 5px solid #cccccc;
-        margin-left: 20px;
+    .button {
+      width: 100px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: #5c6cf6;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 20px;
     }
 
     /* Additional CSS */
@@ -75,6 +82,49 @@
 
     .nav-container li {
       margin-left: 10px;
+      position: relative;
+    }
+
+    .nav-container li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f1f1f1;
+      padding: 10px;
+      min-width: 150px;
+    }
+
+    .nav-container li:hover ul {
+      display: block;
+    }
+
+    /* Mobile-friendly styles */
+    @media screen and (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      .nav-container ul {
+        flex-direction: column;
+      }
+
+      .button {
+        margin-left: 0;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
@@ -89,9 +139,17 @@
       <nav>
         <ul>
           <li><a href="#">Pricing</a></li>
-          <li><a href="#">Resources</a></li>
+          <li class="dropdown">
+            <a href="#">Resources</a>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Updates</a></li>
+              <li><a href="#">Unconference</a></li>
+            </ul>
+          </li>
           <li><a href="#">Demo</a></li>
-          <li><a href="#">Sign In</a></li>
+          <li><a href="#" style="color: #5c6cf6;">Sign In</a></li> <!-- Added Sign In button with specific font color -->
         </ul>
       </nav>
       <button class="button">Create World</button>
