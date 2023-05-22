@@ -39,12 +39,15 @@
             color: white;
         }
         .menu {
-            width: 200px;
-            background-color: #f1f1f1;
-            padding: 15px;
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu > li {
+            padding: 0 15px;
         }
         .content {
-            margin-left: 210px;
             padding: 15px;
         }
         .dropdown {
@@ -67,12 +70,12 @@
         /* Responsive design */
         @media screen and (max-width: 768px) {
             .menu {
-                width: 100%;
+                flex-direction: column;
                 position: static;
                 display: block;
             }
             .content {
-                margin-left: 0;
+                margin-top: 10px;
             }
             .footer {
                 position: static;
@@ -83,13 +86,7 @@
 <body>
     <div class="header">
         <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e70c84dd3aac06fb2ac2b6_topia-logo-blue-2x.png" alt="Logo" class="logo">
-        <h1 style="display: none;">My Website</h1>
-        <button class="button">Create World</button>
-    </div>
-
-    <div class="menu">
-        <h2>Menu</h2>
-        <ul>
+        <ul class="menu">
             <li><a href="#">Pricing</a></li>
             <li class="dropdown">
                 <a href="#">Resources</a>
@@ -102,6 +99,7 @@
             </li>
             <li><a href="#">Demo</a></li>
         </ul>
+        <button class="button">Create World</button>
     </div>
 
     <div class="content">
