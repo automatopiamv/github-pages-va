@@ -4,9 +4,6 @@
   <title>Website Title</title>
   <style>
     /* Add your CSS styling here */
-    
-    
-    
     header {
       background-color: #d0f0ef;
       padding: 20px;
@@ -52,6 +49,25 @@
     margin:0;
     text-align: left;
    }
+   
+   .body-container {
+    display: flex;
+    justify-content: space-between; /* Separates the text and video */
+    }
+
+    .text-content {
+      flex: 1; /* Takes up available space */
+    }
+
+    .video-content {
+     flex: 1; /* Takes up available space */
+    }
+
+    .video {
+     width: 85%; /* Adjusts the width of the video to fill the container */
+     height: auto; /* Adjusts the height automatically based on the width */
+     margin-top: 20px;
+    }
 
     nav ul {
       list-style-type: none;
@@ -194,16 +210,22 @@
 
   <!-- Add your website content here -->
   
-  <div class="body-context">
-  METAVERSE PLATFORM
+ <div class="body-container">
+  <div class="text-content">
+    <div class="body-context">
+      METAVERSE PLATFORM
+    </div>
+    <h1 class="body-subtext">
+      Finally. Software that your teachers and students can’t live without.
+    </h1>
+    <p class="body-subtext2">
+      So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.
+    </p>
   </div>
-  
-  <h1 class="body-subtext">
-  Finally. Software that your teachers and students can’t live without.
-  </h1>
-  <p class="body-subtext2">
-  So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.
-  </p>
+  <div class="video-content">
+    <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop class="video"></video>
+  </div>
+</div>
 
   <footer>
     &copy; Copyright 2023 All rights reserved.
