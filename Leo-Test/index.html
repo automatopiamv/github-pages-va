@@ -3,6 +3,9 @@
 <head>
     <title>My Website</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
         .header {
             display: flex;
             justify-content: space-between;
@@ -18,15 +21,19 @@
             padding: 5px;
         }
         .button {
-            background-color: #f1f1f1;
+            background-color: white;
             color: #4355f9;
             border: none;
-            padding: 15px 30px;
+            padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #f2f2f2;
         }
         .footer {
             position: fixed;
@@ -46,13 +53,18 @@
         }
         .menu > li {
             padding: 0 15px;
+            position: relative;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .menu a:hover {
+            color: #f2f2f2;
         }
         .content {
             padding: 15px;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
         }
         .dropdown-content {
             display: none;
@@ -63,7 +75,17 @@
             padding: 12px 16px;
             z-index: 1;
         }
-        .dropdown:hover .dropdown-content {
+        .dropdown-content a {
+            display: block;
+            color: #4355f9;
+            padding: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .dropdown-content a:hover {
+            background-color: #f2f2f2;
+        }
+        .menu > li:hover .dropdown-content {
             display: block;
         }
 
@@ -88,7 +110,7 @@
         <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e70c84dd3aac06fb2ac2b6_topia-logo-blue-2x.png" alt="Logo" class="logo">
         <ul class="menu">
             <li><a href="#">Pricing</a></li>
-            <li class="dropdown">
+            <li>
                 <a href="#">Resources</a>
                 <div class="dropdown-content">
                     <a href="#">Blog</a>
