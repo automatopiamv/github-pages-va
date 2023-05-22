@@ -21,18 +21,30 @@
             padding: 5px;
         }
         .button {
-            background-color: white;
-            color: #4355f9;
+            margin-left: 10px;
             border: none;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
+            font-weight: bold; /* making the text bolder */
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .button:hover {
+        .button-signin {
+            background-color: #4355f9;
+            color: white;
+        }
+        .button-signin:hover {
+            background-color: #f2f2f2;
+            color: #4355f9;
+        }
+        .button-create {
+            background-color: white;
+            color: #4355f9;
+        }
+        .button-create:hover {
             background-color: #f2f2f2;
         }
         .footer {
@@ -50,6 +62,7 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
+            font-weight: bold; /* making the text bolder */
         }
         .menu > li {
             padding: 0 15px;
@@ -81,10 +94,10 @@
             padding: 5px;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            font-weight: bold; /* making the text bolder */
         }
         .dropdown-content a:hover {
             background-color: #f2f2f2;
-            color: #4355f9;
         }
         .menu > li:hover .dropdown-content {
             display: block;
@@ -122,7 +135,8 @@
             </li>
             <li><a href="#">Demo</a></li>
         </ul>
-        <button class="button">Create World</button>
+        <button class="button button-signin">Sign In</button>
+        <button class="button button-create">Create World</button>
     </div>
 
     <div class="content">
