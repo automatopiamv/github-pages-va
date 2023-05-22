@@ -28,7 +28,7 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            font-weight: bold; /* making the text bolder */
+            font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -62,7 +62,7 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-            font-weight: bold; /* making the text bolder */
+            font-weight: bold;
         }
         .menu > li {
             padding: 0 15px;
@@ -77,7 +77,26 @@
             color: #f2f2f2;
         }
         .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             padding: 15px;
+        }
+        .content-text {
+            width: 50%;
+        }
+        .content p:first-child {
+            font-size: 16px;
+            color: #4355f9;
+        }
+        .content h1 {
+            font-size: 26px;
+        }
+        .content-video {
+            width: 50%;
+        }
+        .content-video video {
+            width: 100%;
         }
         .dropdown-content {
             display: none;
@@ -94,24 +113,34 @@
             padding: 5px;
             text-decoration: none;
             transition: background-color 0.3s ease;
-            font-weight: bold; /* making the text bolder */
+            font-weight: normal;
         }
         .dropdown-content a:hover {
-            background-color: #f2f2f2;
+            background-color: #f1f1f1;
         }
         .menu > li:hover .dropdown-content {
             display: block;
         }
-
         /* Responsive design */
         @media screen and (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
             .menu {
                 flex-direction: column;
-                position: static;
-                display: block;
+                align-items: center;
+            }
+            .menu > li {
+                padding: 10px 0;
+            }
+            .button {
+                margin-top: 15px;
             }
             .content {
-                margin-top: 10px;
+                flex-direction: column;
+            }
+            .content-video video {
+                width: 100%;
             }
             .footer {
                 position: static;
@@ -140,8 +169,14 @@
     </div>
 
     <div class="content">
-        <h2>Welcome to my website!</h2>
-        <p>This is some content for the website.</p>
+        <div class="content-text">
+            <p>Finally. Software that your teachers and students can’t live without.</p>
+            <h1>METAVERSE PLATFORM</h1>
+            <p>So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.</p>
+        </div>
+        <div class="content-video">
+            <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop></video>
+        </div>
     </div>
 
     <div class="footer">
