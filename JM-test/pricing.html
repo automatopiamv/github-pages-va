@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Title - Pricing</title>
+  <style>
+    /* Include the same CSS from your original file here */
+     header {
+      background-color: #d0f0ef;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 85% 85% / 50%;
+      
+    }
+
+    footer {
+      left: 10%;   /* Update to match body margin */
+      right: 10%;  /* Update to match body margin */
+      bottom: 0;
+      background-color: #29a1c6;
+      text-align:left;
+      color: white;
+      padding:30px;
+      border-radius: 85% 85% 0 0 / 50%;
+    }
+    
+    .body-context {
+    font-family: Arial, serif;
+    font-size: 16px;
+    color: blue;
+    margin-top: 30px;
+    text-align: left;
+   
+    }
+    
+    .body-subtext {
+      font-family: Quicksand, sans-serif;
+      font-size: 24px;
+      color: black;
+      margin:0;
+      text-align: left;
+   }
+   
+   .body-subtext2 {
+    font-family: Quicksand, sans-serif;
+    font-size: 16px; /* Updated font size */
+    color: black;
+    margin:0;
+    text-align: left;
+   }
+   
+   .body-container {
+    display: flex;
+    justify-content: space-between; /* Separates the text and video */
+    }
+
+    .text-content {
+      flex: 1; /* Takes up available space */
+    }
+
+   .video-content {
+    flex: 1.2; /* Increase size by 20% */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the video */
+    }
+
+  .video {
+    border: 2px solid blue; /* Add blue border */
+    border-radius: 10px; /* Makes edges curved */
+    width: 70%; /* Adjusts the width of the video to fill the container */
+    height: auto; /* Adjusts the height automatically based on the width */
+    margin-top: 20px;
+   }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-left: 10px;
+      color: black;
+      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    nav li a {
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('logo.png');
+      background-size: cover;
+      display: flex;
+    }
+
+    .logo-topia{
+      width: 150px;
+      height: 120px;
+      background-image: url('logo-topia.png');
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-top: -70px;
+      margin-left: 30px;
+    }
+
+    .button {
+      width: 100px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: #5c6cf6;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin-left: 20px;
+      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
+      font-weight: normal; /* Removed font-weight */
+    }
+
+    /* Additional CSS */
+    .nav-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container ul {
+      display: flex;
+      margin-left: 10px;
+    }
+
+    .nav-container li {
+      margin-left: 10px;
+      position: relative;
+    }
+
+    .nav-container li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f1f1f1;
+      padding: 10px;
+      min-width: 150px;
+    }
+
+    .nav-container li:hover ul {
+      display: block;
+    }
+    
+      .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      }
+
+      .demo-button {
+       width: 200px; 
+       height: 50px; 
+       background-color: #5c6cf6; 
+       color: #ffffff; 
+       border: none;
+       border-radius: 25px; /* This will add curves to the button edges */
+       font-family: Arial, sans-serif;
+       font-size: 20px;
+       text-align: center;
+       cursor: pointer;
+       padding: 10px;
+
+    /* Mobile-friendly styles */
+    @media screen and (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      .nav-container ul {
+        flex-direction: column;
+      }
+
+      .button {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+  <!-- Include your header here -->
+
+  <header>
+    <div class="header">  
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+      <h1 style="display: none;">My Website</h1>
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown">
+            <a href="#">Resources</a>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Updates</a></li>
+              <li><a href="#">Unconference</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Demo</a></li>
+          <li><a href="#" style="color: #5c6cf6;">Sign In</a></li> <!-- Added Sign In button with specific font color -->
+        </ul>
+      </nav>
+      <button class="button">Create World</button>
+    </div>
+  </header>
+
+  <!-- Add your pricing content here -->
+
+  <div class="body-container">
+    <div class="text-content">
+      <div class="body-context">Pricing</div>
+      <h1 class="body-subtext"> Choose the plan that's right for you.</h1>
+      <!-- Add more content about pricing here -->
+    </div>
+
+  </div>
+
+  <!-- Include your footer here -->
+
+  <footer>
+    &copy; Copyright 2023 All rights reserved.
+  </footer>
+</body>
+</html>
