@@ -45,6 +45,33 @@
         .menu .active {
             color: #f2f2f2;
         }
+        .button {
+            margin-left: 10px;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-signin {
+            background-color: #4355f9;
+            color: white;
+        }
+        .button-signin:hover {
+            background-color: #f2f2f2;
+            color: #4355f9;
+        }
+        .button-create {
+            background-color: white;
+            color: #4355f9;
+        }
+        .button-create:hover {
+            background-color: #f2f2f2;
+        }
         .dropdown-content {
             display: none;
             position: absolute;
@@ -98,8 +125,10 @@
                     <a href="#">Unconference</a>
                 </div>
             </li>
-            <li><a href="demo.html">Demo</a></li>
+            <li><a href="#">Demo</a></li>
         </ul>
+        <button class="button button-signin">Sign In</button>
+        <button class="button button-create">Create World</button>
     </div>
 
     <div class="content">
