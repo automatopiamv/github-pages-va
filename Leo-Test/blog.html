@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog - My Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #4355f9;
+            color: white;
+        }
+        .logo {
+            max-height: 50px;
+            max-width: 150px;
+            background-color: white;
+            padding: 5px;
+        }
+        .menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        .menu > li {
+            padding: 0 15px;
+            position: relative;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .menu a:hover {
+            color: #f2f2f2;
+        }
+        /* Highlight the active menu item */
+        .menu .active {
+            color: #f2f2f2;
+        }
+        .button {
+            margin-left: 10px;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-signin {
+            background-color: #4355f9;
+            color: white;
+        }
+        .button-signin:hover {
+            background-color: #f2f2f2;
+            color: #4355f9;
+        }
+        .button-create {
+            background-color: white;
+            color: #4355f9;
+        }
+        .button-create:hover {
+            background-color: #f2f2f2;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            display: block;
+            color: #4355f9;
+            padding: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: normal;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+            color: #4355f9;
+        }
+        .menu > li:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 15px;
+        }
+        .footer {
+            position: fixed;
+            left: 10%;   /* Update to match body margin */
+            right: 10%;  /* Update to match body margin */
+            bottom: 0;
+            background-color: #4355f9;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html"><img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e70c84dd3aac06fb2ac2b6_topia-logo-blue-2x.png" alt="Logo" class="logo"></a>
+        <ul class="menu">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li>
+                <a href="#" class="active">Resources</a>
+                <div class="dropdown-content">
+                    <a href="blog.html" class="active">Blog</a>
+                    <a href="help-center.html">Help Center</a>
+                    <a href="updates.html">Updates</a>
+                    <a href="unconference.html">Unconference</a>
+                </div>
+            </li>
+            <li><a href="demo.html">Demo</a></li>
+        </ul>
+        <button class="button button-signin">Sign In</button>
+        <button class="button button-create">Create World</button>
+    </div>
+
+    <div class="content">
+        <h1>Blog</h1>
+        <!-- Blog content goes here -->
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 My Website</p>
+    </div>
+</body>
+</html>
