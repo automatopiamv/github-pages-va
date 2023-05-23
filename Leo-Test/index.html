@@ -86,16 +86,11 @@
         }
         .content-text {
             width: 35%;  /* Reduce the width */
-        }
-        .content p:first-child {
-            font-size: 16px;
-            color: #4355f9;
-        }
-        .content h1 {
-            font-size: 26px;
+            margin-right: 20px; /* Add margin to the right */
         }
         .content-video {
             width: 65%;   /* Increase the width */
+            margin-left: 20px; /* Add margin to the left */
         }
         .content-video video {
             width: 100%;
@@ -144,6 +139,12 @@
             .content {
                 flex-direction: column;
             }
+            .content-text {
+                margin-right: 0;  /* Remove margin on smaller screens */
+            }
+            .content-video {
+                margin-left: 0;  /* Remove margin on smaller screens */
+            }
             .content-video video {
                 width: 100%;
             }
@@ -180,8 +181,8 @@
             <p>So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.</p>
         </div>
         <div class="content-video">
-        <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop></video>
-    </div>
+            <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop></video>
+        </div>
     </div>
 
     <div class="footer">
