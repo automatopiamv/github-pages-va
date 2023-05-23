@@ -4,25 +4,37 @@
   <title>Website Title - Pricing</title>
   <style>
     /* Include the same CSS from your original file here */
-     header {
+      body {
+      font-family: Arial, sans-serif;
+      margin-left: 10%;
+      margin-right: 10%;
+      }
+   
+      header {
+      background-color: #e6f7f4;
       padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-     
+   }
+   
+     .footer-image {
+      height: 150px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
+      }
       
-    }
-
-    footer {
+      footer {
       left: 10%;   /* Update to match body margin */
       right: 10%;  /* Update to match body margin */
       bottom: 0;
-      background-color: #29a1c6;
+      background-color: gray;
       text-align:left;
       color: white;
       padding:30px;
-      border-radius: 85% 85% 0 0 / 50%;
     }
+    
+   
     
     .body-context {
     font-family: Arial, serif;
@@ -246,8 +258,11 @@
 
   </div>
 
+       
   <!-- Include your footer here -->
-
+ <div class="footer-image"></div>
+ 
+ 
   <footer>
     &copy; Copyright 2023 All rights reserved.
   </footer>
