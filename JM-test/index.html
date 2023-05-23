@@ -4,6 +4,11 @@
   <title>Website Title</title>
   <style>
     /* Add your CSS styling here */
+      body {
+            font-family: Arial, sans-serif;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
    
     header {
       background-color: #e6f7f4;
@@ -11,20 +16,25 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+   }
    
+     .footer-image {
+      height: 150px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
+      }
       
-    }
-
-    footer {
+      footer {
       left: 10%;   /* Update to match body margin */
       right: 10%;  /* Update to match body margin */
       bottom: 0;
-      background-color: #29a1c6;
+      background-color: gray;
       text-align:left;
       color: white;
       padding:30px;
-      border-radius: 85% 85% 0 0 / 50%;
     }
+    
+   
     
     .body-context {
     font-family: Arial, serif;
@@ -253,6 +263,11 @@
     <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop class="video"></video>
   </div>
 </div>
+
+  <!-- Include your footer here -->
+ <div class="footer-image"></div>
+  
+
 
   <footer>
     &copy; Copyright 2023 All rights reserved.
