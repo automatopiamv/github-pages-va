@@ -155,6 +155,26 @@
     .nav-container li:hover ul {
       display: block;
     }
+    
+      .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      }
+
+      .demo-button {
+       width: 200px; 
+       height: 50px; 
+       background-color: #5c6cf6; 
+       color: #ffffff; 
+       border: none;
+       border-radius: 25px; /* This will add curves to the button edges */
+       font-family: Arial, sans-serif;
+       font-size: 20px;
+       text-align: center;
+       cursor: pointer;
+       padding: 10px;
 
     /* Mobile-friendly styles */
     @media screen and (max-width: 480px) {
@@ -182,7 +202,7 @@
         margin-left: 0;
         margin-top: 10px;
       }
-    }
+    
   </style>
 </head>
 <body>
@@ -217,16 +237,16 @@
   
  <div class="body-container">
   <div class="text-content">
-    <div class="body-context">
-      METAVERSE PLATFORM
-    </div>
-    <h1 class="body-subtext">
-      Finally. Software that your teachers and students can’t live without.
-    </h1>
-    <p class="body-subtext2">
-      So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.
-    </p>
-  </div>
+    <div class="body-context">METAVERSE PLATFORM</div>
+     <h1 class="body-subtext"> Finally. Software that your teachers and students can’t live without.</h1>
+      <p class="body-subtext2">
+      So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet. </p>
+     <div class="button-container">
+    <button class="demo-button">Book a Demo</button>
+    </div> 
+</div>
+    
+      
   <div class="video-content">
     <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop class="video"></video>
   </div>
