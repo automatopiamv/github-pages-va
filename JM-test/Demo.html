@@ -4,56 +4,62 @@
   <title>Website Title - Pricing</title>
   <style>
     /* Include the same CSS from your original file here */
+    
+  
    
-      header {
+    header {
       background-color: #e6f7f4;
       padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-   }
+    }
    
-     .footer-image {
+    .footer-image {
       height: 150px;
       background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
       background-size: cover;
-      }
+    }
       
-      footer {
-      left: 10%;   /* Update to match body margin */
-      right: 10%;  /* Update to match body margin */
+    footer {
+      left: 10%;
+      right: 10%;
       bottom: 0;
       background-color: gray;
-      text-align:left;
+      text-align: left;
       color: white;
-      padding:30px;
+      padding: 30px;
     }
     
-   
-    
-    .body-context {
+   .body-context {
     font-family: Arial, serif;
-    font-size: 16px;
+    font-size: 14px;
     color: blue;
     margin-top: 30px;
     text-align: left;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-right: 10%;
    
     }
     
     .body-subtext {
-      font-family: Quicksand, sans-serif;
+      font-family:Tahoma, sans-serif;
       font-size: 24px;
       color: black;
-      margin:0;
       text-align: left;
+      font-weight: none;
+      margin-left: 10%;
+      margin-right: 10%;
    }
    
    .body-subtext2 {
     font-family: Quicksand, sans-serif;
     font-size: 16px; /* Updated font size */
     color: black;
-    margin:0;
     text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
    }
    
    .body-container {
@@ -65,20 +71,15 @@
       flex: 1; /* Takes up available space */
     }
 
-   .video-content {
-    flex: 1.2; /* Increase size by 20% */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the video */
-    }
+  .form-container {
+    background-color: blue;
+    padding: 20px;
+    width: 150px; /* Adjust the width as desired */
+    border-radius: 10px; /* Add border radius to create a curve */
+    margin-right: 100px; /* Add margin to create space between the form and body text */
+     display: flex;
+  }
 
-  .video {
-    border: 2px solid blue; /* Add blue border */
-    border-radius: 10px; /* Makes edges curved */
-    width: 70%; /* Adjusts the width of the video to fill the container */
-    height: auto; /* Adjusts the height automatically based on the width */
-    margin-top: 20px;
-   }
 
     nav ul {
       list-style-type: none;
@@ -90,7 +91,7 @@
     nav li {
       margin-left: 10px;
       color: black;
-      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
+      font-family: Calibri, Arial, sans-serif;
       font-size: 18px;
       line-height: 1.5;
     }
@@ -107,7 +108,7 @@
       display: flex;
     }
 
-    .logo-topia{
+    .logo-topia {
       width: 150px;
       height: 120px;
       background-image: url('logo-topia.png');
@@ -119,17 +120,23 @@
     }
 
     .button {
-      width: 100px;
+      width: 200px;
       height: 50px;
-      border-radius: 12px;
+      border-radius: 25px;
       background-color: #5c6cf6;
-      color: #fff;
+      color: #ffffff;
       border: none;
-      font-size: 16px;
+      font-size: 20px;
       cursor: pointer;
-      margin-left: 20px;
-      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
-      font-weight: normal; /* Removed font-weight */
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    .dropdown::after {
+      content: '▼';
+      font-size: 10px;
+      margin-left: 0;
     }
 
     /* Additional CSS */
@@ -161,28 +168,7 @@
     .nav-container li:hover ul {
       display: block;
     }
-    
-      .button-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      }
 
-      .demo-button {
-       width: 200px; 
-       height: 50px; 
-       background-color: #5c6cf6; 
-       color: #ffffff; 
-       border: none;
-       border-radius: 25px; /* This will add curves to the button edges */
-       font-family: Arial, sans-serif;
-       font-size: 20px;
-       text-align: center;
-       cursor: pointer;
-       padding: 10px;
-
-    /* Mobile-friendly styles */
     @media screen and (max-width: 480px) {
       header {
         flex-direction: column;
@@ -208,6 +194,41 @@
         margin-left: 0;
         margin-top: 10px;
       }
+    }
+    
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      width: 400px;
+      margin: 0 auto;
+    }
+    
+    .form-label {
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 10px;
+    }
+    
+    .form-input {
+      width: 100%;
+      height: 30px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .form-submit-button {
+      width: 200px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: #0000ff;
+      color: #ffffff;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -235,7 +256,7 @@
             </ul>
           </li>
           <li><a href="Demo.html">Demo</a></li>
-          <li><a href="#" style="color: #5c6cf6;">Sign In</a></li> <!-- Added Sign In button with specific font color -->
+          <li><a href="#" style="color: #5c6cf6;">Sign In</a></li>
         </ul>
       </nav>
       <button class="button">Create World</button>
@@ -246,20 +267,42 @@
 
   <div class="body-container">
     <div class="text-content">
-      <div class="body-context">Demo</div>
-      <h1 class="body-subtext"> Choose the plan that's right for you.</h1>
+      <div class="body-context">Explore Topia</div>
+      <h1 class="body-subtext">Choose the plan that's right for you.</h1>
       <!-- Add more content about pricing here -->
     </div>
-
   </div>
-
+  
+  <!-- Add your form here -->
+  <div class="form-container">
+    <form>
+      <label for="first-name" class="form-label">First Name*</label>
+      <input type="text" id="first-name" class="form-input" required>
+      
+      <label for="last-name" class="form-label">Last Name*</label>
+      <input type="text" id="last-name" class="form-input" required>
+      
+      <label for="email" class="form-label">Email*</label>
+      <input type="email" id="email" class="form-input" required>
+      
+      <label for="company-name" class="form-label">Company Name*</label>
+      <input type="text" id="company-name" class="form-input" required>
+      
+      <label for="linkedin-profile" class="form-label">LinkedIn Profile URL</label>
+      <input type="text" id="linkedin-profile" class="form-input">
+      
+      <label for="hear-about" class="form-label">How Did You Hear About Us?*</label>
+      <input type="text" id="hear-about" class="form-input" required>
+      
+      <button type="submit" class="form-submit-button">Submit</button>
+    </form>
+  </div>
        
   <!-- Include your footer here -->
- <div class="footer-image"></div>
- 
- 
+  <div class="footer-image"></div>
+  
   <footer>
-    &copy; Copyright 2023 All rights reserved.
+    <!-- Your footer content here -->
   </footer>
 </body>
 </html>
