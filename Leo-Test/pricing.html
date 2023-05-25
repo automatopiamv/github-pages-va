@@ -109,6 +109,42 @@
             padding: 10px;
             color: white;
         }
+        .pricing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns children at the top */
+    padding-top: 20px;
+}
+
+.pricing-item {
+    width: 30%; /* Adjust width as necessary */
+    border: 1px solid #4355f9;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Separates text and button vertically */
+}
+
+.pricing-item button {
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #4355f9;
+    color: white;
+    border-radius: 5px; /* Add curve to the edges */
+}
+
+        .pricing-item button:hover {
+            background-color: #f2f2f2;
+            color: #4355f9;
+        }
     </style>
 </head>
 <body>
@@ -121,7 +157,7 @@
                 <div class="dropdown-content">
                     <a href="blog.html">Blog</a>
                     <a href="help.html">Help Center</a>
-                    <a href="updates">Updates</a>
+                    <a href="updates.html">Updates</a>
                     <a href="unconference.html">Unconference</a>
                 </div>
             </li>
@@ -132,9 +168,31 @@
     </div>
 
     <div class="content">
-        <h1>Pricing</h1>
-        <!-- Pricing content goes here -->
+    <div class="pricing-container">
+        <div class="pricing-item">
+            <h2>Demo</h2>
+            <p>For individuals, developers, or small teams to create a sandbox.</p>
+            <p>$0/month</p>
+            <p>Includes 10 person capacity</p>
+            <button>Create Demo World</button>
+        </div>
+        <div class="pricing-item">
+            <h2>Community</h2>
+            <p>For registered non-profits and organizations with less than 500 employees.</p>
+            <p>$100/month</p>
+            <p>Includes 20 person capacity</p>
+            <p>Additional capacity at $5/user/mo up to 100</p>
+            <button>Create World</button>
+        </div>
+        <div class="pricing-item">
+            <h2>Enterprise</h2>
+            <p>For organizations that need enterprise security, privacy, customization, scale, and integrations with core business applications.</p>
+            <p>Custom Capacity</p>
+            <button>Contact Us</button>
+        </div>
     </div>
+</div>
+
 
     <div class="footer">
         <p>&copy; 2023 My Website</p>
