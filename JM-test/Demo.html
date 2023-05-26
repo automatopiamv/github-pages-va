@@ -12,12 +12,6 @@
       justify-content: space-between;
       align-items: center;
     }
-   
-    .footer-image {
-      height: 150px;
-      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
-      background-size: cover;
-    }
       
     footer {
       left: 10%;
@@ -26,43 +20,61 @@
       background-color: gray;
       text-align: left;
       color: white;
-      padding: 30px;
+      padding: 50px;
+      }
+    
+    .footer-logo {
+    width: 100px;
+    height: 70px;
+    background-size: cover;
+    display: flex;
+    align-items: right;
+    margin-left: 10px;
+    }  
+      
+    .footer-image {
+      height: 150px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
     }
     
    .body-context {
-    font-family:Quicksand, sans-serif;
-    font-size: 30px;
+    font-family: Quicksand, sans-serif;
+    font-size: 64px;
     color: #12ccc9;
     margin-top: 30px;
     text-align: left;
     margin-left: 10%;
     margin-right: 10%;  
+    margin-bottom:10px;
     }
     
     .body-subtext {
       font-family:Tahoma, sans-serif;
-      font-size: 20px;
-      color: black;
+      font-size: 25px;
+      font-weight: 600;
+      color: white;
       text-align: left;
-      font-weight: none;
       margin-left: 10%;
-      margin-right: 10%;
+      margin-right: 20%;
+      margin-bottom:10px;
    }
    
    .body-subtext2 {
-    font-family: Quicksand, sans-serif;
-    font-size: 16px; /* Updated font size */
-    color: black;
+    font-family: proxima-nova, sans-serif;
+    font-size: 18px; /* Updated font size */
+    line-height: 1.5;
+    color: white;
     text-align: left;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 20%;
    }
    
  .body-container {
     display: flex;
     justify-content: space-between;
-    background-color: #3264a8; /* Add background color */
-    padding: 20px; /* Add padding for spacing */
+    background-color: #120459; /* Add background color */
+    padding: 40px; /* Add padding for spacing */
   }
 
   .text-content {
@@ -71,27 +83,28 @@
   
     .form-container {
     background-color: #ffffff; /* Updated background color */
-    padding: 20px;
-    width: 50px; /* Adjust the width as desired */
-    height:auto;
+    width: 400px; /* Adjust the width as desired */
     border-radius: 10px; /* Add border radius to create a curve */
-    margin-right:10px;
-    flex: 1;
+    padding: 20px;
+    margin-right: 10px;
+    margin-top:50px;
     }
   
   
     .form-label {
       font-size: 17px;
-      font-family: Quicksand, sans-serif;
-      font-weight: bold;
+      font-family: proxima-nova, sans-serif;
       color: black;
+      margin-left:20px;
     }
     
     .form-input {
-      width: 90%;
+      width: 80%;
       height: 10px;
       padding: 15px;
       margin-bottom: 10px;
+      margin-left:20px;
+      
     }
     
     .form-submit-button {
@@ -105,6 +118,8 @@
       cursor: pointer;
       font-family: Arial, sans-serif;
       text-align: center;
+      margin-left:20px;
+      margin-top:10px;
     }
 
 
@@ -265,6 +280,13 @@
   <div class="text-content">
   <div class="body-context">Explore Topia</div>
         <div class="body-subtext">See why Topia is quickly replacing webinars, branded content, and corporate meeting tools with interactive experiences.</div>
+        <div class="body-subtext2">
+          <ul>
+            <li>No special tech is needed for our browser-based Metaverse platform, just your computer.</li>
+            <li>Get a private tour of our Demo World 🌎.</li>
+            <li>We have solutions for 2 or 20,000 attendees.</li>
+          </ul>
+        </div>
         <!-- Add more content about pricing here -->
       </div>
   <div class="form-container">
@@ -297,6 +319,11 @@
   
   <footer>
     <!-- Your footer content here -->
+    <a href="index.html"><div class="footer-logo">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62ea8335debf3e69060b6d96_topia-logo-white-2x.png" alt="Topia Logo" class="footer-logo">
+    </a>
+    </div>
+    &copy; Copyright 2023 All rights reserved.
   </footer>
 </body>
 </html>
