@@ -13,8 +13,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
-            background-color: white;
-            color: #4355f9;
+            background-color: #4355f9;
+            color: white;
         }
         .logo {
             max-height: 50px;
@@ -71,28 +71,25 @@
             position: relative;
         }
         .menu a {
-            color: #4355f9;
+            color: white;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         .menu a:hover {
-            background-color: #4355f9;
-            color: white;
+            color: #f2f2f2;
         }
         .content {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Distribute items evenly */
+            justify-content: flex-start; /* Align the content to the start */
             padding: 15px;
         }
         .content-text {
+            width: 50%;  /* Reduce the width */
             margin-right: 20px; /* Add margin to the right */
         }
-        .content-text, .content-video {
-            flex: 1 0 auto;  /* Allow the items to grow and shrink as needed */
-            margin: 0 20px;  /* Add some margin around the items for spacing */
-        }
         .content-video {
+            width: 50%;   /* Increase the width */
             margin-left: 20px; /* Add margin to the left */
         }
         .content-video video {
@@ -118,8 +115,8 @@
             font-weight: normal;
         }
         .dropdown-content a:hover {
-            background-color: #4355f9;
-            color: white;
+            background-color: #f1f1f1;
+            color: #4355f9;
         }
         .menu > li:hover .dropdown-content {
             display: block;
@@ -155,32 +152,6 @@
                 position: static;
             }
         }
-        
-        @keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.slide-in-from-left {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-}
-
-.slide-in-from-right {
-    animation: 1s ease-out 0s 1 slideInFromRight;
-}
     </style>
 </head>
 <body>
@@ -203,13 +174,13 @@
         <button class="button button-create">Create World</button>
     </div>
 
-    <div class="content content-text slide-in-from-left">
+    <div class="content">
         <div class="content-text">
             <p>METAVERSE PLATFORM</p>
             <h1>Finally. Software that your teachers and students can’t live without.</h1>
             <p>So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.</p>
         </div>
-        <div class="content-video slide-in-from-right">
+        <div class="content-video">
             <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop></video>
         </div>
     </div>
