@@ -91,6 +91,9 @@
         .content-video {
             width: 50%;   /* Increase the width */
             margin-left: 20px; /* Add margin to the left */
+            animation: 1s ease-out 0s 1 slideInFromRight; /* Apply the slide-in animation */
+            width: 50%;   
+            margin-left: 20px;
         }
         .content-video video {
             width: 100%;
@@ -144,6 +147,8 @@
             }
             .content-video {
                 margin-left: 0;  /* Remove margin on smaller screens */
+                animation: none; /* Remove animation on smaller screens */
+                margin-left: 0;
             }
             .content-video video {
                 width: 100%;
@@ -152,6 +157,8 @@
                 position: static;
             }
         }
+        
+        
     </style>
 </head>
 <body>
