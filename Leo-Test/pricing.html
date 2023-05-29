@@ -13,8 +13,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px;
-            background-color: #4355f9;
-            color: white;
+            background-color: white;
+            color: #4355f9;
         }
         .logo {
             max-height: 50px;
@@ -34,16 +34,17 @@
             position: relative;
         }
         .menu a {
-            color: white;
+            color: #4355f9;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         .menu a:hover {
-            color: #f2f2f2;
+            background-color: #4355f9; /* added this */
+            color: white; /* changed this */
         }
         /* Highlight the active menu item */
         .menu .active {
-            color: #f2f2f2;
+            color: #4355f9;
         }
         .button {
             margin-left: 10px;
@@ -71,6 +72,7 @@
         }
         .button-create:hover {
             background-color: #f2f2f2;
+            color: #4355f9;
         }
         .dropdown-content {
             display: none;
@@ -167,6 +169,9 @@ th {
 
 td:first-child {
     text-align: left;
+}
+th:first-child {
+    background-color: transparent;
 }
     </style>
 </head>
