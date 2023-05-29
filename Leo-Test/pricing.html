@@ -149,31 +149,36 @@
             color: #4355f9;
         }
         table {
-    width: 100%;
-    margin-top: 20px;
-    border: none;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    margin-bottom: 50px;
-}
+            width: 100%;
+            margin-top: 20px;
+            border: none;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            margin-bottom: 50px;
+        }
 
-th, td {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #4355f9; /* Only bottom border */
-}
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #4355f9; /* Only bottom border */
+        }
 
-th {
-    background-color: #4355f9;
-    color: white;
-}
-
-td:first-child {
-    text-align: left;
-}
-th:first-child {
-    background-color: transparent;
-}
+        td:first-child {
+            text-align: left;
+            width: 25%; /* Adjust as needed */
+        }
+        th:first-child {
+            background-color: transparent;
+            width: 25%; /* Adjust as needed */
+        }
+        td:not(:first-child), th:not(:first-child) {
+            width: 25%; /* Adjust as needed */
+            background-color: #f0f0f0; /* Change as needed */
+        }
+        th {
+            background-color: #4355f9;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -220,12 +225,12 @@ th:first-child {
             <button>Contact Us</button>
         </div>
     </div>
-    <table>
+ <table>
   <tr>
     <th></th>
-    <th>Demo</th>
-    <th>Pro</th>
-    <th>Enterprise</th>
+    <th style="background-color: #4355f9;">Demo</th>
+    <th style="background-color: #4355f9;">Pro</th>
+    <th style="background-color: #4355f9;">Enterprise</th>
   </tr>
   <tr>
     <td>Standard quality video</td>
