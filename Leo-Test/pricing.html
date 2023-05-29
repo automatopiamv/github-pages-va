@@ -152,7 +152,8 @@
             width: 100%;
             margin-top: 20px;
             border: none;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 2px; 
             font-family: Arial, sans-serif;
             margin-bottom: 50px;
         }
@@ -174,6 +175,10 @@
         td:not(:first-child), th:not(:first-child) {
             width: 25%; /* Adjust as needed */
             background-color: #f0f0f0; /* Change as needed */
+        }
+        th:not(:first-child) {
+            border-left: 2px solid #4355f9; 
+            border-right: 2px solid #4355f9;
         }
         th {
             background-color: #4355f9;
