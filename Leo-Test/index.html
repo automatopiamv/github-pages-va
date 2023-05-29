@@ -82,15 +82,17 @@
         .content {
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Align the content to the start */
+            justify-content: space-between; /* Distribute items evenly */
             padding: 15px;
         }
         .content-text {
-            width: 50%;  /* Reduce the width */
             margin-right: 20px; /* Add margin to the right */
         }
+        .content-text, .content-video {
+            flex: 1 0 auto;  /* Allow the items to grow and shrink as needed */
+            margin: 0 20px;  /* Add some margin around the items for spacing */
+        }
         .content-video {
-            width: 50%;   /* Increase the width */
             margin-left: 20px; /* Add margin to the left */
         }
         .content-video video {
