@@ -152,6 +152,32 @@
                 position: static;
             }
         }
+        
+        @keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-in-from-left {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.slide-in-from-right {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
     </style>
 </head>
 <body>
@@ -174,13 +200,13 @@
         <button class="button button-create">Create World</button>
     </div>
 
-    <div class="content">
+    <div class="content content-text slide-in-from-left">
         <div class="content-text">
             <p>METAVERSE PLATFORM</p>
             <h1>Finally. Software that your teachers and students can’t live without.</h1>
             <p>So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.</p>
         </div>
-        <div class="content-video">
+        <div class="content-video slide-in-from-right">
             <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop></video>
         </div>
     </div>
