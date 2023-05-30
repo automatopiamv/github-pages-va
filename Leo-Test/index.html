@@ -104,6 +104,16 @@
             border: 2px solid grey;
             border-radius: 10px;
         }
+        .content-video2 {
+            animation: 1s ease-in 0s 1 slideInFromRight; /* Apply the slide-in animation */
+    width: 50%;   
+    margin-right: 30px;
+        }
+        .content-video2 video {
+            width: 100%;
+            border: 2px solid grey;
+            border-radius: 10px;
+        }
         .dropdown-content {
             display: none;
             position: absolute;
@@ -152,7 +162,6 @@
             .content-video {
                 margin-left: 0;  /* Remove margin on smaller screens */
                 animation: none; /* Remove animation on smaller screens */
-                margin-left: 0;
             }
             .content-video video {
                 width: 100%;
@@ -223,6 +232,7 @@
     height: 100px; /* Make the image same height as the text */
     object-fit: cover; /* Cover the full width of the image */
 }
+
         
     </style>
 </head>
@@ -305,7 +315,10 @@
     </div>
 
 
-<div class="content">
+<div class="content content-reverse">
+   <div class="content-video2">
+            <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d5b99ec1e98723083e209_Math Tutoring opt-transcode.mp4" autoplay muted loop></video>
+        </div>     
         <div class="content-text content-text-last">
             <div class="text-wrapper">
         <p style="color: #4355f9; font-weight:bold;">PRICING</p>
@@ -317,12 +330,8 @@
         <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e9c5eda0f5020a4d1d09d2_Computer-Turquoise%202.png">
     </div>
         </div>
-        <div class="content-video">
-            <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d5b99ec1e98723083e209_Math Tutoring opt-transcode.mp4" autoplay muted loop></video>
-        </div>
+        
     </div>
-
-
 
     <div class="footer">
         <p>&copy; 2023 Topia</p>
