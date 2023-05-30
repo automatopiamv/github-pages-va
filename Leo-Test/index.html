@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Topia</title>
+    <script src="animation.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -250,7 +251,13 @@ background-attachment: fixed;
 background-size: cover;
           
       }
-        
+      
+      .scroll-animation {
+    opacity: 0;
+    transform: translateX(100px); /* Adjust based on how far you want the slide animation to start from */
+    transition: all 1s ease-out; /* Change duration and easing function as needed */
+}
+
     </style>
 </head>
 <body>
@@ -344,7 +351,7 @@ background-size: cover;
 
 <div class="content content-reverse content-svg">
    <div class="content-video2">
-            <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d5b99ec1e98723083e209_Math Tutoring opt-transcode.mp4" autoplay muted loop></video>
+            <video class="scroll-animation" src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d5b99ec1e98723083e209_Math Tutoring opt-transcode.mp4" autoplay muted loop></video>
         </div> 
         
         <div class="content-text content-text-last">
