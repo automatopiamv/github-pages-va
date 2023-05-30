@@ -208,7 +208,20 @@
                 margin-bottom: 20px;
             }
         }
-        
+.content-text-last {
+    display: flex; /* Flex container */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between text and image */
+}
+
+.content-text-last .topi {
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.content-text-last .topi img {
+    height: 100px; /* Make the image same height as the text */
+    object-fit: cover; /* Cover the full width of the image */
+}
         
     </style>
 </head>
@@ -291,6 +304,25 @@
             <p>Build apps and integrations with the real-time SDK.</p>
         </div>
     </div>
+
+
+<div class="content">
+        <div class="content-text content-text-last">
+            <div class="text-wrapper">
+        <p style="color: #4355f9; font-weight:bold;">PRICING</p>
+        <h1>We offer free demo worlds and paid pilots</h1>
+        <p>Our pricing plans are customized to your needs.</p>
+        <button class="button button-signin">Book a Demo</button>
+    </div>
+    <div class="topi">
+        <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e9c5eda0f5020a4d1d09d2_Computer-Turquoise%202.png">
+    </div>
+        </div>
+        <div class="content-video">
+            <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d5b99ec1e98723083e209_Math Tutoring opt-transcode.mp4" autoplay muted loop></video>
+        </div>
+    </div>
+
 
 
     <div class="footer">
