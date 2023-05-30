@@ -184,6 +184,30 @@
                 }
             }
 
+      .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .box {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            width: calc(25% - 10px);
+            margin-bottom: 20px;
+        }
+        .box h3 {
+            margin-top: 0;
+            color: #4355f9;
+        }
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        
         
     </style>
 </head>
@@ -226,6 +250,42 @@
             <p>Navigate your avatar around the world to easily move between audio / video conversations.</p>
             <button class="button button-signin">Enterprise</button>
             <button class="button button-signin">Education</button>
+        </div>
+    </div>
+
+
+<div class="boxes">
+        <div class="box">
+            <h3>Scalable</h3>
+            <p>Bring thousands of people together at once in a single space.</p>
+        </div>
+        <div class="box">
+            <h3>Data Security</h3>
+            <p>Deploy behind your firewall to eliminate 3rd party access and counterparty risk.</p>
+        </div>
+        <div class="box">
+            <h3>No-Code Design</h3>
+            <p>Visual interface with pre-built components and drag-and-drop tools.</p>
+        </div>
+        <div class="box">
+            <h3>Unparalleled Privacy</h3>
+            <p>Patented Peer-to-Peer (P2P) encrypted audio/video connections.</p>
+        </div>
+        <div class="box">
+            <h3>White Label Solution</h3>
+            <p>Fully customizable to meet your needs and match your brand.</p>
+        </div>
+        <div class="box">
+            <h3>Browser Based & 2.5D</h3>
+            <p>Access from anywhere; no special hardware required. Meet your people where they are.</p>
+        </div>
+        <div class="box">
+            <h3>Tool Integrations</h3>
+            <p>Integrate all of your existing tools like Miro, Google Suite, LMS, and many more.</p>
+        </div>
+        <div class="box">
+            <h3>Programmable</h3>
+            <p>Build apps and integrations with the real-time SDK.</p>
         </div>
     </div>
 
