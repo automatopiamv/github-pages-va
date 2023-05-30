@@ -2,12 +2,10 @@
 <html>
 <head>
     <title>Topia</title>
-    <script src="animation.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin-left: 10%;
-            margin-right: 10%;
+            margin:auto;
         }
         .header {
             display: flex;
@@ -98,12 +96,13 @@
         }
         .content-text {
             width: 50%;  /* Reduce the width */
-            margin-right: 20px; /* Add margin to the right */
+            margin-left: 10%;
+            margin-right: 5%;
         }
         .content-video {
             animation: 1s ease-in 0s 1 slideInFromRight; /* Apply the slide-in animation */
     width: 50%;   
-    margin-left: 20px;
+    margin-right: 10%;
         }
         .content-video video {
             width: 100%;
@@ -113,7 +112,7 @@
         .content-video2 {
             animation: 1s ease-in 0s 1 slideInFromRight; /* Apply the slide-in animation */
     width: 50%;   
-    margin-right: 30px;
+    margin-left: 10%;
         }
         .content-video2 video {
             width: 100%;
@@ -177,15 +176,15 @@
             }
         }
         @keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+              0% {
+                  transform: translateX(100%);
+                  opacity: 0;
+              }
+              100% {
+                  transform: translateX(0);
+                  opacity: 1;
+              }
+          }
 
 
       .content-text-full-width {
@@ -233,6 +232,8 @@
     display: flex; /* Flex container */
     align-items: center; /* Vertically center items */
     justify-content: space-between; /* Space between text and image */
+    margin-right: 10%;
+    margin-left: 5%;
 }
 
 .content-text-last .topi {
@@ -253,7 +254,7 @@ background-size: cover;
       }
       
       .scroll-animation {
-    opacity: 100;
+    opacity: 0;
     transform: translateX(100px); /* Adjust based on how far you want the slide animation to start from */
     transition: all 1s ease-out; /* Change duration and easing function as needed */
 }
