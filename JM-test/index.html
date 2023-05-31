@@ -49,17 +49,16 @@
     text-align: left;
     font-weight: bold;
     margin-left: 18%;
-    margin-right: 10%;
+  
   }
    
   .body-subtext {
     font-family: Tahoma, sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     color: black;
     text-align: left;
-    font-weight: none;
+    font-weight: bold;
     margin-left: 18%;
-    margin-right: 10%;
   }
    
   .body-subtext2 {
@@ -68,7 +67,6 @@
     color: black;
     text-align: left;
     margin-left: 18%;
-    margin-right: 10%;
   }
    
 .body-container {
@@ -209,6 +207,59 @@
     cursor: pointer;
     padding: 10px;
   }
+  
+.bottom-section {
+  padding: 20px;
+  margin: 20px;
+  width: 100%; /* Adjust the width */
+  text-align: center; /* Align the text to the center
+  */
+}
+
+.bottom-header {
+   margin-top:50px;
+  font-family: Arial, serif;
+  font-size: 14px;
+  color: blue;
+  font-weight: bold;
+}
+
+.bottom-text {
+  font-family: Tahoma, serif;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  margin-top:10px;
+}
+
+.bottom-text-detail {
+  font-size: 14px;
+  color: #37343d;
+  font-family: Quicksand, sans-serif;
+  margin-top:-20px;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: center; /* Align the buttons to the center */
+  gap: 10px; /* distance between buttons */
+  margin-top: 20px;
+}
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .bottom-header {
+    font-size: 28px; /* Increase the font size */
+  }
+
+  .bottom-text {
+    font-size: 20px; /* Increase the font size */
+  }
+
+  .bottom-buttons {
+    flex-direction: column; /* Stack the buttons vertically */
+  }
+}
 
   /* Mobile-friendly styles */
   @media screen and (max-width: 480px) {
@@ -287,6 +338,16 @@
   </div>
 </div>
 
+<!-- Add this new section just before the footer -->
+<div class="bottom-section">
+  <div class="bottom-header">REAL-TIME SPATIAL CONNECTION</div>
+  <p class="bottom-text">So engaging, it feels like being in person.</p>
+  <p class="bottom-text-detail">Navigate your avatar around the world to easily move between audio / video conversations</p>
+  <div class="bottom-buttons">
+    <button class="demo-button">Enterprise</button>
+    <button class="demo-button">Education</button>
+  </div>
+</div>
 
   <!-- Include your footer here -->
  <div class="footer-image"></div>
