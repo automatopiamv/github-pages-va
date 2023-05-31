@@ -44,11 +44,11 @@
   .body-context {
     font-family: Arial, serif;
     font-size: 14px;
-    color: blue;
+    color: #4355e4;
     margin-top: 40px;
     text-align: left;
     font-weight: bold;
-    margin-left: 18%;
+    margin-left: 20%
   
   }
    
@@ -58,7 +58,7 @@
     color: black;
     text-align: left;
     font-weight: bold;
-    margin-left: 18%;
+    margin-left: 20%
   }
    
   .body-subtext2 {
@@ -66,7 +66,7 @@
     font-size: 16px;
     color: black;
     text-align: left;
-    margin-left: 18%;
+    margin-left: 20%
   }
    
 .body-container {
@@ -191,7 +191,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 20px;
-    margin-left: 90px;
+    margin-left: 20%
   }
 
   .demo-button {
@@ -208,9 +208,9 @@
     padding: 10px;
   }
   
-.bottom-section {
+  .bottom-section {
   padding: 20px;
-  margin: 20px;
+  margin-right:50px;
   width: 100%; /* Adjust the width */
   text-align: center; /* Align the text to the center
   */
@@ -220,7 +220,7 @@
    margin-top:50px;
   font-family: Arial, serif;
   font-size: 14px;
-  color: blue;
+  color: #4355e4;
   font-weight: bold;
 }
 
@@ -288,6 +288,53 @@
       margin-top: 10px;
     }
   }
+  
+   /* grid style */
+  
+  
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-left: 10%;
+  margin-right:10%;
+  justify-content: space-evenly;
+  margin-top:30px;
+}
+
+.feature-box {
+  border: 1px solid #ddd;
+  padding: 30px 26px 36px;
+  border-radius: 12px;
+  background-color: rgba(67, 85, 249, .05);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  color: #4355e4;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+.feature-box img {
+    height: 20%;   
+    }
+
+/* Make the boxes responsive for smaller screens */
+@media (max-width: 600px) {
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* From 4 to 2 */
+    grid-gap: 20px;
+    margin-left: 5%;
+    margin-right:5%;
+  }
+}
 </style>
 </head>
 <body>
@@ -311,7 +358,7 @@
             </ul>
           </li>
           <li><a href="Demo.html">Demo</a></li>
-          <li><a href="#" style="color: #5c6cf6;">Sign In</a></li> <!-- Added Sign In button with specific font color -->
+          <li><a href="#" style="color: #4355e4;">Sign In</a></li> <!-- Added Sign In button with specific font color -->
         </ul>
       </nav>
       <button class="button">Create World</button>
@@ -338,7 +385,7 @@
   </div>
 </div>
 
-<!-- Add this new section just before the footer -->
+<!-- bottom text-->
 <div class="bottom-section">
   <div class="bottom-header">REAL-TIME SPATIAL CONNECTION</div>
   <p class="bottom-text">So engaging, it feels like being in person.</p>
@@ -346,6 +393,50 @@
   <div class="bottom-buttons">
     <button class="demo-button">Enterprise</button>
     <button class="demo-button">Education</button>
+  </div>
+</div>
+
+<!-- Add this new section just before the footer -->
+<div class="feature-grid">
+  <div class="feature-box">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c696fdada99d8bc0a178e_people.svg">
+    <h3>Scalable</h3>
+    <p>Bring thousands of people together at once in a single space</p>
+  </div>
+  <div class="feature-box">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c697072cbae9a68d30481_shield.svg" >
+    <h3>Data Security</h3>
+    <p>Deploy behind your firewall to eliminate 3rd party access and counterparty risk</p>
+  </div>
+  <div class="feature-box">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c696f1846fe14e7890918_grid.svg">
+    <h3>No-Code Design</h3>
+    <p>Visual interface with pre-built components and drag-and-drop tools</p>
+  </div>
+  <div class="feature-box">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/646c4aa2411d46597c4ddcf9_Desktop.svg" alt="Browser Based & 2.5D">
+    <h3>Browser Based & 2.5D</h3>
+    <p>Access from anywhere; no special hardware required. Meet your people where they are.</p>
+</div>
+  <div class="feature-box">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c696f8bc0bc6f06a722de_edit.svg">
+    <h3>White Label Solution</h3>
+    <p>Fully customizable to meet your needs and match your brand</p>
+  </div>
+  <div class="feature-box">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/646c4aa2411d46597c4ddcf9_Desktop.svg">
+    <h3>Browser Based & 2.5D</h3>
+    <p>Access from anywhere; no special hardware required. Meet your people where they are.</p>
+  </div>
+  <div class="feature-box">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c6a1b3558778176e02abe_control-centre.svg">
+    <h3>Tool Integrations</h3>
+    <p>Integrate all of your existing tools like Miro, Google Suite, LMS, and many more.</p>
+  </div>
+  <div class="feature-box">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c696fd85d9d938b6d3691_controls-alt.svg">
+    <h3>Programmable</h3>
+    <p>Build apps and integrations with the real-time SDK</p>
   </div>
 </div>
 
