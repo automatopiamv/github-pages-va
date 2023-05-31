@@ -74,24 +74,27 @@
 
 .text-content {
   flex: 1;
-  margin-right: 20px; /* Add some space between the text and video */
+  margin-right: 40px; /* Increase from 20px to 40px to add more space between text and video */
 }
 
 .video-content {
-  flex: 1.5;
+  flex: 1.8; /* Increase from 1.5 to 1.8 */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 40px; /* Add a left margin to add more space between video and text */
+  margin-right:40px;
 }
+
 .video {
   border: 2px solid #2ecfb3;
   border-radius: 10px;
-  width: 90%; /* Adjust the width to your preference */
+  width: 120%; /* Increase from 100% to 120% */
   height: auto; /* Maintain aspect ratio */
-  max-height: 400px; /* Set a maximum height to prevent excessive stretching */
+  max-height: 300px; /* Increase from 250px to 300px */
   margin-top: 20px;
+  object-fit: contain;
 }
-  
   nav ul {
     list-style-type: none;
     margin: 0;
