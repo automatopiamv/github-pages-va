@@ -5,8 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin-left: 10%;
-            margin-right: 10%;
+            margin:auto;
         }
         .header {
             display: flex;
@@ -15,6 +14,8 @@
             padding: 10px;
             background-color: white;
             color: #4355f9;
+            margin-left: 10%;
+            margin-right: 10%;
         }
         .logo {
             max-height: 50px;
@@ -22,31 +23,8 @@
             background-color: white;
             padding: 5px;
         }
-        .menu {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            font-weight: bold;
-        }
-        .menu > li {
-            padding: 0 15px;
-            position: relative;
-        }
-        .menu a {
-            color: #4355f9;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .menu a:hover {
-            background-color: #4355f9; /* added this */
-            color: white; /* changed this */
-        }
-        /* Highlight the active menu item */
-        .menu .active {
-            color: #4355f9;
-        }
         .button {
+            margin-top: 15px;
             margin-left: 10px;
             border: none;
             padding: 10px 20px;
@@ -73,7 +51,53 @@
         }
         .button-create:hover {
             background-color: #f2f2f2;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px;
+            width: 100%;
+        }
+        .footer {
+            position: relative;
+            left: 0;   /* Update to match body margin */
+            right: 0;  /* Update to match body margin */
+            bottom: 0;
+            background-color: #4355f9;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        .menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            margin-right: 15px; /* Adjust this as needed */
+        }
+        .menu > li {
+            padding: 0 15px;
+            position: relative;
+        }
+        .menu a {
             color: #4355f9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .menu a:hover {
+            color: white;
+            background-color: #4355f9;
+        }
+        .menu .active {
+            background-color: #f2f2f2;
+        }
+        .menu-and-buttons {
+            display: flex;
+            align-items: center;
         }
         .dropdown-content {
             display: none;
@@ -93,25 +117,66 @@
             font-weight: normal;
         }
         .dropdown-content a:hover {
-            background-color: #f1f1f1;
-            color: #4355f9;
+            background-color: #4355f9;
+            color: white;
         }
         .menu > li:hover .dropdown-content {
             display: block;
         }
-        .content {
-            padding: 15px;
-        }
-        .footer {
-            position: relative;
-            left: 0;   /* Update to match body margin */
-            right: 0;  /* Update to match body margin */
-            bottom: 0;
-            background-color: #4355f9;
-            text-align: center;
-            padding: 10px;
-            color: white;
-        }
+        
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+            .menu {
+                flex-direction: row;
+                align-items: left;
+            }
+            .menu > li {
+                padding: 10px 0;
+            }
+            .button {
+                margin-top: 15px;
+            }
+            .menu-and-buttons{
+                flex-direction: column;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .content-text {
+                width: 100%;
+                margin: 0;  /* Remove margin on smaller screens */
+                padding: 0;
+                font-size: 16px;
+            }
+            .content-form {
+                margin: 0;  /* Remove margin on smaller screens */
+                animation: none; /* Remove animation on smaller screens */
+                width: 90%;
+            }
+            }
+            
+            
+            .footer {
+                position: static;
+            }
+
+      .content-text-full-width {
+                width: 100%;  /* Adjust the width */
+                text-align: center; /* Align the text to the center */
+            }
+
+            /* Responsive design */
+            @media screen and (max-width: 768px) {
+                .content-text-full-width {
+                    width: 100%; /* Adjust the width for smaller screens */
+                }
+            }
+ 
+ 
+ 
         .pricing-container {
     display: flex;
     justify-content: space-between;
@@ -187,10 +252,11 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="index.html"><img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e70c84dd3aac06fb2ac2b6_topia-logo-blue-2x.png" alt="Logo" class="logo"></a>
+    <div class="header"><a href="index.html">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e70c84dd3aac06fb2ac2b6_topia-logo-blue-2x.png" alt="Logo" class="logo"></a>
+        <div class="menu-and-buttons">
         <ul class="menu">
-            <li><a href="pricing.html" class="active">Pricing</a></li>
+            <li><a class="active" href="pricing.html">Pricing</a></li>
             <li>
                 <a href="resources.html">Resources</a>
                 <div class="dropdown-content">
@@ -204,6 +270,7 @@
         </ul>
         <button class="button button-signin">Sign In</button>
         <button class="button button-create">Create World</button>
+        </div>
     </div>
 
     <div class="content">
@@ -230,6 +297,8 @@
             <button>Contact Us</button>
         </div>
     </div>
+    </div>
+    <div class="content">
  <table>
   <tr>
     <th></th>
