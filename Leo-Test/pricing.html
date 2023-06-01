@@ -55,9 +55,9 @@
         .content {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: flex-start; /* Align the content to the start */
             padding: 15px;
-            width: 100%;
+            margin-bottom: 20px;
         }
         .footer {
             position: relative;
@@ -122,57 +122,10 @@
         }
         .menu > li:hover .dropdown-content {
             display: block;
-        }
-        
-        /* Responsive design */
-        @media screen and (max-width: 768px) {
-            .header {
-                flex-direction: column;
-            }
-            .menu {
-                flex-direction: row;
-                align-items: left;
-            }
-            .menu > li {
-                padding: 10px 0;
-            }
-            .button {
-                margin-top: 15px;
-            }
-            .menu-and-buttons{
-                flex-direction: column;
-            }
-            .content {
-                flex-direction: column;
-            }
-            .content-text {
-                width: 100%;
-                margin: 0;  /* Remove margin on smaller screens */
-                padding: 0;
-                font-size: 16px;
-            }
-            .content-form {
-                margin: 0;  /* Remove margin on smaller screens */
-                animation: none; /* Remove animation on smaller screens */
-                width: 90%;
-            }
-            }
-            
+        }      
             
             .footer {
                 position: static;
-            }
-
-      .content-text-full-width {
-                width: 100%;  /* Adjust the width */
-                text-align: center; /* Align the text to the center */
-            }
-
-            /* Responsive design */
-            @media screen and (max-width: 768px) {
-                .content-text-full-width {
-                    width: 100%; /* Adjust the width for smaller screens */
-                }
             }
  
  
@@ -181,7 +134,7 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch; /* Adjusts children to the same height */
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .pricing-item {
