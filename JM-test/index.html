@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
   <title>Topia</title>
 <style>
@@ -43,7 +44,7 @@
    
   .body-context {
     font-family: Arial, serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #4355e4;
     margin-top: 40px;
     text-align: left;
@@ -54,7 +55,7 @@
    
   .body-subtext {
     font-family: Tahoma, sans-serif;
-    font-size: 28px;
+    font-size: 30px;
     color: black;
     text-align: left;
     font-weight: bold;
@@ -63,7 +64,7 @@
    
   .body-subtext2 {
     font-family: Quicksand, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: black;
     text-align: left;
     margin-left: 20%
@@ -219,7 +220,7 @@
 .bottom-header {
    margin-top:50px;
   font-family: Arial, serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #4355e4;
   font-weight: bold;
 }
@@ -233,7 +234,7 @@
 }
 
 .bottom-text-detail {
-  font-size: 14px;
+  font-size: 18px;
   color: #37343d;
   font-family: Quicksand, sans-serif;
   margin-top:-20px;
@@ -340,27 +341,27 @@
 .pricing {
     padding: 20px;
     text-align: left;
+    margin-top:50px;
 }
 
 /* This styles the heading inside the pricing section */
 .pricing h2 {
    font-family: Arial, serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #4355e4;
-    margin-top: 40px;
     text-align: left;
     font-weight: bold;
-    margin-left: 20%
+    margin-left: 15%
   
 }
 
 /* This styles the paragraph inside the pricing section */
 .pricing p {
     font-family: Quicksand, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     color: black;
     text-align: left;
-    margin-left: 20%
+    margin-left: 15%
 }
 
 /* This styles the button container inside the pricing section */
@@ -380,13 +381,14 @@
 
 .video-container {
     flex: 1;
+    margin-top:30px;
 }
 
 .video-wrapper {
   flex: 1.8; /* Increase from 1.5 to 1.8 */
   display: flex;
   justify-content: center;
-  margin-right:20%;
+  margin-right:15%;
   margin-top:60px;
  
 }
@@ -398,6 +400,21 @@
   width: 100%;
   align-items: center;
 }
+
+.image-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    flex-shrink: 0;
+    margin-left:-80px;
+    margin-top:80x;
+   
+}
+
+.image-container img {
+    max-width: 30%;
+    height: auto;
+  }
 
 </style>
 </head>
@@ -508,7 +525,7 @@
 <div class="content-row">
     <div class="pricing">
         <h2>PRICING</h2>
-        <h1 style="margin-left:20%;">We offer <span style="color:#4355f9; font-weight: bold;" >free demo</span> worlds and paid pilots</h1>
+        <h1 style="margin-left:15%; margin-right:40px; font-family: Tahoma, serif; font-size:40px;">We offer <span style="color:#4355f9; font-weight: bold;" >free demo</span> worlds and paid pilots</h1>
         <p> Our pricing plans are customized to your needs.</p>
         <div class="button-container">
      <a href="Demo.html">
@@ -516,15 +533,19 @@
     </a>
     </div> 
     </div>
+    
+       <div class="image-container">
+        <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e9c5eda0f5020a4d1d09d2_Computer-Turquoise%202.png" alt="Computer Turquoise">
+        </div>
+    
     <div class="video-container">
         <div class="video-wrapper">
             <video controls>
                 <source src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d5b99ec1e98723083e209_Math%20Tutoring%20opt-transcode.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
     </div>
-</div>
+ </div>
   <!-- Include your footer here -->
  <div class="footer-image"></div>
   
