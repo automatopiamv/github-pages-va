@@ -92,7 +92,7 @@
   border-radius: 10px;
   width: 60%; /* Increase from 100% to 120% */
   margin-top: 30px;
-  object-fit: contain;
+  object-fit: cover;
  
 }
   nav ul {
@@ -335,6 +335,70 @@
     margin-right:5%;
   }
 }
+
+/* This styles the section for the pricing */
+.pricing {
+    padding: 20px;
+    text-align: left;
+}
+
+/* This styles the heading inside the pricing section */
+.pricing h2 {
+   font-family: Arial, serif;
+    font-size: 14px;
+    color: #4355e4;
+    margin-top: 40px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 20%
+  
+}
+
+/* This styles the paragraph inside the pricing section */
+.pricing p {
+    font-family: Quicksand, sans-serif;
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    margin-left: 20%
+}
+
+/* This styles the button container inside the pricing section */
+.pricing .button-container {
+    margin-top: 20px;
+}
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.video-container {
+    flex: 1;
+}
+
+.video-wrapper {
+  flex: 1.8; /* Increase from 1.5 to 1.8 */
+  display: flex;
+  justify-content: center;
+  margin-right:20%;
+  margin-top:60px;
+ 
+}
+
+.video-wrapper video {
+   border: 2px solid #2ecfb3;
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  align-items: center;
+}
+
 </style>
 </head>
 <body>
@@ -440,6 +504,27 @@
   </div>
 </div>
 
+ <!-- pricing -->
+<div class="content-row">
+    <div class="pricing">
+        <h2>PRICING</h2>
+        <h1 style="margin-left:20%;">We offer <span style="color:#4355f9; font-weight: bold;" >free demo</span> worlds and paid pilots</h1>
+        <p> Our pricing plans are customized to your needs.</p>
+        <div class="button-container">
+     <a href="Demo.html">
+    <button class="demo-button">Book a Demo</button>
+    </a>
+    </div> 
+    </div>
+    <div class="video-container">
+        <div class="video-wrapper">
+            <video controls>
+                <source src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d5b99ec1e98723083e209_Math%20Tutoring%20opt-transcode.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
   <!-- Include your footer here -->
  <div class="footer-image"></div>
   
