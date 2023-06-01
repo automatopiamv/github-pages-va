@@ -249,6 +249,38 @@
             background-color: #4355f9;
             color: white;
         }
+        
+        
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+            .menu {
+                flex-direction: row;
+                align-items: left;
+            }
+            .menu > li {
+                padding: 10px 0;
+            }
+            .button {
+                margin-top: 15px;
+            }
+            .menu-and-buttons{
+                flex-direction: column;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .pricing-container {
+                flex-direction: column;
+            }
+            .pricing-item {
+                width: 100%;
+                margin-bottom: 15px;  /* Remove margin on smaller screens */
+                flex-direction: column;
+            }
+            }
     </style>
 </head>
 <body>
