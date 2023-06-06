@@ -135,8 +135,8 @@
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
-    margin-left:20%;
-    margin-right:20%;
+    margin-left: 20%;
+    margin-right: 20%;
     
   }
 
@@ -146,51 +146,75 @@
     background-color: #f1f1f1;
     border-radius: 10px;
     text-align: left;
-    margin:5px; /* Adjust the gap between pricing columns */
+    margin: 5px; /* Adjust the gap between pricing columns */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   
-    .pricing-column h2 {
-      color: #4355e4;
-      font-size: 24px;
-      margin-top: 0;
-      align-self: flex-start;
-    }
-    
-    .pricing-image {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 20px;
-    }
+  .pricing-column h2 {
+    color: #4355e4;
+    font-size: 24px;
+    margin-top: 0;
+    align-self: flex-start;
+  }
   
-    .pricing-column p {
-      font-size: 16px;
-      margin-bottom:0;
-    }
-    
-    .pricing-button-row {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; /* Align items to the top */
-      margin-top: 20px;
-    }
+  .pricing-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
   
-    .pricing-button {
-      width: 150px;
-      height: 50px;
-      border-radius: 12px;
-      background-color: #2ecfb3;
-      color: #fff;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 0 5px; /* Add margin to create space between buttons */
-      align-items: center;
-      display: flex;
-      justify-content: center;
-    }
+  .pricing-column p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  
+  .pricing-button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+
+  .pricing-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: #2ecfb3;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .pricing-table {
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+  .pricing-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+
+  .pricing-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+  }
+  
   </style>
 </head>
 <body>
@@ -227,38 +251,154 @@
 
   <!-- Add your pricing content here -->
 
-  <div class="pricing-columns">
-    <div class="pricing-column">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/631ff9285478cc84a9ebcddf_Key-1-01.svg" class="pricing-image">
-      <h2>Demo</h2>
-      <p>For individuals, developers, or small teams to create a sandbox.</p>
-      <p>$0/month</p>
-      <p>Includes 10 person capacity</p>
-      <div class="pricing-button-row">
-        <button class="button">Create Demo World</button>
+      <div class="pricing-columns">
+        <div class="pricing-column">
+          <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/631ff9285478cc84a9ebcddf_Key-1-01.svg" class="pricing-image">
+          <h2>Demo</h2>
+          <p>For individuals, developers, or small teams to create a sandbox.</p>
+          <p>$0/month</p>
+          <p>Includes 10 person capacity</p>
+          <div class="pricing-button-row">
+            <button class="button">Create Demo World</button>
+          </div>
+        </div>
+        <div class="pricing-column">
+          <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/631ffad6cd75457051c24424_Connections-2.svg" class="pricing-image">
+          <h2>Community</h2>
+          <p>For registered non-profits and organizations with less than 500 employees.</p>
+          <p>$100/month</p>
+          <p>Includes 20 person capacity</p>
+          <p>Additional capacity at $5/user/mo up to 100</p>
+          <div class="pricing-button-row">
+            <button class="button">Create World</button>
+          </div>
+        </div>
+        <div class="pricing-column">
+          <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/631ff929ded8c3467841800e_Achievement.svg" class="pricing-image">
+          <h2>Enterprise</h2>
+          <p>For organizations that need enterprise security, privacy, customization, scale, and integrations with core business applications.</p>
+          <p>Custom Capacity</p>
+          <div class="pricing-button-row">
+            <button class="button">Contact Us</button>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="pricing-column">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/631ffad6cd75457051c24424_Connections-2.svg" class="pricing-image">
-      <h2>Community</h2>
-      <p>For registered non-profits and organizations with less than 500 employees.</p>
-      <p>$100/month</p>
-      <p>Includes 20 person capacity</p>
-      <p>Additional capacity at $5/user/mo up to 100</p>
-      <div class="pricing-button-row">
-        <button class="button">Create World</button>
-      </div>
-    </div>
-    <div class="pricing-column">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/631ff929ded8c3467841800e_Achievement.svg" class="pricing-image">
-      <h2>Enterprise</h2>
-      <p>For organizations that need enterprise security, privacy, customization, scale, and integrations with core business applications.</p>
-      <p>Custom Capacity</p>
-      <div class="pricing-button-row">
-        <button class="button">Contact Us</button>
-      </div>
-    </div>
-  </div>
+
+      <!-- Pricing table -->
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Demo</th>
+            <th>Pro</th>
+            <th>Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Standard quality video</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Embed live streams, websites, & music</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Embed collaborative tools and games like Miro, Padlet, and Skribbl</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Help articles & guides</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Unlimited Broadcasting</td>
+            <td></td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Unlimited Screensharing</td>
+            <td></td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Multiple admins</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Password & guest list protected access</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Custom URL</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Higher definition video</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Advanced analytics</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>More efficient bandwidth usage</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Priority Support & live chat</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>VIP training & support</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Single-Sign On (SSO)</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Security & compliance support</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Custom domain</td>
+            <td></td>
+            <td></td>
+            <td>✓</td>
+          </tr>
+        </tbody>
+      </table>
        
   <!-- Include your footer here -->
   <div class="footer-image"></div>
