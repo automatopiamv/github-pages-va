@@ -5,8 +5,13 @@
   <style>
     /* Include the same CSS from your original file here */
    
+   body {
+      font-family: Calibri, Arial, sans-serif;
+      margin: auto;
+    }
+        
     header {
-      background-color: #e6f7f4;
+      background-color: white;
       padding: 20px;
       display: flex;
       justify-content: space-between;
@@ -22,22 +27,101 @@
       color: white;
       padding: 50px;
       }
-    
-    .footer-logo {
-    width: 100px;
-    height: 70px;
-    background-size: cover;
-    display: flex;
-    align-items: right;
-    margin-left: 10px;
-    margin-top: -10px;
-    }  
       
-    .footer-image {
-      height: 150px;
+       .footer-image {
+      height: 200px;
       background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
       background-size: cover;
     }
+      
+      .logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('logo.png');
+      background-size: cover;
+      display: flex;
+      margin-left: 20px;
+    }
+  
+    .logo-topia {
+      width: 150px;
+      height: 120px;
+      background-image: url('logo-topia.png');
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-top: -70px;
+      margin-left: 50px;
+    }
+    
+      .button {
+      width: 150px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: #2ecfb3;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+  
+    nav li {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-right: 50px;
+      position: relative;
+    }
+  
+    nav li a {
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  
+    nav li:hover {
+      background-color: #2ecfb3;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  
+    .nav-container {
+      display: flex;
+      align-items: center;
+    }
+  
+    .nav-container ul {
+      display: flex;
+      margin-right: 20px;
+    }
+  
+    .nav-container li {
+      margin-left: 20px;
+      margin-right: 20px;
+      position: relative;
+    }
+  
+    .nav-container li ul {
+      display: none;
+      position: absolute;
+      background-color: white;
+      padding: 20px;
+      margin-left: -50px;
+    }
+  
+    .nav-container li a {
+      color: black;
+    }
+  
+    .nav-container li:hover ul {
+      display: block;
+    }
+
     
    .body-context {
     font-family: Quicksand, sans-serif;
@@ -111,8 +195,8 @@
     .form-submit-button {
       width: 200px;
       height: 50px;
-      border-radius: 25px;
-      background-color: #12ccc9;
+      border-radius: 12px;
+      background-color: #2ecfb3;
       color: #ffffff;
       border: none;
       font-size: 20px;
@@ -122,125 +206,48 @@
       margin-left:20px;
       margin-top:10px;
     }
-
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    nav li {
-      margin-left: 10px;
-      color: black;
-      font-family: Calibri, Arial, sans-serif;
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    nav li a {
-      text-decoration: none;
-    }
-
-    .logo {
-      width: 60px;
-      height: 60px;
-      background-image: url('logo.png');
-      background-size: cover;
-      display: flex;
-    }
-
-    .logo-topia {
-      width: 150px;
-      height: 120px;
-      background-image: url('logo-topia.png');
-      background-size: cover;
-      display: flex;
-      align-items: right;
-      margin-top: -70px;
-      margin-left: 30px;
-    }
-
-
-    .button {
-      width: 120px;
-      height: 50px;
-      border-radius: 12px;
-      background-color: #5c6cf6;
-      color: #fff;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      margin-left: 20px;
-      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
-      font-weight: normal; /* Removed font-weight */
-      border-radius: 25px; /* This will add curves to the button edges */
-    }
     
-    .dropdown::after {
-      content: '▼';
-      font-size: 10px;
-      margin-left: 0;
-    }
-
-    /* Additional CSS */
-    .nav-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-container ul {
-      display: flex;
-      margin-left: 10px;
-    }
-
-    .nav-container li {
-      margin-left: 10px;
-      position: relative;
-    }
-
-    .nav-container li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #f1f1f1;
-      padding: 10px;
-      min-width: 150px;
-    }
-
-    .nav-container li:hover ul {
-      display: block;
-    }
-
-    @media screen and (max-width: 480px) {
-      header {
+     @media (max-width: 600px) {
+      .body-container {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+        align-items: center;
       }
 
-      .logo {
-        margin-bottom: 10px;
+      .text-content {
+        margin-bottom: 40px;
+        text-align: center;
       }
 
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
-
-      .nav-container ul {
-        flex-direction: column;
-      }
-
-      .button {
-        margin-left: 0;
-        margin-top: 10px;
+      .form-container {
+        width: 90%;
+        margin-right: 0;
       }
     }
-    
+
+    /* Medium screens (601px to 1024px) */
+    @media (min-width: 601px) and (max-width: 1024px) {
+      .body-context {
+        font-size: 48px;
+      }
+
+      .body-subtext {
+        font-size: 20px;
+      }
+
+      .body-subtext2 {
+        font-size: 16px;
+      }
+
+      .form-container {
+        width: 60%;
+      }
+    }
+
+    /* Large screens (1025px and above) */
+    @media (min-width: 1025px) {
+      /* No additional changes needed */
+    }
+
   
   </style>
 </head>
@@ -320,10 +327,7 @@
   
   <footer>
     <!-- Your footer content here -->
-    <a href="index.html"><div class="footer-logo">
-    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62ea8335debf3e69060b6d96_topia-logo-white-2x.png" alt="Topia Logo" class="footer-logo">
-    </a>
-    </div>
+
     &copy; Copyright 2023 All rights reserved.
   </footer>
 </body>
