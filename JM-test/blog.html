@@ -1,113 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Website Title - Pricing</title>
+  <title>Website Title - Blog</title>
   <style>
     /* Include the same CSS from your original file here */
    
-      header {
-      background-color: #e6f7f4;
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      margin: auto;
+    }
+        
+    header {
+      background-color: white;
       padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-   }
+    }
    
-     .footer-image {
-      height: 150px;
-      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
-      background-size: cover;
-      }
-      
-      footer {
-      left: 10%;   /* Update to match body margin */
-      right: 10%;  /* Update to match body margin */
-      bottom: 0;
-      background-color: gray;
-      text-align:left;
-      color: white;
-      padding:30px;
-    }
-    
-   
-    
-    .body-context {
-    font-family: Arial, serif;
-    font-size: 16px;
-    color: blue;
-    margin-top: 30px;
-    text-align: left;
-   
-    }
-    
-    .body-subtext {
-      font-family: Quicksand, sans-serif;
-      font-size: 24px;
-      color: black;
-      margin:0;
-      text-align: left;
-   }
-   
-   .body-subtext2 {
-    font-family: Quicksand, sans-serif;
-    font-size: 16px; /* Updated font size */
-    color: black;
-    margin:0;
-    text-align: left;
-   }
-   
-   .body-container {
-    display: flex;
-    justify-content: space-between; /* Separates the text and video */
-    }
-
-    .text-content {
-      flex: 1; /* Takes up available space */
-    }
-
-   .video-content {
-    flex: 1.2; /* Increase size by 20% */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the video */
-    }
-
-  .video {
-    border: 2px solid blue; /* Add blue border */
-    border-radius: 10px; /* Makes edges curved */
-    width: 70%; /* Adjusts the width of the video to fill the container */
-    height: auto; /* Adjusts the height automatically based on the width */
-    margin-top: 20px;
-   }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    nav li {
-      margin-left: 10px;
-      color: black;
-      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    nav li a {
-      text-decoration: none;
-    }
-
-    .logo {
+     .logo {
       width: 60px;
       height: 60px;
       background-image: url('logo.png');
       background-size: cover;
       display: flex;
+      margin-left: 20px;
     }
-
-    .logo-topia{
+  
+    .logo-topia {
       width: 150px;
       height: 120px;
       background-image: url('logo-topia.png');
@@ -115,99 +35,114 @@
       display: flex;
       align-items: right;
       margin-top: -70px;
-      margin-left: 30px;
+      margin-left: 50px;
     }
-
+    
     .button {
-      width: 100px;
+      width: 150px;
       height: 50px;
       border-radius: 12px;
-      background-color: #5c6cf6;
+      background-color: #2ecfb3;
       color: #fff;
       border: none;
       font-size: 16px;
-      cursor: pointer;
-      margin-left: 20px;
-      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
-      font-weight: normal; /* Removed font-weight */
-    }
 
-    /* Additional CSS */
+    }
+  
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+  
+    nav li {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-right: 50px;
+      position: relative;
+    }
+  
+    nav li a {
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  
+    nav li:hover {
+      background-color: #2ecfb3;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+  
     .nav-container {
       display: flex;
       align-items: center;
     }
-
+  
     .nav-container ul {
       display: flex;
-      margin-left: 10px;
+      margin-right: 20px;
     }
-
+  
     .nav-container li {
-      margin-left: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
       position: relative;
     }
-
+  
     .nav-container li ul {
       display: none;
       position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #f1f1f1;
-      padding: 10px;
-      min-width: 150px;
+      background-color: white;
+      padding: 20px;
+      margin-left: -50px;
     }
-
+  
+    .nav-container li a {
+      color: black;
+    }
+  
     .nav-container li:hover ul {
       display: block;
     }
-    
-      .button-container {
+  
+    footer {
+      background-color: gray;
+      text-align: left;
+      color: white;
+      padding: 50px;
+    }
+  
+    .footer-logo {
+      width: 100px;
+      height: 50px;
+      background-size: cover;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      }
-
-      .demo-button {
-       width: 200px; 
-       height: 50px; 
-       background-color: #5c6cf6; 
-       color: #ffffff; 
-       border: none;
-       border-radius: 25px; /* This will add curves to the button edges */
-       font-family: Arial, sans-serif;
-       font-size: 20px;
-       text-align: center;
-       cursor: pointer;
-       padding: 10px;
-
-    /* Mobile-friendly styles */
-    @media screen and (max-width: 480px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
-
-      .logo {
-        margin-bottom: 10px;
-      }
-
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
-
-      .nav-container ul {
-        flex-direction: column;
-      }
-
-      .button {
-        margin-left: 0;
-        margin-top: 10px;
-      }
+      align-items: right;
+      margin-left: 5%;
+    }
+  
+    .footer-image {
+      height: 200px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
+    }
+    
+  .body-container {
+   padding: 20px;
+   margin-right: 50px;
+   width: 100%;
+   text-align: center;
+  }
+  
+  .body-context {
+   margin-top: 50px;
+  font-size: 50px;
+  color: #4355e4;
+  font-weight: bold;
+  }
+  
   </style>
 </head>
 <body>
@@ -242,18 +177,14 @@
     </div>
   </header>
 
-  <!-- Add your Demo content here -->
+  <!-- Add your Blog content here -->
 
-  <div class="body-container">
+ <div class="body-container">
     <div class="text-content">
       <div class="body-context">Blog</div>
-      <h1 class="body-subtext"> Choose the plan that's right for you.</h1>
-      <!-- Add more content about pricing here -->
-    </div>
-
-  </div>
-
-       
+      </div>
+   </div>    
+   
   <!-- Include your footer here -->
  <div class="footer-image"></div>
  
