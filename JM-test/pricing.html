@@ -133,6 +133,7 @@
   
    .pricing-columns {
     display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
     justify-content: space-between;
     margin-top: 50px;
     margin-left: 20%;
@@ -192,10 +193,12 @@
   }
   
   .pricing-table {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     border-collapse: collapse;
     margin-bottom: 50px;
+    margin-top: 50px;
+    table-layout: fixed; /* Set the table layout to fixed */
   }
 
   .pricing-table th,
@@ -203,16 +206,56 @@
     padding: 10px;
     text-align: center;
     border: 1px solid #ccc;
+    width: 25%; /* Set the width for each table cell */
   }
 
   .pricing-table th {
+    color: #4355e4;
     background-color: #f1f1f1;
     font-weight: bold;
   }
 
   .pricing-table td:first-child {
     text-align: left;
-    font-weight: bold;
+  }
+  
+  /* Media Queries for Responsive Layout */
+  
+  /* Small screens (up to 600px) */
+  @media (max-width: 600px) {
+    .pricing-columns {
+      flex-direction: column;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    
+    .pricing-column {
+      margin: 10px;
+    }
+    
+    .pricing-table {
+      width: 90%;
+    }
+  }
+  
+  /* Medium screens (601px to 1024px) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .pricing-columns {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+    
+    .pricing-table {
+      width: 90%;
+    }
+  }
+  
+  /* Large screens (1025px and above) */
+  @media (min-width: 1025px) {
+    .pricing-columns {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
   }
   
   </style>
@@ -297,105 +340,105 @@
         <tbody>
           <tr>
             <td>Standard quality video</td>
-            <td>✓</td>
-            <td>✓</td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Embed live streams, websites, & music</td>
-            <td>✓</td>
-            <td>✓</td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Embed collaborative tools and games like Miro, Padlet, and Skribbl</td>
-            <td>✓</td>
-            <td>✓</td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Help articles & guides</td>
-            <td>✓</td>
-            <td>✓</td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Unlimited Broadcasting</td>
             <td></td>
-            <td>✓</td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Unlimited Screensharing</td>
             <td></td>
-            <td>✓</td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Multiple admins</td>
-            <td></td>
-            <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Password & guest list protected access</td>
             <td></td>
-            <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Custom URL</td>
             <td></td>
-            <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Higher definition video</td>
             <td></td>
-            <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Advanced analytics</td>
             <td></td>
-            <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>More efficient bandwidth usage</td>
             <td></td>
-            <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Priority Support & live chat</td>
             <td></td>
-            <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>VIP training & support</td>
             <td></td>
             <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Single-Sign On (SSO)</td>
             <td></td>
             <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Security & compliance support</td>
             <td></td>
             <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
           <tr>
             <td>Custom domain</td>
             <td></td>
             <td></td>
-            <td>✓</td>
+            <td><img src="https://www.pngmart.com/files/12/TikTok-Verified-Badge-PNG-Photos.png" style="width: 35px; height: 35px;"></td>
           </tr>
         </tbody>
       </table>
