@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Help Center - My Website</title>
+    <title>Topia - Help Center</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin-left: 10%;
-            margin-right: 10%;
+            margin:auto;
         }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px;
-            background-color: #4355f9;
-            color: white;
+            background-color: white;
+            color: #4355f9;
+            margin-left: 10%;
+            margin-right: 10%;
         }
         .logo {
             max-height: 50px;
@@ -22,30 +23,8 @@
             background-color: white;
             padding: 5px;
         }
-        .menu {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            font-weight: bold;
-        }
-        .menu > li {
-            padding: 0 15px;
-            position: relative;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .menu a:hover {
-            color: #f2f2f2;
-        }
-        /* Highlight the active menu item */
-        .menu .active {
-            color: #f2f2f2;
-        }
         .button {
+            margin-top: 15px;
             margin-left: 10px;
             border: none;
             padding: 10px 20px;
@@ -56,6 +35,7 @@
             font-weight: bold;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            border-radius: 20px;
         }
         .button-signin {
             background-color: #4355f9;
@@ -71,6 +51,71 @@
         }
         .button-create:hover {
             background-color: #f2f2f2;
+        }
+        .footer {
+            position: relative;
+            left: 0;   /* Update to match body margin */
+            right: 0;  /* Update to match body margin */
+            bottom: 0;
+            background-color: #4355f9;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        .menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            margin-right: 15px; /* Adjust this as needed */
+        }
+        .menu > li {
+            padding: 0 15px;
+            position: relative;
+        }
+        .menu a {
+            color: #4355f9;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .menu a:hover {
+            color: white;
+            background-color: #4355f9;
+        }
+        .menu .active {
+            background-color: #f2f2f2;
+        }
+        .menu-and-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align the content to the start */
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .content-text {
+            width: 50%;  /* Reduce the width */
+            margin-left: 10%;
+            margin-right: 5%;
+            font-size: 25px;
+        }
+        .content-form {
+              width: 50%;   
+              margin-right: 10%;
+              border-radius: 20px;
+              font-weight: bold;
+        }
+        .content-form input {
+              width: 90%;
+              padding: 10px;
+              margin-bottom: 20px;
+              border-radius: 5px;
         }
         .dropdown-content {
             display: none;
@@ -90,38 +135,149 @@
             font-weight: normal;
         }
         .dropdown-content a:hover {
-            background-color: #f1f1f1;
-            color: #4355f9;
+            background-color: #4355f9;
+            color: white;
         }
         .menu > li:hover .dropdown-content {
             display: block;
         }
-        .content {
-            padding: 15px;
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+            .menu {
+                flex-direction: row;
+                align-items: left;
+            }
+            .menu > li {
+                padding: 10px 0;
+            }
+            .button {
+                margin-top: 15px;
+            }
+            .menu-and-buttons{
+                flex-direction: column;
+            }
+            .content {
+                flex-direction: column;
+            }
+            .content-text {
+                width: 100%;
+                margin: 0;  /* Remove margin on smaller screens */
+                padding: 0;
+                font-size: 16px;
+            }
+            .content-form {
+                margin: 0;  /* Remove margin on smaller screens */
+                animation: none; /* Remove animation on smaller screens */
+                width: 90%;
+            }
+            }
+            .footer {
+                position: static;
+            }
         }
-        .footer {
-            position: fixed;
-            left: 10%;   /* Update to match body margin */
-            right: 10%;  /* Update to match body margin */
-            bottom: 0;
-            background-color: #4355f9;
-            text-align: center;
-            padding: 10px;
-            color: white;
+        @keyframes slideInFromRight {
+              0% {
+                  transform: translateX(100%);
+                  opacity: 0;
+              }
+              100% {
+                  transform: translateX(0);
+                  opacity: 1;
+              }
+          }
+
+
+      .content-text-full-width {
+                width: 100%;  /* Adjust the width */
+                text-align: center; /* Align the text to the center */
+            }
+
+            /* Responsive design */
+            @media screen and (max-width: 768px) {
+                .content-text-full-width {
+                    width: 100%; /* Adjust the width for smaller screens */
+                }
+            }
+
+      .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left: 10%;
+            margin-right: 10%;
         }
+        .box {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            width: 20%;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .box h3 {
+            margin-top: 0;
+            color: #4355f9;
+        }
+        @media screen and (max-width: 768px) {
+            .box {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        .box img{
+          height: 20%;          
+        }
+.content-text-last {
+    display: flex; /* Flex container */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between text and image */
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+.content-text-last .topi {
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.content-text-last .topi img {
+    height: 100px; /* Make the image same height as the text */
+    object-fit: cover; /* Cover the full width of the image */
+}
+
+      .content-svg {
+          background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%234FE'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+          
+      }
+      
+      .scroll-animation {
+    opacity: 0;
+    transform: translateX(100px); /* Adjust based on how far you want the slide animation to start from */
+    transition: all 1s ease-out; /* Change duration and easing function as needed */
+}
+
     </style>
 </head>
 <body>
-    <div class="header">
-        <a href="index.html"><img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e70c84dd3aac06fb2ac2b6_topia-logo-blue-2x.png" alt="Logo" class="logo"></a>
+    <div class="header"><a href="index.html">
+    <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e70c84dd3aac06fb2ac2b6_topia-logo-blue-2x.png" alt="Logo" class="logo"></a>
+        <div class="menu-and-buttons">
         <ul class="menu">
             <li><a href="pricing.html">Pricing</a></li>
             <li>
                 <a href="resources.html">Resources</a>
                 <div class="dropdown-content">
                     <a href="blog.html">Blog</a>
-                    <a href="help.html"  class="active">Help Center</a>
-                    <a href="updates">Updates</a>
+                    <a href="help.html">Help Center</a>
+                    <a href="updates.html">Updates</a>
                     <a href="unconference.html">Unconference</a>
                 </div>
             </li>
@@ -129,6 +285,7 @@
         </ul>
         <button class="button button-signin">Sign In</button>
         <button class="button button-create">Create World</button>
+        </div>
     </div>
 
     <div class="content">
