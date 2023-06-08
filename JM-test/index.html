@@ -311,41 +311,56 @@ nav li:hover {
   max-width: 300px;
   height: auto;
 }
+.menu-icon {
+  display: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+}
 
 @media (max-width: 768px) {
   .header {
-   flex-direction: column;
+    flex-direction: column;
   }
+
   .logo {
-     margin-left: 0;
+    margin-left: 0;
   }
 
   .nav-container {
     flex-direction: column;
     align-items: center;
-     padding: 10px 0;
-     margin-right:0;
+    padding: 10px 0;
+    margin-right: 0;
   }
 
   nav ul {
     justify-content: center;
     flex-direction: column;
- 
   }
+
   .nav-container li ul {
     justify-content: center;
     flex-direction: column;
-    margin-left:50px;
+    margin-left: 50px;
     position: absolute;
-    }
+  }
 
-  .button-container {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-container ul {
+    display: none;
+  }
+
+  .nav-container.active ul {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
-
 /* Add media queries for smaller screens */
 
 @media (max-width: 480px) {
@@ -434,7 +449,13 @@ nav li:hover {
 /* Make the bottom section responsive */
 @media (max-width: 600px) {
   .bottom-section {
-    margin-right: 20px;
+    margin-right:10px;
+    margin-left:0;
+  }
+  .bottom-text-detail{
+    margin-right:0;
+    margin-left:0px;
+    
   }
 }
 
