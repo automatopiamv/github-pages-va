@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enterprise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* Add your CSS styling here */
+  
+  body {
+    font-family: Calibri, Arial, sans-serif;
+    margin: auto;
+  }
+        
+  header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    background-image: url('logo.png');
+    background-size: cover;
+    display: flex;
+    margin-left: 20px;
+  }
+
+  .logo-topia {
+    width: 150px;
+    height: 120px;
+    background-image: url('logo-topia.png');
+    background-size: cover;
+    display: flex;
+    align-items: right;
+    margin-top: -70px;
+    margin-left: 50px;
+  }
+
+   
+  footer {
+    background-color: gray;
+    text-align: left;
+    color: white;
+    padding: 50px;
+  }
+   
+  .footer-logo {
+    width: 100px;
+    height: 50px;
+    background-size: cover;
+    display: flex;
+    align-items: right;
+    margin-left: 5%;
+  }
+   
+  .footer-image {
+    height: 200px;
+    background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+    background-size: cover;
+  }
+   
+   
+ .body-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: -30px;
+  margin-left: 10%;
+  margin-bottom: 50px;
+}
+
+  .body-context {
+    font-size: 16px;
+    color: #4355e4;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+   
+  .body-subtext {
+    font-size: 40px;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+   
+  .body-subtext2 {
+    font-size: 18px;
+    color: black;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  
+
+.text-content {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.video-content {
+  flex: 1.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  border: 2px solid #2ecfb3;
+  border-radius: 10px;
+  width: 60%;
+  margin-top: -30px;
+  object-fit: cover;
+}
+
+.button {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #2ecfb3;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-right: 50px;
+  position: relative;
+}
+
+nav li a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav li:hover {
+  background-color: #2ecfb3;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-container li {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-container li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  margin-left: -50px;
+}
+
+.nav-container li a {
+  color: black;
+}
+
+.nav-container li:hover ul {
+  display: block;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.demo-button {
+  width: 150px;
+  height: 50px;
+  background-color: #2ecfb3;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  align-items: left;
+}
+
+.bottom-section {
+  padding: 20px;
+  margin-right: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom-header {
+  margin-top: 50px;
+  font-size: 16px;
+  color: #4355e4;
+  font-weight: bold;
+}
+
+.bottom-text {
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.bottom-text-detail {
+  font-size: 18px;
+  color: #37343d;
+  margin-top: -20px;
+  margin-left:250px;
+  margin-right:250px;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+.menu-icon {
+  display: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    margin-right: 0;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .nav-container li ul {
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 50px;
+    position: absolute;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-container ul {
+    display: none;
+  }
+
+  .nav-container.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+/* Add media queries for smaller screens */
+
+@media (max-width: 480px) {
+  .nav-container {
+    justify-content: flex-start;
+  }
+}
+
+
+/* Make the body container responsive */
+@media (max-width: 600px) {
+  .body-container {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .video {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
+/* Make the EMBED & INTEGRATE section responsive */
+@media (max-width: 600px) {
+  .body-container:nth-child(4) {
+    flex-direction: column;
+  }
+
+  .image-container {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .image {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .video-content {
+    margin-top: 20px;
+  }
+}
+
+/* Make the bottom section responsive */
+@media (max-width: 600px) {
+  .bottom-section {
+    margin-right:50px;
+    margin-left:0;
+  }
+  .bottom-text-detail{
+    margin-right:20px;
+    margin-left:0;
+    
+  }
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="header">  
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+      <h1 style="display: none;">My Website</h1>
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown">
+            <a href="#">Resources</a>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="helpcenter.html">Help Center</a></li>
+              <li><a href="updates.html">Updates</a></li>
+              <li><a href="unconference.html">Unconference</a></li>
+            </ul>
+          </li>
+          <li><a href="Demo.html">Demo</a></li>
+          <li><a href="#" style="color: #4355e4;">Sign In</a></li>
+        </ul>
+      </nav>
+      <button class="button">Create World</button>
+    </div>
+  </header>
+
+  <!-- Add your website content here -->
+  
+  <div class="body-container">
+    <div class="text-content">
+      <div class="body-context">METAVERSE PLATFORM</div>
+      <h1 class="body-subtext">Finally. Software that your teachers and students can’t live without.</h1>
+      <p class="body-subtext2">
+        So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.
+      </p>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+      
+    <div class="video-content">
+      <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop class="video"></video>
+    </div>
+  </div>
+  
+    
+    
+    <div class="bottom-section">
+    <div class="bottom-header">YOUR METAVERSE PLATFORM</div>
+    <p class="bottom-text">Be an early adopter of the next big thing</p>
+    <p class="bottom-text-detail">Replace webinars, branded content, and corporate meeting tools with interactive experiences. A community engagement platform that increases retention through real-time connection.</p>
+    <div class="bottom-buttons">
+       <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      <button class="demo-button">Contact us</button>
+    </div>
+  </div>
+
+  
+
+  <!-- Include your footer here -->
+  <div class="footer-image"></div>
+  
+  
+  <footer>
+    <a href="index.html">
+      <div class="footer-logo"> 
+        <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62ea8335debf3e69060b6d96_topia-logo-white-2x.png" alt="Topia Logo" class="footer-logo">
+      </div>
+    </a>
+    <p class="footer-text">&copy; 2023 All rights reserved.</p>
+  </footer>
+</body>
+</html>
