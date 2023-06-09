@@ -129,19 +129,23 @@
       background-size: cover;
     }
     
-  .body-container {
-   padding: 20px;
-   margin-right: 50px;
-   width: 100%;
-   text-align: center;
-  }
-  
-  .body-context {
-   margin-top: 50px;
-  font-size: 50px;
-  color: #4355e4;
-  font-weight: bold;
-  }
+   .body-container {
+      padding: 20px;
+      margin-right: 50px;
+      width: 100%;
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+    }
+
+    .body-context {
+      margin-top: 50px;
+      font-size: 50px;
+      color: #4355e4;
+      font-weight: bold;
+    }
   
   </style>
 </head>
@@ -182,8 +186,15 @@
  <div class="body-container">
     <div class="text-content">
       <div class="body-context">Blog</div>
-      </div>
-   </div>    
+       <div class="body-context" style="grid-column: 1; grid-row: 1;">The Benefits of Using Peer-to-Peer Encrypted Data Connections in the Metaverse</div>
+       <h1 class="body-subtext">P2P connections offer greater security and privacy, are more scalable and efficient at low cost, and offer a number of other benefits such as resilience and efficiency.</h1>
+       <p class="body-subtext2"> December 6, 2022</p>
+    <div style="grid-column: 2; grid-row: 1;"></div>
+    <div style="grid-column: 3; grid-row: 1;"></div>
+    <div style="grid-column: 1 / span 3; grid-row: 2;"></div>
+    <div style="grid-column: 1 / span 3; grid-row: 3;"></div>
+  </div>
+      </div> 
    
   <!-- Include your footer here -->
  <div class="footer-image"></div>
