@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Enterprise</title>
+  <title>Education</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   /* Add your CSS styling here */
@@ -95,7 +95,7 @@
     color: black;
     text-align: left;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom:10px;
   }
 
   
@@ -365,6 +365,67 @@ nav li:hover {
   }
 }
 
+    .tab-container {
+      display: flex;
+      justify-content: space-between;
+      margin-left:10%;
+      margin-right:10%;
+
+     
+    }
+
+    .tab {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      background-color: #2ecfb3;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+    }
+
+    .tab:first-child {
+      margin-left: 0;
+    }
+
+    .tab:last-child {
+      margin-right:0;
+    }
+
+    .tab.active {
+      background-color: #fff;
+      color: #2ecfb3;
+      
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.5s;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background-color: #f1f1f1;
+      margin-top: -1px;
+      margin-left:10%;
+      margin-right:10%;
+    }
+
+    /* Add animations */
+    .fade-in {
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
 </style>
 </head>
 <body>
@@ -418,7 +479,139 @@ nav li:hover {
     </div>
   </div>
   
-    
+  <div class="bottom-section">
+    <div class="bottom-header">IDEAL FOR</div>
+    <p class="bottom-text">Topia is used by…</p>
+  </div>
+   <div class="tab-container">
+    <div class="tab active" data-tab="teachers" onclick="openTab(event, 'teachers')">Teachers</div>
+    <div class="tab" data-tab="students" onclick="openTab(event, 'students')">Students</div>
+    <div class="tab" data-tab="administrators" onclick="openTab(event, 'administrators')">School Administrators</div>
+    <div class="tab" data-tab="companies" onclick="openTab(event, 'companies')">Ed Tech Product Companies</div>
+  </div>
+
+  <div id="teachers" class="tab-content">
+      <div class="body-container">
+    <div class="text-content">
+    <h2 style="color:#4355e4; font-size: 30px;">Teachers</h2>
+      <p class="body-subtext2">
+        You’ve never had more control and flexibility simultaneously than teaching in the real time internet. Understand your students based on analytics.
+      </p>
+      <p class="body-subtext2">
+       All of your teaching assignments, homework submissions, and tools right at your fingertips. Every day.
+      </p>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+      
+    <div class="video-content">
+      <video src="https://youtu.be/b3-7mJNAggM" autoplay muted loop class="video"></video>
+    </div>
+  </div>
+  </div>
+
+  <div id="students" class="tab-content">
+    <div class="body-container">
+    <div class="text-content">
+    <h2 style="color:#4355e4; font-size: 30px;">Students</h2>
+      <p class="body-subtext2">
+        Community experience that rivals in person without Zoom fatigue. Create an emotional connection to learning by giving the students the flexibility to build the classroom they attend.
+      </p>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+      
+    <div class="video-content">
+      <video src="https://youtu.be/b3-7mJNAggM" autoplay muted loop class="video"></video>
+    </div>
+  </div>
+  </div>
+
+  <div id="administrators" class="tab-content">
+    <div class="body-container">
+    <div class="text-content">
+    <h2 style="color:#4355e4; font-size: 30px;">School Administrators</h2>
+      <p class="body-subtext2">
+       Increase your control over classroom moderation like never before. Mitigate unwanted behavior with AI moderation. Go head to head with other school systems to create interconnected environments with other schools and increase your community.
+      </p>
+      <p class="body-subtext2">
+       Add coding academies, tutoring content, individual courses from the entire marketplace by embedding in a way that is as easy as attaching a hyperlink. Expose students to other product offerings by embedding them throughout your world.
+      </p>
+       <p class="body-subtext2">
+       Gamify learning experiences with gated content, scavenger hunts, leaderboards – all connected with the backdrop of a community where social connection exists simultaneously.
+      </p>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+      
+    <div class="video-content">
+      <video src="https://youtu.be/b3-7mJNAggM" autoplay muted loop class="video"></video>
+    </div>
+  </div>
+  </div>
+
+  <div id="companies" class="tab-content">
+ <div class="body-container">
+    <div class="text-content">
+    <h2 style="color:#4355e4; font-size: 30px;">Ed Tech Product Companies</h2>
+      <p class="body-subtext2">
+        Build custom learning applications embedded with your product portfolio and white labelled as your own solution. Increase revenue by selling these applications to your clients.
+      </p>
+      <p class="body-subtext2">
+        Position your company as a true innovator in the Ed Tech market.
+      </p>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+      
+    <div class="video-content">
+      <video src="https://youtu.be/b3-7mJNAggM" autoplay muted loop class="video"></video>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      // Get all tab content elements
+      var tabContents = document.getElementsByClassName("tab-content");
+
+      // Hide all tab content elements
+      for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+      }
+
+      // Remove the "active" class from all tabs
+      var tabs = document.getElementsByClassName("tab");
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+      }
+
+      // Show the selected tab content and add "active" class to the clicked tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.classList.add("active");
+
+      // Apply fade-in animation to the tab content
+      setTimeout(function() {
+        document.getElementById(tabName).classList.add("fade-in");
+      }, 50);
+    }
+
+    // Show the "Teachers" tab by default
+    document.getElementById("teachers").style.display = "block";
+    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
+  </script>
     
     <div class="bottom-section">
     <div class="bottom-header">YOUR METAVERSE PLATFORM</div>
