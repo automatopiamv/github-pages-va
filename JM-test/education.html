@@ -426,6 +426,37 @@ nav li:hover {
         opacity: 1;
       }
     }
+    
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+.column {
+  flex: 1;
+  margin: 5px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.image-caption {
+  margin: 5px 0 0;
+  text-align: center;
+  font-size: 12px;
+}
 
 </style>
 </head>
@@ -619,6 +650,152 @@ nav li:hover {
     <div class="bottom-header">REAL-TIME CONNECTION</div>
     <p style="color:black; font-size:30px; font-weight:bold;" >Your Custom Virtual Learning Platform for Real Time Connection</p>
   </div>
+  
+  <div class="tab-container">
+  <div class="tab active" data-tab="k12" onclick="openTab(event, 'k12')">K-12</div>
+  <div class="tab" data-tab="higher-education" onclick="openTab(event, 'higher-education')">Higher Education</div>
+  <div class="tab" data-tab="tutoring" onclick="openTab(event, 'tutoring')">Tutoring</div>
+  <div class="tab" data-tab="learning-tech" onclick="openTab(event, 'learning-tech')">Learning Technology Companies</div>
+  <div class="tab" data-tab="corporate-learning" onclick="openTab(event, 'corporate-learning')">Corporate Learning</div>
+</div>
+
+<div id="k12" class="tab-content">
+  <div class="body-container">
+    <div class="text-content">
+      <h2 style="color:#4355e4; font-size: 30px;">K-12</h2>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+    <div class="video-content">
+        <p style="margin-right:10px;" class="body-subtext2">
+        Co-create worlds with your teachers and experience to unlock social community connection brought to life with homework club, tutoring worlds, physical education hour, teacher's lounge, spirit week, scavenger hunts, superintendent all-hands and whatever else you can imagine!
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="higher-education" class="tab-content">
+  <div class="body-container">
+    <div class="text-content">
+      <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Higher Education</span></h2>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+    <div class="video-content">
+       <p style="margin-right:10px;" class="body-subtext2">
+        Build replicas of your campus, give a space for student clubs, tutors, alumni, and curriculum designers to test new concepts and creative competitive challenges against rivals!
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="tutoring" class="tab-content">
+  <div class="body-container">
+    <div class="text-content">
+      <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Tutoring</span></h2>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+    <div class="video-content">
+       <p style="margin-right:10px;" class="body-subtext2">
+        Allow your tutors, learners, & content teams to convert 1:1 tutoring into a thriving community where users are able to learn from each other, share more of your content, and easily pick up where they left off with our first of its kind “object permanence” that teaching on Zoom just cannot do.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="learning-tech" class="tab-content">
+  <div class="body-container">
+    <div class="text-content">
+      <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Learning Technology Companies</span></h2>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+    <div class="video-content">
+       <p style="margin-right:10px;" class="body-subtext2">
+       White label the Topia platform using our SDK to extend your product value in ways that makes you stickier, drive cross-sell, upsell opportunities, and allow for innovation possibilities that your core product team does not have to build.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="corporate-learning" class="tab-content">
+  <div class="body-container">
+     <div class="text-content">
+      <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Corporate Learning</span></h2>
+      <div class="button-container">
+        <a href="Demo.html">
+          <button class="demo-button">Book a Demo</button>
+        </a>
+      </div> 
+    </div>
+    <div class="video-content">
+       <p style="margin-right:10px;" class="body-subtext2">
+     Transform Onboarding, Learning, Training, and self-serve into full blow learning worlds that allows users to come and go as they please, stay connected to one another, and build custom journey based learning programs that can be embedded into corporate all hands, team meetings, and other disconnected enterprise business process. Now, learning is a company wide community.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.getElementById("k12").style.display = "block";
+    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
+  </script>
+  
+  <div class="bottom-section">
+    <div class="bottom-header">USER TESTIMONIALS</div>
+    <p style="color:black; font-size:30px; font-weight:bold;" >Don't just take our word for it</p>
+  </div>
+ <div class="image-container">
+  <div class="column">
+    <div class="image">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521f61039c7699ff5a49_dance%20party.jpg" alt="Dance Party">
+    </div>
+    <div class="image">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521ff490a865262b2cf4_3-5%20Poppin.jpg" alt="3-5 Poppin">
+    </div>
+    <div class="image">
+       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d522261039c755eff5a4d_video%20chat%20bestie.jpg" alt="Video Chat Bestie">
+    </div>
+    <div class="image">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521f96deeb348a117415_hide%20and%20seek.jpg" alt="Hide and Seek">
+    </div>
+  </div>
+  <div class="column">
+    <div class="image">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d52204c4cfd1cc87e5f1f_bullying%20report.jpg" alt="Bullying Report">
+    </div>
+    <div class="image">
+       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521fe503a1e04ec490c7_More%20connected.jpg" alt="More connected">
+    </div>
+    <div class="image">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d52219a03d43d8db2aeea_teachers%20lounge.jpg" alt="Teachers Lounge">
+    </div>
+  </div>
+  <div class="column">
+    <div class="image">
+        <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521faa4cc50c83d268c4_daughter.jpg" alt="Daughter">
+    </div>
+    <div class="image">
+       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521f0c5ec7fe47a1060d_conversation.jpg" alt="Conversation">
+    </div>
+    <div class="image">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521f69bf4a1d2e73c9c8_cute%20kiddos.jpg" alt="Cute Kiddos">
+    </div>
+  </div>
+</div>
 
     
     <div class="bottom-section">
