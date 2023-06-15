@@ -337,48 +337,22 @@ nav li:hover {
   color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .header {
     flex-direction: column;
   }
 
-  .logo {
-    margin-left: 0;
-  }
 
   .nav-container {
+      flex-direction: column;
+  }
+  .nav-container  li ul {
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;
-    margin-right: 0;
+x;
   }
+ 
 
-  nav ul {
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .nav-container li ul {
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 50px;
-    position: absolute;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-container ul {
-    display: none;
-  }
-
-  .nav-container.active ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
 }
 /* Add media queries for smaller screens */
 
