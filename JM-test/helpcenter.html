@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Website Title - Blog</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     /* Include the same CSS from your original file here */
    
@@ -146,7 +148,50 @@ nav li:hover {
       background-size: cover;
     }
 
- 
+ .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      padding: 20px;
+      margin-left:10%;
+      margin-right:10%;
+     
+    }
+
+    .grid-item {
+      background-color: #f2f2f2;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .grid-item h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.3em;
+      color: #333;
+    }
+
+    .grid-item p {
+      color: #666;
+      line-height: 1.6;
+      margin: 0 0 20px 0;
+    }
+
+    .grid-item a {
+      color: #0082f3;
+      text-decoration: none;
+    }
+
+    .grid-item a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+    
+
+    
    @media (max-width: 600px) {
 
    .header {
@@ -179,21 +224,11 @@ nav li:hover {
   }
 
 }
- @media (max-width: 768px) {
-      .blog-container {
-        grid-template-columns: 1fr;
-        width: 80%;
-      }
-
-      .blog-card {
-        width: 100%;
-        margin: 0;
-      }
-    }
 
     /* Other CSS styles */
   </style>
-</head>
+ </head>
+
 <body>
   <!-- Include your header here -->
     <header>
@@ -222,6 +257,53 @@ nav li:hover {
     </div>
   </header>
        
+ <div class="grid-container">
+    <div class="grid-item">
+   <i class="fa-solid fa-star fa-xl" style="color: #1f68e5; margin-bottom:30px;"></i>
+      <div class="section">
+        <h2>Getting Started</h2>
+        <p>Everything you need to know about using Topia.</p>
+        <a href="#">See all articles</a>
+      </div>
+     </div>
+      
+     <div class="grid-item">
+     <i class="fa-solid fa-paintbrush fa-xl" style="color: #1f68e5; margin-bottom:30px;"></i>
+      <div class="section">
+        <h2>Customize Your World</h2>
+        <p>Tips for creating the perfect Topia world.</p>
+        <a href="#">See all articles</a>
+      </div>
+    </div>
+
+    <div class="grid-item">
+    <i class="fa-solid fa-wand-magic-sparkles fa-xl" style="color: #1f68e5; margin-bottom:30px;"></i>
+      <div class="section">
+        <h2>Confluencer Resources</h2>
+        <p>Confluencer Resources</p>
+        <a href="#">See all articles</a>
+      </div>
+      </div>
+    
+    <div class="grid-item">
+    <i class="fa-solid fa-gear fa-xl" style="color: #1f68e5; margin-bottom:30px;"></i>
+      <div class="section">
+        <h2>World Settings</h2>
+        <p>Everything you need to know about managing your world.</p>
+        <a href="#">See all articles</a>
+      </div>
+    </div>
+
+    <div class="grid-item">
+    <i class="fa-solid fa-triangle-exclamation fa-xl" style="color: #1f68e5; margin-bottom:30px;"></i>
+      <div class="section">
+        <h2>Troubleshooting</h2>
+        <p>Have a problem? This should fix it!</p>
+        <a href="#">See all articles</a>
+      </div>
+    </div>
+  </div>
+  
   <!-- Include your footer here -->
  <div class="footer-image"></div>
  
