@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Title - Blog</title>
+  <style>
+    /* Include the same CSS from your original file here */
+   
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      margin: auto;
+    }
+        
+    header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+   
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('logo.png');
+      background-size: cover;
+      display: flex;
+      margin-left: 20px;
+    }
+  
+    .logo-topia {
+      width: 150px;
+      height: 120px;
+      background-image: url('logo-topia.png');
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-top: -70px;
+      margin-left: 50px;
+    }
+    
+   .button {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #2ecfb3;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+  .button:hover {
+  background-color: white;
+  color:#2ecfb3;
+  }
+ .button-sign {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+        }
+  .button-sign:hover {
+  background-color: #2ecfb3;
+  color:white;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-right: 50px;
+  position: relative;
+}
+
+nav li a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav li:hover {
+  background-color: #C8C8CA;
+  width:100px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-container li {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-container li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  margin-left: -50px;
+}
+
+.nav-container li a {
+  color: black;
+}
+
+.nav-container li:hover ul {
+  display: block;
+}
+  
+    footer {
+      background-color: gray;
+      text-align: left;
+      color: white;
+      padding: 50px;
+    }
+  
+    .footer-logo {
+      width: 100px;
+      height: 50px;
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-left: 5%;
+    }
+  
+    .footer-image {
+      height: 200px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
+    }
+
+   
+   @media (max-width: 600px) {
+
+   .header {
+     flex-direction: column;
+     margin-top:-150px;
+     }
+     
+  nav {
+     flex-direction: column;
+     align-items: center;
+     margin-top:100px;
+     margin-left:-300px;
+    
+     }
+     
+  .nav-container{
+    flex-direction: column;
+     align-items: center;
+  }
+     
+
+  .button {
+   margin-top: 15px;
+   margin-left:-300px;
+   }
+  .button-sign{
+     margin-top: 15px;
+   margin-left:-300px;
+    
+  }
+  }
+
+    /* Other CSS styles */
+  </style>
+</head>
+<body>
+  <!-- Include your header here -->
+    <header>
+    <div class="header">  
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown">
+            <a>Resources</a>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="helpcenter.html">Help Center</a></li>
+              <li><a href="updates.html">Updates</a></li>
+              <li><a href="unconference.html">Unconference</a></li>
+            </ul>
+          </li>
+          <li><a href="Demo.html">Demo</a></li>
+        </ul>
+      </nav>
+      <button class="button-sign">Sign in</button>
+      <button class="button">Create World</button>
+    </div>
+  </header>
+
+    <!-- Include your footer here -->
+  <div class="footer-image"></div>
+  <footer>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+</body>
+</html>
