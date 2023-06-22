@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Title - Blog</title>
+  <style>
+    /* Include the same CSS from your original file here */
+   
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      margin: auto;
+    }
+        
+    header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+   
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('logo.png');
+      background-size: cover;
+      display: flex;
+      margin-left: 20px;
+    }
+  
+    .logo-topia {
+      width: 150px;
+      height: 120px;
+      background-image: url('logo-topia.png');
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-top: -70px;
+      margin-left: 50px;
+    }
+    
+   .button {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #2ecfb3;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+  .button:hover {
+  background-color: white;
+  color:#2ecfb3;
+  }
+ .button-sign {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+        }
+  .button-sign:hover {
+  background-color: #2ecfb3;
+  color:white;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-right: 50px;
+  position: relative;
+}
+
+nav li a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav li:hover {
+  background-color: #C8C8CA;
+  width:100px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-container li {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-container li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  margin-left: -50px;
+}
+
+.nav-container li a {
+  color: black;
+}
+
+.nav-container li:hover ul {
+  display: block;
+}
+  
+    footer {
+      background-color: gray;
+      text-align: left;
+      color: white;
+      padding: 50px;
+    }
+  
+    .footer-logo {
+      width: 100px;
+      height: 50px;
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-left: 5%;
+    }
+  
+    .footer-image {
+      height: 200px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
+    }
+    
+     .content-container {
+      display: flex;
+      align-items: center;
+      background-image: url('https://global-uploads.webflow.com/62e9154430bdfe665e503e71/63a4b0e62cb21c1d8af93ba9_7E.png');
+      background-size: cover;
+      padding: 30px;
+      margin-top: 20px;
+      margin-left: 10%;
+      margin-right: 10%;
+      max-width: 100vw;
+    }
+
+    .content-text {
+      width: 60%;
+      background-color: white;
+      color: black;
+      padding: 20px;
+      margin-top: 100px;
+      margin-left: -80px;
+      margin-bottom: -70px;
+    }
+    
+  .bottom-section {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top:20px;
+    }
+
+   .bottom-text-detail {
+    font-size: 16px;
+    color: #37343d;
+    margin-top: 20px;
+    }
+   
+   #platform {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px;
+    width:70px;
+    text-align:center;
+    font-size: 16px; 
+    margin-left:20%;
+    margin-top:50px;
+    }
+
+
+   @media (max-width: 600px) {
+
+   .header {
+     flex-direction: column;
+     margin-top:-150px;
+     }
+     
+  nav {
+     flex-direction: column;
+     align-items: center;
+     margin-top:100px;
+     margin-left:-300px;
+    
+     }
+     
+  .nav-container{
+    flex-direction: column;
+     align-items: center;
+  }
+     
+
+  .button {
+   margin-top: 15px;
+   margin-left:-300px;
+   }
+  .button-sign{
+     margin-top: 15px;
+   margin-left:-300px;
+    
+  }
+  }
+
+    /* Other CSS styles */
+  </style>
+</head>
+<body>
+  <!-- Include your header here -->
+    <header>
+    <div class="header">  
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown">
+            <a>Resources</a>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="helpcenter.html">Help Center</a></li>
+              <li><a href="updates.html">Updates</a></li>
+              <li><a href="unconference.html">Unconference</a></li>
+            </ul>
+          </li>
+          <li><a href="Demo.html">Demo</a></li>
+        </ul>
+      </nav>
+      <button class="button-sign">Sign in</button>
+      <button class="button">Create World</button>
+    </div>
+  </header>
+  
+  <div class="content-container">
+    <div class="content-text">
+      <h2>From Me to We: The Cultural Shift Behind Topia and Confluencer Con</h2>
+      <p>On September 28, Topia ran our first Confluencer Con, which attracted 700+ tech enthusiasts, investors, and culture and community managers…</p>
+      <p><small>September 30, 2021 -7 minutes read</small></p>
+    </div>
+  </div>
+  
+    <div class="bottom-section">
+    <p class="bottom-text-detail">On September 28, Topia ran our first Confluencer Con, which attracted 700+ tech enthusiasts, investors, and culture and community managers, all eager to learn about the art and business of bringing people together.</p>
+    
+    <p class="bottom-text-detail">The event’s success — and our decision to create it — reflects the desire to explore and amplify an emerging cultural shift in the way people socialise online and interact in the marketplace.
+
+Welcome to the rise of the Confluencer Era, where community has snatched the customer’s crown and dopamine-driven ‘users’ are transitioning into more heart-centred community members and active participants.</p>
+    
+ <p class="bottom-text-detail">In this era, the social capital and marketplace clout of look-at-me influencers is giving way to we-driven confluencers, who earn capital and clout by building communities.
+
+It’s a cultural shift that drove the creation of Topia, a spatial platform designed to inspire authentic human connection, and financial-reward initiatives such as our Confluencer Program.</p>
+
+<h2>Confluencer vs. Influencer </h2>
+     
+<p class="bottom-text-detail">The Merriam-Webster dictionary defines confluence as a coming or flowing together, meeting, or gathering at one point. It’s often used to describe where rivers meet.
+
+Confluencers are people or entities that create, curate, and hold spaces that bring people together in real-time for shared experiences and conversations. In comparison, influencers focus on themselves and on turning people into followers.</p>
+      
+<p style="margin-left:50px;" class="bottom-text-detail">“Influencer marketing is really all about crafting a persona and gaining as many followers as you can by broadcasting a one-way stream of content,” Topia co-Founder Daniel Liebeskind said to Confluencer Con attendees.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“A lot of influencer technology has been asynchronous, where I write a message or I record a video and broadcast it, and then people consume it. With confluencers, there’s an evolution towards more synchronous communication, where people are actually having real human connection in real time.”</p>
+
+<p class="bottom-text-detail">Christina Apple Georgoulakis, Operating Partner at <span style="color:blue;">Seven Seven Six</span>   and former Head of Growth at Typeform, also pointed to the way influencers stand apart to affect others, while confluencers stand together with others to co-create impact.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“If you look at the synonyms of influencer, it's to guide, to direct, to affect. These are things that you do to someone else. If you look at the synonyms of confluence, it's to join me to create a new juncture,” Christina said.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“When we talk about confluence, there's no hierarchy. I'm impacted by you and you're impacted by me. Together, we're creating this new space, this new environment, this new experience. It's more authentic, credible, and motivating,” she said.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“I'd much rather be a part of something than be influenced by something else.”</p>
+
+<h2>Cultural and Technological Shifts </h2>
+
+<p class="bottom-text-detail">Will Cady, Global Director of KarmaLab at Reddit, told the conference the emphasis on co-creation is part of broader changes in how we interact online.</p>
+
+<p class="bottom-text-detail">“We’re in the middle of a giant shift in culture towards community,” Will said. “We're also moving from a consumptive culture to a co-creative culture.”</p>
+
+<p class="bottom-text-detail">These shifts are connected to the emerging creator economy, where users have moved away from consuming content to creating it and contributing to communities. Creators wield their confluencer cache through the experiences and spaces they craft, and they earn money from creativity.</p>
+
+<p class="bottom-text-detail">Space is the operative word when exploring the internet changes driving these cultural shifts — the move from Web 2.0 to Web 3.0 (aka the Metaverse).</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“Web 2.0 is this idea of being able to engage with feeds and endlessly scroll through different content that is brought together from different resources,” Will said. “That's what you have on Facebook, Instagram, Twitter, TikTok: you're scrolling through these things that are a very time-based experience.”</p>
+
+<p class="bottom-text-detail">This amygdala-based engagement is at the mercy of algorithms and rewards users with dopamine hits when they get a like, share, or retweet.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“We're beginning to see something different happening on platforms such as Topia, Clubhouse, Discord, and Reddit. These aren't feeds, they're spaces. They're spaces that you step into. And there's a different way of understanding and engaging with art and business in space than there is in time,” Will said.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“People are finding a sense of human connection in a way they dismissed [previously]. I feel like I dismissed it in the face of my narcissism and constructing my online identity in these temporal-based, feed-based social media platforms. But in these social community-based platforms, it's more about a connection through the heart.”</p>
+
+<p class="bottom-text-detail">And at a time when social-media silos and online toxicity have never had more power to divide people, Will has witnessed the power of these spaces.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“There's something that we've been able to observe on Reddit that is truly extraordinary: people change their mind. That doesn't happen in a moment, it happens in a space. It happens in a space that you trust, in a community where you know the culture and you believe in what you are going to get there,” he said.</p>
+
+
+<h2>Why We Need Confluencers Now More Than Ever </h2>
+
+<p class="bottom-text-detail">COVID-19 may seem like the catalyst for our changing relationships to health, community, work, and online interactions, but it has only amplified issues that have long been creating cracks and laying down roots in society.</p>
+
+<p class="bottom-text-detail">Over the past decade, there has been growing concern amongst mental health experts and technologists about the mental health impacts of Web 2.0. These include individual and collective impacts such as depression, anxiety, loneliness, and intensifying acrimony and toxic behaviours amongst groups online.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“A lot of this anxiety arises from engineering to engage with the amygdala,” Will said. “I also see a connection between internal anxieties and the external acrimony we face.”</p>
+
+<p class="bottom-text-detail">Algorithms amplify these anxieties and acrimonies by feeding on people’s dreams and fears. They foster crippling comparisons with others, spread misinformation, manufacture dangerous echo chambers, and encourage a sometimes horrifying lack of empathy online.</p>
+
+<p class="bottom-text-detail">Furthermore, the eponymous social media is not really serving the very social needs it set out to meet.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“Humans are inherently social. We evolved to connect deeply with one another and to build communities with belief systems based on shared understanding formed through collaborative, real-time experiences,” Daniel said.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“Rather than optimizing for these needs, today’s social platforms are optimized to capture our attention, not develop meaningful relationships.”</p>
+
+
+<p class="bottom-text-detail">And with loneliness on the rise, Christina said the cost of not bringing people together in communities is too great.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“Research continues to show that loneliness is impacting more and more of us, with 15 to 30% of people polled of the general population feeling chronic loneliness,” she said.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“I think people who maybe wrote off online communities are now seeing the value and what it feels like to have a connection with someone across the world. [There are people] who, maybe through accessibility or budget, couldn’t attend Burning Man but can now share that experience. It's democratized that for lots of people. And that's a very powerful thing to say: it doesn't matter where you are, or how much you make, you can be part of it, too.”</p>
+
+<h2>___What Do These Shifts Mean for Business? ___</h2>
+
+<p class="bottom-text-detail">According to Christina, the power of communities is also transforming the way companies succeed at business.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“I've worked at companies where product-led growth was really important, and now we're seeing product-led growth with the accelerator of community-led growth, which is extremely exciting and powerful,” she said.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“When you give people a voice to build your company and to shape what you're creating, they have a vested interest in the success of your product. And that amplifies with word of mouth and with community.”</p>
+
+
+<p class="bottom-text-detail">Christina said people are also turning to their communities to help evaluate tools and make purchasing decisions. “I think, as a society, as a community, we are tired of being influenced and being sold to.”</p>
+
+<p class="bottom-text-detail">And when it comes to communities, confluencers, and business, what we are seeing now is just the tip of the iceberg, said Alexis Ohanian, co-Founder of Reddit and Founder of Seven Seven Six.</p>
+
+<p class="bottom-text-detail">*“Communities are out-creating, out-innovating, out-manoeuvring institutions. They are helping people find a sense of purpose and belonging. We've seen what community does with fun, entertaining things. But what it does for business is going to be even bigger,” he said. *</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“I think people who maybe wrote off online communities are now seeing the value and what it feels like to have a connection with someone across the world. [There are people] who, maybe through accessibility or budget, couldn’t attend Burning Man but can now share that experience. It's democratized that for lots of people. And that's a very powerful thing to say: it doesn't matter where you are, or how much you make, you can be part of it, too.”</p>
+
+
+<h2>Creating a New World(s) Through Topia</h2>
+
+<img src="https://global-uploads.webflow.com/62e9154430bdfe665e503e71/62fe3d386f861f67010707a8_confluencer_Con-2-min.jpg" loading="lazy" alt style="width:100%; margin-bottom:10px;">
+
+    <!-- Insert image-->
+<p class="bottom-text-detail">Recognition of these cultural shifts and business changes inspired Daniel to co-create Topia in 2020. The pandemic put the pedal to metal.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“How to bring distributed communities together, to have access to each other, to experience serendipity, and to strengthen our bonds has been a problem for a very long time,” Daniel said.</p>
+
+<p class="bottom-text-detail">He also believes technologists have a duty to restore empathy online and to derail an internet that is speeding towards a future where augmented and virtual reality will entrench toxic dynamics further.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“There is a growing movement to make the internet a safer and more humane place,” Daniel said.</p>
+
+<p style="margin-left:50px;" class="bottom-text-detail">“If you can see the whites of people’s eyes and hear those you are interacting with in real-time, it’s easier to interact with others from a place of empathy and more difficult to insult, troll, and engage in other toxic behaviors that are so rampant in social media platforms today.”</p>
+
+
+<p class="bottom-text-detail">Daniel’s plan for the 2020s was to build a bunch of different technologies. “But when the pandemic hit, I scrapped them and focused on Topia. Because the metaverse that was going to emerge over 10 years was condensed into one.”</p>
+
+
+<p class="bottom-text-detail">Businesses also need to tap into this new shared understanding that immersion, experiences and people are important, he said. “Any brand that isn't community focused and community empowering is going to lose when the world is all about, ‘What is your community curating for you?’”</p>
+
+
+<p class="bottom-text-detail">To empower both communities and confluencers (aka world creators and owners), Daniel and the Topia team built a spatial platform that provides accessible, safe, customizable, and creative spaces. Here, people can connect authentically and share anything in real time — no matter where they are in the world and without the silos or gatekeeping effect of algorithms.</p>
+
+
+<p class="bottom-text-detail">We continue to revise this platform according to the needs of our communities and world creators. And we are ensuring that confluencers thrive by introducing the Confluencer Program and the ability to ‘play to earn’.</p>
+
+
+<p class="bottom-text-detail">To join the <span style="color:blue">Confluencer Earning Program,</span> you simply subscribe to the community plan, create a world, and open the doors to your people. When they enter your world or click through  </p>
+
+<p class="bottom-text-detail">Find out more about building a new world of connection <span style="color:blue">here. </span></p>
+
+</div>
+  
+  <div id="platform">
+    Platform
+  </div>
+    <!-- Include your footer here -->
+  <div class="footer-image"></div>
+  <footer>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+</body>
+</html>
