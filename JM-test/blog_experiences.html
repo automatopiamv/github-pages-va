@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Title - Blog</title>
+  <style>
+    /* Include the same CSS from your original file here */
+   
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      margin: auto;
+    }
+        
+    header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+   
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('logo.png');
+      background-size: cover;
+      display: flex;
+      margin-left: 20px;
+    }
+  
+    .logo-topia {
+      width: 150px;
+      height: 120px;
+      background-image: url('logo-topia.png');
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-top: -70px;
+      margin-left: 50px;
+    }
+    
+   .button {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #2ecfb3;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+  .button:hover {
+  background-color: white;
+  color:#2ecfb3;
+  }
+ .button-sign {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+        }
+  .button-sign:hover {
+  background-color: #2ecfb3;
+  color:white;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-right: 50px;
+  position: relative;
+}
+
+nav li a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav li:hover {
+  background-color: #C8C8CA;
+  width:100px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-container li {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-container li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  margin-left: -50px;
+}
+
+.nav-container li a {
+  color: black;
+}
+
+.nav-container li:hover ul {
+  display: block;
+}
+  
+    footer {
+      background-color: gray;
+      text-align: left;
+      color: white;
+      padding: 50px;
+    }
+  
+    .footer-logo {
+      width: 100px;
+      height: 50px;
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-left: 5%;
+    }
+  
+    .footer-image {
+      height: 200px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
+    }
+    
+     .content-container {
+      display: flex;
+      align-items: center;
+      background-image: url('https://global-uploads.webflow.com/62e9154430bdfe665e503e71/63a4b0e62cb21c1d8af93ba9_7E.png');
+      background-size: cover;
+      padding: 30px;
+      margin-top: 20px;
+      margin-left: 10%;
+      margin-right: 10%;
+      max-width: 100vw;
+    }
+
+    .content-text {
+      width: 60%;
+      background-color: white;
+      color: black;
+      padding: 20px;
+      margin-top: 100px;
+      margin-left: -80px;
+      margin-bottom: -70px;
+    }
+    
+  .bottom-section {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top:20px;
+    }
+
+   .bottom-text-detail {
+    font-size: 16px;
+    color: #37343d;
+    margin-top: 20px;
+    }
+   
+   #platform {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px;
+    width:70px;
+    text-align:center;
+    font-size: 16px; 
+    margin-left:20%;
+    margin-top:50px;
+    }
+
+
+   @media (max-width: 600px) {
+
+   .header {
+     flex-direction: column;
+     margin-top:-150px;
+     }
+     
+  nav {
+     flex-direction: column;
+     align-items: center;
+     margin-top:100px;
+     margin-left:-300px;
+    
+     }
+     
+  .nav-container{
+    flex-direction: column;
+     align-items: center;
+  }
+     
+
+  .button {
+   margin-top: 15px;
+   margin-left:-300px;
+   }
+  .button-sign{
+     margin-top: 15px;
+   margin-left:-300px;
+    
+  }
+  }
+
+    /* Other CSS styles */
+  </style>
+</head>
+<body>
+  <!-- Include your header here -->
+    <header>
+    <div class="header">  
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown">
+            <a>Resources</a>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="helpcenter.html">Help Center</a></li>
+              <li><a href="updates.html">Updates</a></li>
+              <li><a href="unconference.html">Unconference</a></li>
+            </ul>
+          </li>
+          <li><a href="Demo.html">Demo</a></li>
+        </ul>
+      </nav>
+      <button class="button-sign">Sign in</button>
+      <button class="button">Create World</button>
+    </div>
+  </header>
+  
+  <div class="content-container">
+    <div class="content-text">
+      <h2>Browser-based social experiences</h2>
+      <p>Browser-based, 2.5D metaverse worlds offer visitors a more accessible, easy-to-use, and intuitive experience than VR-based experiences.</p>
+      <p><small>July 13, 2022</small></p>
+    </div>
+  </div>
+  
+    <div class="bottom-section">
+    <p class="bottom-text-detail">The metaverse, a virtual world where users can interact with one another and with virtual objects and experiences, has long been a futuristic dream for many. With the emergence of virtual reality (VR) technology, it seemed that this dream was finally becoming a reality. However, while VR offers a fully immersive experience, it has many limitations that point to a VR-based metaverse being ~a decade away. In the meantime, 2.5D browser-based experiences offer an entry point that is accessible, easy-to-use, and inexpensive.</p>
+    
+    <p class="bottom-text-detail">One major limitation of VR is the need for specialized hardware, such as VR headsets and controllers. This can be a barrier for many people who may not have the financial resources or physical ability to use this technology. In contrast, browser-based 2.5D metaverses can be accessed from any device with a web browser, making them more accessible and inclusive. This means that anyone with a computer, smartphone, or tablet can participate in a browser-based 2.5D metaverse, regardless of their physical abilities or financial resources.</p>
+    
+ <p class="bottom-text-detail">Another limitation of VR is the fact that it requires users to be physically present in a specific location in order to fully experience it. This can be inconvenient for those who may not have the time or resources to travel to a VR arcade or other location where VR is available. Browser-based 2.5D metaverses, on the other hand, can be accessed from anywhere with an internet connection, making them more convenient and flexible. This means that users can participate in a browser-based 2.5D metaverse from the comfort of their own home, or even on the go if they have a device with a web browser and an internet connection.</p>
+     
+<p class="bottom-text-detail">In addition to accessibility and convenience, browser-based 2.5D metaverses also offer a number of other benefits. For one, they can be more cost-effective than VR, as users do not need to purchase expensive hardware in order to access them. This means that users can save money on expensive VR headsets and controllers, and can instead use the devices they already own to participate in a browser-based 2.5D metaverse.</p>
+      
+<p class="bottom-text-detail">Browser-based 2.5D metaverses can also be more scalable than VR, as they can accommodate a larger number of users without the need for additional hardware. This means that developers can create metaverses that can support thousands, or even millions, of users simultaneously, without having to worry about the limitations of hardware.</p>
+
+<p class="bottom-text-detail">Another advantage of browser-based 2.5D metaverses is the ability to create and customize content. VR environments are often limited to the content that is pre-designed and programmed by the creators. In contrast, browser-based 2.5D metaverses allow users to create their own content and experiences, leading to a greater sense of ownership and creativity. This means that users can create their own virtual spaces, objects, and experiences, and can share them with others in the metaverse.</p>
+
+<p class="bottom-text-detail">Overall, while VR technology has made great strides in recent years, browser-based 2.5D metaverses offer a number of benefits that make them a compelling alternative. They are more accessible, convenient, cost-effective, scalable, and customizable than VR, making them a viable option for developers and users alike. Whether you are a developer looking to create immersive experiences or a user looking to engage with others in a virtual world, browser-based 2.5D metaverses are worth considering as a powerful and flexible platform for virtual reality.</p>
+
+</div>
+  <div id="platform">
+    Platform
+  </div>
+    <!-- Include your footer here -->
+  <div class="footer-image"></div>
+  <footer>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+</body>
+</html>
