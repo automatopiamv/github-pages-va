@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Title - Blog</title>
+  <style>
+    /* Include the same CSS from your original file here */
+   
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      margin: auto;
+    }
+        
+    header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+   
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('logo.png');
+      background-size: cover;
+      display: flex;
+      margin-left: 20px;
+    }
+  
+    .logo-topia {
+      width: 150px;
+      height: 120px;
+      background-image: url('logo-topia.png');
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-top: -70px;
+      margin-left: 50px;
+    }
+    
+   .button {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #2ecfb3;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+  .button:hover {
+  background-color: white;
+  color:#2ecfb3;
+  }
+ .button-sign {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+        }
+  .button-sign:hover {
+  background-color: #2ecfb3;
+  color:white;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-right: 50px;
+  position: relative;
+}
+
+nav li a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav li:hover {
+  background-color: #C8C8CA;
+  width:100px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-container li {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-container li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  margin-left: -50px;
+}
+
+.nav-container li a {
+  color: black;
+}
+
+.nav-container li:hover ul {
+  display: block;
+}
+  
+    footer {
+      background-color: gray;
+      text-align: left;
+      color: white;
+      padding: 50px;
+    }
+  
+    .footer-logo {
+      width: 100px;
+      height: 50px;
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-left: 5%;
+    }
+  
+    .footer-image {
+      height: 200px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
+    }
+    
+     .content-container {
+      display: flex;
+      align-items: center;
+      background-image: url('https://global-uploads.webflow.com/62e9154430bdfe665e503e71/63a5ce672cb21c35640ba1ed_6A.png');
+      background-size: cover;
+      padding: 30px;
+      margin-top: 20px;
+      margin-left: 10%;
+      margin-right: 10%;
+      max-width: 100vw;
+    }
+
+    .content-text {
+      width: 60%;
+      background-color: white;
+      color: black;
+      padding: 20px;
+      margin-top: 100px;
+      margin-left: -80px;
+      margin-bottom: -70px;
+    }
+    
+  .bottom-section {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top:20px;
+    }
+
+   .bottom-text-detail {
+    font-size: 16px;
+    color: #37343d;
+    margin-top: 20px;
+    }
+   
+   #platform {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px;
+    width:70px;
+    text-align:center;
+    font-size: 16px; 
+    margin-left:20%;
+    margin-top:50px;
+    }
+
+
+   @media (max-width: 600px) {
+
+   .header {
+     flex-direction: column;
+     margin-top:-150px;
+     }
+     
+  nav {
+     flex-direction: column;
+     align-items: center;
+     margin-top:100px;
+     margin-left:-300px;
+    
+     }
+     
+  .nav-container{
+    flex-direction: column;
+     align-items: center;
+  }
+     
+
+  .button {
+   margin-top: 15px;
+   margin-left:-300px;
+   }
+  .button-sign{
+     margin-top: 15px;
+   margin-left:-300px;
+    
+  }
+  }
+
+    /* Other CSS styles */
+  </style>
+</head>
+<body>
+  <!-- Include your header here -->
+    <header>
+    <div class="header">  
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown">
+            <a>Resources</a>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="helpcenter.html">Help Center</a></li>
+              <li><a href="updates.html">Updates</a></li>
+              <li><a href="unconference.html">Unconference</a></li>
+            </ul>
+          </li>
+          <li><a href="Demo.html">Demo</a></li>
+        </ul>
+      </nav>
+      <button class="button-sign">Sign in</button>
+      <button class="button">Create World</button>
+    </div>
+  </header>
+  
+  <div class="content-container">
+    <div class="content-text">
+      <h2>Creating a Decision-Based Content Journey</h2>
+      <p>Creating a Decision-Based Content Journey
+By planning and organizing the overall structure and flow of the content journey, testing and refining the experience, and promoting the journey to potential users, developers and creators can create a more immersive and engaging experience for users, and can use the power of the metaverse to bring their ideas to life. By incorporating a decision tree into the content journey, developers and creators can create a more dynamic and interactive experience, and can help to engage users in a deeper and more meaningful way.</p>
+      <p><small>October 3, 2022</small></p>
+    </div>
+  </div>
+  
+    <div class="bottom-section">
+    <p class="bottom-text-detail">Creating a content journey in a browser-based 2.5D metaverse platform can be a powerful way to engage users and tell a story in a virtual world. A content journey is a series of interconnected experiences or activities that guide users through a virtual space and tell a story or convey a message. By designing a content journey, developers and creators can create a more immersive and engaging experience for users, and can use the power of the metaverse to bring their ideas to life.</p>
+    <p class="bottom-text-detail">One key element of creating a successful content journey is planning and organizing the experience. This may involve sketching out a rough outline or flowchart of the journey, identifying key themes and messages, and designing individual experiences or activities that fit together to create a cohesive whole.  A content journey might take users on a tour of a business’ website, where they can learn about different aspects of the organization. Alternatively, a content journey might take users on a virtual adventure, where they can solve puzzles and challenges to progress. Whatever the theme or focus , it’s important to consider the overall structure and flow of the experience, and to design individual experiences or activities that fit together to create a cohesive whole.</p>
+ <p class="bottom-text-detail">Another important element of creating a content journey is testing and refining the experience. This may involve prototyping and iterating on different ideas and approaches, and gathering feedback from users or testers to see what works and what doesn’t. For example, a content journey might be designed to be completed in a certain amount of time, with users moving from one experience or activity to the next. However, if users are finding certain experiences or activities too difficult or time-consuming, it may be necessary to adjust the design or mechanics of the journey to ensure that it flows smoothly and engages users in a meaningful way.</p>
+     
+<p class="bottom-text-detail">Once the content journey is complete, it’s important to consider how it will be shared and accessed by users. This may involve creating a landing page or portal within the metaverse platform, or integrating the journey into an existing virtual space or experience. It may also involve promoting the journey to potential users through social media, newsletters, or other marketing channels.</p>
+      
+<p class="bottom-text-detail">Overall, creating a content journey in a browser-based 2.5D metaverse platform can be a powerful and rewarding experience. By planning and organizing the experience, testing and refining it, and sharing it with users, developers and creators can create a more immersive and engaging experience for users, and can use the power of the metaverse to bring their ideas to life.</p>
+
+<p class="bottom-text-detail">In addition to planning and organizing the overall structure and flow of a content journey, developers and creators can also create a more immersive and engaging experience by incorporating elements of branching and choice. One way to do this is through the use of a decision tree, where users are presented with a series of choices or decisions that affect the path of the journey. This can create a more dynamic and interactive experience, and can help to engage users in a deeper and more meaningful way.</p>
+
+<p class="bottom-text-detail">To create a decision tree within a content journey, developers and creators will need to consider the different choices or decisions that users will be presented with, and how those choices will affect the path of the journey. This may involve designing different experiences or activities for each possible choice, or creating branching pathways that lead to different outcomes based on the user’s decision. It may also involve designing systems or mechanics that allow users to make decisions, such as dialog trees or interactive objects.</p>
+
+<p class="bottom-text-detail">Once the decision tree has been designed, it’s important to test and refine the experience to ensure that it flows smoothly and engages users in a meaningful way. This may involve gathering feedback from users or testers, and adjusting the design or mechanics of the decision tree as needed. It may also involve testing different variations of the decision tree to see which ones work best and which ones need improvement.</p>
+
+<p class="bottom-text-detail">By incorporating a decision tree into a content journey, developers and creators can create a more immersive and engaging experience for users, and can use the power of the metaverse to bring their ideas to life. This can help to create a more dynamic and interactive experience, and can help to engage users in a deeper and more meaningful way.</p>
+</div>
+  
+  <div id="platform">
+    Platform
+  </div>
+    <!-- Include your footer here -->
+  <div class="footer-image"></div>
+  <footer>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+</body>
+</html>
