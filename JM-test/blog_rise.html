@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Title - Blog</title>
+  <style>
+    /* Include the same CSS from your original file here */
+   
+    body {
+      font-family: Calibri, Arial, sans-serif;
+      margin: auto;
+    }
+        
+    header {
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+   
+    .logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('logo.png');
+      background-size: cover;
+      display: flex;
+      margin-left: 20px;
+    }
+  
+    .logo-topia {
+      width: 150px;
+      height: 120px;
+      background-image: url('logo-topia.png');
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-top: -70px;
+      margin-left: 50px;
+    }
+    
+   .button {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #2ecfb3;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+  .button:hover {
+  background-color: white;
+  color:#2ecfb3;
+  }
+ .button-sign {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+        }
+  .button-sign:hover {
+  background-color: #2ecfb3;
+  color:white;
+  }
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-right: 50px;
+  position: relative;
+}
+
+nav li a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+nav li:hover {
+  background-color: #C8C8CA;
+  width:100px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-container li {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-container li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  margin-left: -50px;
+}
+
+.nav-container li a {
+  color: black;
+}
+
+.nav-container li:hover ul {
+  display: block;
+}
+  
+    footer {
+      background-color: gray;
+      text-align: left;
+      color: white;
+      padding: 50px;
+    }
+  
+    .footer-logo {
+      width: 100px;
+      height: 50px;
+      background-size: cover;
+      display: flex;
+      align-items: right;
+      margin-left: 5%;
+    }
+  
+    .footer-image {
+      height: 200px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
+    }
+    
+     .content-container {
+      display: flex;
+      align-items: center;
+      background-image: url('https://img.freepik.com/premium-vector/colored-paper-texture-with-cells-sheet-background-notepad-notebook-with-square-lines-page-pattern-cute-kawaii-style-retro-vintage-70s-60s-groove-vector-design-illustration_509073-642.jpg');
+      background-size: cover;
+      padding: 30px;
+      margin-top: 20px;
+      margin-left: 10%;
+      margin-right: 10%;
+      max-width: 100vw;
+    }
+
+    .content-text {
+      width: 60%;
+      background-color: white;
+      color: black;
+      padding: 20px;
+      margin-top: 100px;
+      margin-left: -80px;
+      margin-bottom: -70px;
+    }
+    
+  .bottom-section {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top:20px;
+    }
+
+   .bottom-text-detail {
+    font-size: 16px;
+    color: #37343d;
+    margin-top: 20px;
+    }
+   
+   #platform {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px;
+    width:70px;
+    text-align:center;
+    font-size: 16px; 
+    margin-left:20%;
+    margin-top:50px;
+    }
+
+
+   @media (max-width: 600px) {
+
+   .header {
+     flex-direction: column;
+     margin-top:-150px;
+     }
+     
+  nav {
+     flex-direction: column;
+     align-items: center;
+     margin-top:100px;
+     margin-left:-300px;
+    
+     }
+     
+  .nav-container{
+    flex-direction: column;
+     align-items: center;
+  }
+     
+
+  .button {
+   margin-top: 15px;
+   margin-left:-300px;
+   }
+  .button-sign{
+     margin-top: 15px;
+   margin-left:-300px;
+    
+  }
+  }
+
+    /* Other CSS styles */
+  </style>
+</head>
+<body>
+  <!-- Include your header here -->
+    <header>
+    <div class="header">  
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+    </div>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li class="dropdown">
+            <a>Resources</a>
+            <ul>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="helpcenter.html">Help Center</a></li>
+              <li><a href="updates.html">Updates</a></li>
+              <li><a href="unconference.html">Unconference</a></li>
+            </ul>
+          </li>
+          <li><a href="Demo.html">Demo</a></li>
+        </ul>
+      </nav>
+      <button class="button-sign">Sign in</button>
+      <button class="button">Create World</button>
+    </div>
+  </header>
+  
+  <div class="content-container">
+    <div class="content-text">
+      <h2>The Rise of the Confluencer</h2>
+      <p>Humans are inherently social. We evolved to connect deeply and to build communities through shared, real-time experiences.</p>
+      <p><small>August 3, 2021 -2 minutes read</small></p>
+    </div>
+  </div>
+  
+    <div class="bottom-section">
+    <h2>What is a Confluencer?</h2>
+    <p class="bottom-text-detail">Mirriam-Webster defines confluence as "a coming or flowing together, meeting, or gathering at one point." The word is often used to describe where rivers meet. In a social context, we believe a confluencer is a person or entity that creates space to bring people together in real-time for shared experiences and conversations. While influencers earn money by endorsing brands, broadcasting content, and getting views, confluencers earn (financial and social capital) by building community.</p>
+    
+    <h2>How Confluencers will change the way we socialize</h2>
+    <p class="bottom-text-detail">Humans are inherently social. We evolved to connect deeply and to build communities through shared, real-time experiences. While we’ve experienced significant technological advancements over the past few decades, it has come at a cost.. Today, we have higher rates of loneliness and polarization than ever. It turns out, a chronological stream of selfies, 280 character thoughts, and broadcasted content does not lead to the formation of the collective memories that are required to create human connection and community. And, the risk only grows greater as technology progresses toward even more immersive mediums.</p>
+    
+ <p class="bottom-text-detail">We have an opportunity now to pivot from social platforms that are heading toward increasingly toxic destinations toward social experiences (on and offline) that inspire more authentic connection with others.</p>
+
+<p class="bottom-text-detail">This idea of confluence came up many times in the past year as we were figuring out who we were and what type of company we were building.</p>
+
+<p class="bottom-text-detail">To us, a confluencer meets the following key criteria:</p>
+<ol>
+     <li>Confluencers create space to bring people together for shared experiences and conversations</li>
+     <li>Confluencers have the ability to earn money for bringing people together.</li>
+</ol>
+
+<p class="bottom-text-detail">Confluencers require a particular type of network to thrive, one that is accessible, customizable, and optimized to strengthen connections between individuals within a community. We have built these key features into Topia from the beginning. Our recent launch of the<span style="color:blue">creator ecosystem</span>, which pays 30% of our revenue to our community of creators and confluencers, demonstrates our commitment to supporting creators and incentivizing confluencers on the platform. We have hundreds of members of our community who are already making money designing world assets and earning commissions by hosting events and growing their communities on Topia.</p>
+
+<h2>We're overjoyed to announce the launch of a completely new user interface and improved user experience. </h2>
+
+<img src="https://global-uploads.webflow.com/62e9154430bdfe665e503e71/62fe43465d62d52bc24c512e_Earn%20on%20Topia-img-min.jpg" loading="lazy" alt style="width:100%; margin-bottom:10px;">
+     
+<h2>Why we must optimize for Confluencers</h2>
+
+<p class="bottom-text-detail">As technologists, we are designing the next generation of online platforms and have a responsibility to be conscious of and intentional in the impact of each feature we launch. As we look towards a future where Artificial Intelligence is increasingly utilized to solve pattern-based problems, creativity becomes the human quality we need to foster most. Creators are confluencers and they wield their influence through the creative experiences and spaces they craft.</p>
+      
+<p class="bottom-text-detail">Topia is spearheading the shift from “me” to “we.” And those that learn to master the art of bringing other people together for shared experiences and human connection stand to be compensated for their effort. The confluencer economy is coming. Actual progress demands it.hat we're calling "Topia 2.0" reflects months of creation and exploration between our team and global community – and is only a starting point for what we have planned.</p>
+
+<p class="bottom-text-detail">To learn more about earning on Topia, go here and sign up for our<span style="color:blue">Confluencer Program</span>, where we pay 30% of our revenue out to our community.</p>
+
+</div>
+  
+  <div id="platform">Confluencer</div>
+    <!-- Include your footer here -->
+  <div class="footer-image"></div>
+  <footer>
+    <p>&copy; 2023 All rights reserved.</p>
+  </footer>
+</body>
+</html>
