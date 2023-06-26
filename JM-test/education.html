@@ -119,8 +119,7 @@
   margin-top: -30px;
   object-fit: cover;
 }
-
-.button {
+  .button {
   width: 150px;
   height: 50px;
   border-radius: 12px;
@@ -130,7 +129,24 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 10px;
+  
 }
+  .button:hover {
+  background-color: #4457ff;
+  color:#fff;   
+  transform: scale3d(.95, .95, 1.01);
+  }
+ .button-sign {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  color: #0082f3;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 10px;
+  }
+
 
 nav ul {
   list-style-type: none;
@@ -152,9 +168,9 @@ nav li a {
 }
 
 nav li:hover {
-  background-color: #2ecfb3;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: #C8C8CA;
+  width:100px;
+  border-radius: 20px;
   text-align: center;
 }
 
@@ -188,13 +204,6 @@ nav li:hover {
 
 .nav-container li:hover ul {
   display: block;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: black;
 }
 
 .button-container {
@@ -256,62 +265,37 @@ nav li:hover {
 }
 
 
-.menu-icon {
-  display: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: black;
-}
-
 @media (max-width: 768px) {
-  .header {
+
+   .header {
+     flex-direction: column;
+     margin-top:-150px;
+     }
+     
+  nav {
+     flex-direction: column;
+     align-items: center;
+     margin-top:100px;
+     margin-left:-300px;
+    
+     }
+     
+  .nav-container{
     flex-direction: column;
+     align-items: center;
+  }
+     
+
+  .button {
+   margin-top: 15px;
+   margin-left:-300px;
+   }
+  .button-sign{
+     margin-top: 15px;
+   margin-left:-300px;
+    
   }
 
-  .logo {
-    margin-left: 0;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-    margin-right: 0;
-  }
-
-  nav ul {
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .nav-container li ul {
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 50px;
-    position: absolute;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-container ul {
-    display: none;
-  }
-
-  .nav-container.active ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-  }
-}
-/* Add media queries for smaller screens */
-
-@media (max-width: 480px) {
-  .nav-container {
-    justify-content: flex-start;
-  }
 }
 
 
@@ -461,20 +445,17 @@ nav li:hover {
 </style>
 </head>
 <body>
-  <header>
+<header>
     <div class="header">  
-      <a href="index.html">
-     <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo"> 
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
       <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
-      </a>
-      <h1 style="display: none;">My Website</h1>
     </div>
     <div class="nav-container">
       <nav>
         <ul>
           <li><a href="pricing.html">Pricing</a></li>
           <li class="dropdown">
-            <a href="#">Resources</a>
+            <a>Resources</a>
             <ul>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="helpcenter.html">Help Center</a></li>
@@ -483,9 +464,9 @@ nav li:hover {
             </ul>
           </li>
           <li><a href="Demo.html">Demo</a></li>
-          <li><a href="#" style="color: #4355e4;">Sign In</a></li>
         </ul>
       </nav>
+      <button class="button-sign">Sign in</button>
       <button class="button">Create World</button>
     </div>
   </header>
