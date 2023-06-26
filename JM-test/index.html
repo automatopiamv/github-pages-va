@@ -128,7 +128,7 @@
   object-fit: cover; 
 }
 
-.button {
+  .button {
   width: 150px;
   height: 50px;
   border-radius: 12px;
@@ -138,26 +138,24 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 10px;
+  
 }
   .button:hover {
-  background-color: white;
-  color:#2ecfb3;
+  background-color: #4457ff;
+  color:#fff;   
+  transform: scale3d(.95, .95, 1.01);
   }
  .button-sign {
   width: 150px;
   height: 50px;
-  border-radius: 12px;
   background-color: white;
-  color: black;
+  color: #0082f3;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   border-radius: 10px;
-        }
-  .button-sign:hover {
-  background-color: #2ecfb3;
-  color:white;
   }
+
 
 nav ul {
   list-style-type: none;
@@ -215,13 +213,6 @@ nav li:hover {
 
 .nav-container li:hover ul {
   display: block;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: black;
 }
 
 .button-container {
@@ -330,12 +321,6 @@ nav li:hover {
   max-width: 300px;
   height: auto;
 }
-.menu-icon {
-  display: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: black;
-}
 
 @media (max-width: 768px) {
 
@@ -371,7 +356,7 @@ nav li:hover {
 }
 
 /* Make the boxes responsive for smaller screens */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .feature-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -379,7 +364,7 @@ nav li:hover {
 
 
 /* Make the body container responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .body-container {
     flex-direction: column;
     align-items: center;
@@ -393,14 +378,14 @@ nav li:hover {
 }
 
 /* Make the feature grid responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .feature-grid {
     grid-template-columns: 1fr;
   }
 }
 
 /* Make the pricing section responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .body-container:nth-child(3) {
     flex-direction: column;
   }
@@ -427,7 +412,7 @@ nav li:hover {
 }
 
 /* Make the EMBED & INTEGRATE section responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .body-container:nth-child(4) {
     flex-direction: column;
   }
@@ -449,7 +434,7 @@ nav li:hover {
 }
 
 /* Make the bottom section responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .bottom-section {
     margin-right:50px;
     margin-left:0;
@@ -618,8 +603,6 @@ nav li:hover {
       </a>
     </div>
   </div>
-
-  
 
   <!-- Include your footer here -->
   <div class="footer-image"></div>
