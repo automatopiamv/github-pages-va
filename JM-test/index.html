@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Education</title>
+  <title>Topia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   /* Add your CSS styling here */
@@ -38,8 +38,8 @@
     margin-top: -70px;
     margin-left: 50px;
   }
-
-   
+  
+  
   footer {
     background-color: gray;
     text-align: left;
@@ -61,65 +61,9 @@
     background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
     background-size: cover;
   }
-   
-   
- .body-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: -30px;
-  margin-left: 10%;
-  margin-bottom: 50px;
-}
-
-  .body-context {
-    font-size: 16px;
-    color: #4355e4;
-    text-align: left;
-    font-weight: bold;
-    margin-top: 50px;
-    margin-bottom: 0;
-  }
-   
-  .body-subtext {
-    font-size: 40px;
-    color: black;
-    text-align: left;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-   
-  .body-subtext2 {
-    font-size: 18px;
-    color: black;
-    text-align: left;
-    margin-top: 0;
-    margin-bottom:10px;
-  }
-
   
-
-.text-content {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.video-content {
-  flex: 1.8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video {
-  border: 2px solid #2ecfb3;
-  border-radius: 10px;
-  width: 60%;
-  margin-top: -30px;
-  object-fit: cover;
-}
-  .button {
+  
+   .button {
   width: 150px;
   height: 50px;
   border-radius: 12px;
@@ -205,7 +149,73 @@ nav li a:hover {
 .nav-container li:hover ul {
   display: block;
 }
- ,
+ 
+   
+   
+ .body-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: -30px;
+  margin-left: 10%;
+  margin-bottom: 50px;
+}
+
+  .body-context {
+    font-size: 16px;
+    color: #4355e4;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+   
+  .body-subtext {
+    font-size: 40px;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+   
+  .body-subtext2 {
+    font-size: 18px;
+    color: black;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  
+
+.text-content {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.video-content {
+  flex: 1.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  border: 2px solid #2ecfb3;
+  border-radius: 10px;
+  width: 60%;
+  margin-top: -30px;
+  object-fit: cover;
+}
+
+.video-two {
+  border: 2px solid #2ecfb3;
+  border-radius: 10px;
+  width: 60%;
+  margin-top: 10px;
+  object-fit: cover; 
+}
 
 .button-container {
   display: flex;
@@ -265,6 +275,60 @@ nav li a:hover {
   margin-top: 20px;
 }
 
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.feature-box {
+  border: 1px solid #ddd;
+  padding: 30px 26px 36px;
+  border-radius: 12px;
+  background-color: rgba(67, 85, 249, .05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  color: #4355e4;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+.feature-box img {
+  height: 20%;
+}
+
+.image-container {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 350px;
+  margin-top: -70px;
+}
+
+.image {
+  width: 35%;
+  max-width: 300px;
+  height: auto;
+}
+.menu-icon {
+  display: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+}
 
 @media (max-width: 768px) {
 
@@ -277,7 +341,7 @@ nav li a:hover {
      flex-direction: column;
      align-items: center;
      margin-top:100px;
-     margin-left:-300px;
+     margin-left:-250px;
     
      }
      
@@ -289,19 +353,27 @@ nav li a:hover {
 
   .button {
    margin-top: 15px;
-   margin-left:-300px;
+   margin-left:-250px;
    }
   .button-sign{
      margin-top: 15px;
-   margin-left:-300px;
+   margin-left:-250px;
     
   }
 
 }
 
 
+/* Make the boxes responsive for smaller screens */
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 /* Make the body container responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .body-container {
     flex-direction: column;
     align-items: center;
@@ -314,9 +386,42 @@ nav li a:hover {
   }
 }
 
+/* Make the feature grid responsive */
+@media (max-width: 768px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Make the pricing section responsive */
+@media (max-width: 768px) {
+  .body-container:nth-child(3) {
+    flex-direction: column;
+  }
+
+  .image-container {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .image {
+    width: 70%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .video-content {
+    margin-top: 20px;
+  }
+
+  .video-two {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
 
 /* Make the EMBED & INTEGRATE section responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .body-container:nth-child(4) {
     flex-direction: column;
   }
@@ -338,7 +443,7 @@ nav li a:hover {
 }
 
 /* Make the bottom section responsive */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .bottom-section {
     margin-right:50px;
     margin-left:0;
@@ -350,103 +455,10 @@ nav li a:hover {
   }
 }
 
-    .tab-container {
-      display: flex;
-      justify-content: space-between;
-      margin-left:10%;
-      margin-right:10%;
-
-     
-    }
-
-    .tab {
-      flex: 1;
-      font-size:16px;
-      padding: 20px;
-      text-align: center;
-      background-color: #2ecfb3;
-      color: #fff;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      
-    }
-
-    .tab:first-child {
-      margin-left: 0;
-    }
-
-    .tab:last-child {
-      margin-right:0;
-    }
-
-    .tab.active {
-      background-color: #fff;
-      color: #2ecfb3;
-      
-    }
-    
-    .fade-in {
-      animation: fadeIn 0.5s;
-    }
-
-    .tab-content {
-      display: none;
-      padding: 20px;
-      background-color: #f1f1f1;
-      margin-top: -1px;
-      margin-left:10%;
-      margin-right:10%;
-    }
-
-    /* Add animations */
-    .fade-in {
-      animation: fadeIn 0.5s;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    
-.image-container {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-  margin-left:10%;
-  margin-right:10%;
-}
-
-.column {
-  flex: 1;
-  margin: 5px;
-}
-
-.image {
-  width: 100%;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.image-caption {
-  margin: 5px 0 0;
-  text-align: center;
-  font-size: 12px;
-}
-
 </style>
 </head>
 <body>
-<header>
+  <header>
     <div class="header">  
       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
       <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
@@ -471,7 +483,6 @@ nav li a:hover {
       <button class="button">Create World</button>
     </div>
   </header>
-
   <!-- Add your website content here -->
   
   <div class="body-container">
@@ -479,7 +490,7 @@ nav li a:hover {
       <div class="body-context">METAVERSE PLATFORM</div>
       <h1 class="body-subtext">Finally. Software that your teachers and students can’t live without.</h1>
       <p class="body-subtext2">
-        So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real time internet.
+        So engaging, it feels like being in-person. Inspire creativity, community, collaboration, and connection with the real-time internet.
       </p>
       <div class="button-container">
         <a href="Demo.html">
@@ -492,293 +503,100 @@ nav li a:hover {
       <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643e79963aab653dcfb59faa_E-Learning Showcase World Tour opt-transcode.mp4" autoplay muted loop class="video"></video>
     </div>
   </div>
-  
+
+  <!-- bottom text-->
   <div class="bottom-section">
-    <div class="bottom-header">IDEAL FOR</div>
-    <p class="bottom-text">Topia is used by…</p>
-  </div>
-   <div class="tab-container">
-    <div class="tab active" data-tab="teachers" onclick="openTab(event, 'teachers')">Teachers</div>
-    <div class="tab" data-tab="students" onclick="openTab(event, 'students')">Students</div>
-    <div class="tab" data-tab="administrators" onclick="openTab(event, 'administrators')">School Administrators</div>
-    <div class="tab" data-tab="companies" onclick="openTab(event, 'companies')">Ed Tech Product Companies</div>
+    <div class="bottom-header">REAL-TIME SPATIAL CONNECTION</div>
+    <p class="bottom-text">So engaging, it feels like being in person.</p>
+    <p class="bottom-text-detail">Navigate your avatar around the world to easily move between audio / video conversations</p>
+    <div class="bottom-buttons">
+      <a href="enterprise.html">
+      <button class="demo-button">Enterprise</button>
+      </a>
+      <a href="education.html">
+      <button class="demo-button">Education</button>
+      </a>
+    </div>
   </div>
 
-  <div id="teachers" class="tab-content">
-      <div class="body-container">
+  <!-- Add this new section just before the footer -->
+  <div class="feature-grid">
+    <div class="feature-box">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c696fdada99d8bc0a178e_people.svg">
+      <h3>Scalable</h3>
+      <p>Bring thousands of people together at once in a single space</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c697072cbae9a68d30481_shield.svg">
+      <h3>Data Security</h3>
+      <p>Deploy behind your firewall to eliminate 3rd party access and counterparty risk</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c696f1846fe14e7890918_grid.svg">
+      <h3>No-Code Design</h3>
+      <p>Visual interface with pre-built components and drag-and-drop tools</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/646c4aa2411d46597c4ddcf9_Desktop.svg" alt="Browser Based & 2.5D">
+      <h3>Browser Based & 2.5D</h3>
+      <p>Access from anywhere; no special hardware required. Meet your people where they are.</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c696f8bc0bc6f06a722de_edit.svg">
+      <h3>White Label Solution</h3>
+      <p>Fully customizable to meet your needs and match your brand</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/646c4aa2411d46597c4ddcf9_Desktop.svg">
+      <h3>Browser Based & 2.5D</h3>
+      <p>Access from anywhere; no special hardware required. Meet your people where they are.</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c6a1b3558778176e02abe_control-centre.svg">
+      <h3>Tool Integrations</h3>
+      <p>Integrate all of your existing tools like Miro, Google Suite, LMS, and many more.</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c696fd85d9d938b6d3691_controls-alt.svg">
+      <h3>Programmable</h3>
+      <p>Build apps and integrations with the real-time SDK</p>
+    </div>
+  </div>
+
+  <!-- pricing -->
+  <div class="body-container">
     <div class="text-content">
-    <h2 style="color:#4355e4; font-size: 30px;">Teachers</h2>
-      <p class="body-subtext2">
-        You’ve never had more control and flexibility simultaneously than teaching in the real time internet. Understand your students based on analytics.
-      </p>
-      <p class="body-subtext2">
-       All of your teaching assignments, homework submissions, and tools right at your fingertips. Every day.
-      </p>
+      <div class="body-context">PRICING</div>
+      <h1 class="body-subtext">Easily build, deploy, & manage your real-time experience platform</h1>   
+      
+        <div class="image-container">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62e9c5eda0f5020a4d1d09d2_Computer-Turquoise%202.png" alt="Image" class="image">
+    </div>
+      <p class="body-subtext2">Bring people together to work, learn, and collaborate in customizable virtual worlds.</p>
       <div class="button-container">
         <a href="Demo.html">
           <button class="demo-button">Book a Demo</button>
         </a>
       </div> 
     </div>
-      
+    
     <div class="video-content">
-      <video src="https://youtu.be/b3-7mJNAggM" autoplay muted loop class="video"></video>
+      <video src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d5b99ec1e98723083e209_Math%20Tutoring%20opt-transcode.mp4" autoplay muted loop class="video-two"></video>
     </div>
-  </div>
-  </div>
-
-  <div id="students" class="tab-content">
-    <div class="body-container">
-    <div class="text-content">
-    <h2 style="color:#4355e4; font-size: 30px;">Students</h2>
-      <p class="body-subtext2">
-        Community experience that rivals in person without Zoom fatigue. Create an emotional connection to learning by giving the students the flexibility to build the classroom they attend.
-      </p>
-      <div class="button-container">
-        <a href="Demo.html">
-          <button class="demo-button">Book a Demo</button>
-        </a>
-      </div> 
-    </div>
-      
-    <div class="video-content">
-      <video src="https://youtu.be/b3-7mJNAggM" autoplay muted loop class="video"></video>
-    </div>
-  </div>
-  </div>
-
-  <div id="administrators" class="tab-content">
-    <div class="body-container">
-    <div class="text-content">
-    <h2 style="color:#4355e4; font-size: 30px;">School Administrators</h2>
-      <p class="body-subtext2">
-       Increase your control over classroom moderation like never before. Mitigate unwanted behavior with AI moderation. Go head to head with other school systems to create interconnected environments with other schools and increase your community.
-      </p>
-      <p class="body-subtext2">
-       Add coding academies, tutoring content, individual courses from the entire marketplace by embedding in a way that is as easy as attaching a hyperlink. Expose students to other product offerings by embedding them throughout your world.
-      </p>
-       <p class="body-subtext2">
-       Gamify learning experiences with gated content, scavenger hunts, leaderboards – all connected with the backdrop of a community where social connection exists simultaneously.
-      </p>
-      <div class="button-container">
-        <a href="Demo.html">
-          <button class="demo-button">Book a Demo</button>
-        </a>
-      </div> 
-    </div>
-      
-    <div class="video-content">
-      <video src="https://youtu.be/b3-7mJNAggM" autoplay muted loop class="video"></video>
-    </div>
-  </div>
-  </div>
-
-  <div id="companies" class="tab-content">
- <div class="body-container">
-    <div class="text-content">
-    <h2 style="color:#4355e4; font-size: 30px;">Ed Tech Product Companies</h2>
-      <p class="body-subtext2">
-        Build custom learning applications embedded with your product portfolio and white labelled as your own solution. Increase revenue by selling these applications to your clients.
-      </p>
-      <p class="body-subtext2">
-        Position your company as a true innovator in the Ed Tech market.
-      </p>
-      <div class="button-container">
-        <a href="Demo.html">
-          <button class="demo-button">Book a Demo</button>
-        </a>
-      </div> 
-    </div>
-      
-    <div class="video-content">
-      <video src="https://youtu.be/b3-7mJNAggM" autoplay muted loop class="video"></video>
-    </div>
-  </div>
-  </div>
-
-  <script>
-    function openTab(evt, tabName) {
-      // Get all tab content elements
-      var tabContents = document.getElementsByClassName("tab-content");
-
-      // Hide all tab content elements
-      for (var i = 0; i < tabContents.length; i++) {
-        tabContents[i].style.display = "none";
-      }
-
-      // Remove the "active" class from all tabs
-      var tabs = document.getElementsByClassName("tab");
-      for (var i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove("active");
-      }
-
-      // Show the selected tab content and add "active" class to the clicked tab
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.classList.add("active");
-
-      // Apply fade-in animation to the tab content
-      setTimeout(function() {
-        document.getElementById(tabName).classList.add("fade-in");
-      }, 50);
-    }
-
-    // Show the "Teachers" tab by default
-    document.getElementById("teachers").style.display = "block";
-    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
-  </script>
- 
- 
-    <div class="bottom-section">
-    <div class="bottom-header">REAL-TIME CONNECTION</div>
-    <p style="color:black; font-size:30px; font-weight:bold;" >Your Custom Virtual Learning Platform for Real Time Connection</p>
   </div>
   
-  <div class="tab-container">
-  <div class="tab active" data-tab="k12" onclick="openTab(event, 'k12')">K-12</div>
-  <div class="tab" data-tab="higher-education" onclick="openTab(event, 'higher-education')">Higher Education</div>
-  <div class="tab" data-tab="tutoring" onclick="openTab(event, 'tutoring')">Tutoring</div>
-  <div class="tab" data-tab="learning-tech" onclick="openTab(event, 'learning-tech')">Learning Technology Companies</div>
-  <div class="tab" data-tab="corporate-learning" onclick="openTab(event, 'corporate-learning')">Corporate Learning</div>
-</div>
-
-<div id="k12" class="tab-content">
-  <div class="body-container">
+   <div class="body-container">
     <div class="text-content">
-      <h2 style="color:#4355e4; font-size: 30px;">K-12</h2>
-      <div class="button-container">
-        <a href="Demo.html">
-          <button class="demo-button">Book a Demo</button>
-        </a>
-      </div> 
-    </div>
+      <div class="body-context">EMBED & INTEGRATE</div>
+      <h1 class="body-subtext">Increase engagement and productivity with robust integrations and custom SDK apps</h1>   
+     <ul><li style=" font-size: 18px;">Access all your tools and relevant information when and where you need them</li><li style=" font-size: 18px;">Streamline internal user experience with turnkey Single-Sign-On credentialing</li><li style=" font-size: 18px;">Create custom applications and extensions via the real-time SDK, API, and webhooks</li></ul>
+ </div>
+
     <div class="video-content">
-        <p style="margin-right:10px;" class="body-subtext2">
-        Co-create worlds with your teachers and experience to unlock social community connection brought to life with homework club, tutoring worlds, physical education hour, teacher's lounge, spirit week, scavenger hunts, superintendent all-hands and whatever else you can imagine!
-      </p>
+        <img style=" width: 70%; height: 70%; " src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643c4e8b3b3ed24089681e4c_integrations-p-800.png">
     </div>
   </div>
-</div>
-
-<div id="higher-education" class="tab-content">
-  <div class="body-container">
-    <div class="text-content">
-      <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Higher Education</span></h2>
-      <div class="button-container">
-        <a href="Demo.html">
-          <button class="demo-button">Book a Demo</button>
-        </a>
-      </div> 
-    </div>
-    <div class="video-content">
-       <p style="margin-right:10px;" class="body-subtext2">
-        Build replicas of your campus, give a space for student clubs, tutors, alumni, and curriculum designers to test new concepts and creative competitive challenges against rivals!
-      </p>
-    </div>
-  </div>
-</div>
-
-<div id="tutoring" class="tab-content">
-  <div class="body-container">
-    <div class="text-content">
-      <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Tutoring</span></h2>
-      <div class="button-container">
-        <a href="Demo.html">
-          <button class="demo-button">Book a Demo</button>
-        </a>
-      </div> 
-    </div>
-    <div class="video-content">
-       <p style="margin-right:10px;" class="body-subtext2">
-        Allow your tutors, learners, & content teams to convert 1:1 tutoring into a thriving community where users are able to learn from each other, share more of your content, and easily pick up where they left off with our first of its kind “object permanence” that teaching on Zoom just cannot do.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div id="learning-tech" class="tab-content">
-  <div class="body-container">
-    <div class="text-content">
-      <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Learning Technology Companies</span></h2>
-      <div class="button-container">
-        <a href="Demo.html">
-          <button class="demo-button">Book a Demo</button>
-        </a>
-      </div> 
-    </div>
-    <div class="video-content">
-       <p style="margin-right:10px;" class="body-subtext2">
-       White label the Topia platform using our SDK to extend your product value in ways that makes you stickier, drive cross-sell, upsell opportunities, and allow for innovation possibilities that your core product team does not have to build.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div id="corporate-learning" class="tab-content">
-  <div class="body-container">
-     <div class="text-content">
-      <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Corporate Learning</span></h2>
-      <div class="button-container">
-        <a href="Demo.html">
-          <button class="demo-button">Book a Demo</button>
-        </a>
-      </div> 
-    </div>
-    <div class="video-content">
-       <p style="margin-right:10px;" class="body-subtext2">
-     Transform Onboarding, Learning, Training, and self-serve into full blow learning worlds that allows users to come and go as they please, stay connected to one another, and build custom journey based learning programs that can be embedded into corporate all hands, team meetings, and other disconnected enterprise business process. Now, learning is a company wide community.
-      </p>
-    </div>
-  </div>
-</div>
-
-<script>
-    document.getElementById("k12").style.display = "block";
-    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
-  </script>
-  
-  <div class="bottom-section">
-    <div class="bottom-header">USER TESTIMONIALS</div>
-    <p style="color:black; font-size:30px; font-weight:bold;" >Don't just take our word for it</p>
-  </div>
- <div class="image-container">
-  <div class="column">
-    <div class="image">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521f61039c7699ff5a49_dance%20party.jpg" alt="Dance Party">
-    </div>
-    <div class="image">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521ff490a865262b2cf4_3-5%20Poppin.jpg" alt="3-5 Poppin">
-    </div>
-    <div class="image">
-       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d522261039c755eff5a4d_video%20chat%20bestie.jpg" alt="Video Chat Bestie">
-    </div>
-    <div class="image">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521f96deeb348a117415_hide%20and%20seek.jpg" alt="Hide and Seek">
-    </div>
-  </div>
-  <div class="column">
-    <div class="image">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d52204c4cfd1cc87e5f1f_bullying%20report.jpg" alt="Bullying Report">
-    </div>
-    <div class="image">
-       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521fe503a1e04ec490c7_More%20connected.jpg" alt="More connected">
-    </div>
-    <div class="image">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d52219a03d43d8db2aeea_teachers%20lounge.jpg" alt="Teachers Lounge">
-    </div>
-  </div>
-  <div class="column">
-    <div class="image">
-        <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521faa4cc50c83d268c4_daughter.jpg" alt="Daughter">
-    </div>
-    <div class="image">
-       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521f0c5ec7fe47a1060d_conversation.jpg" alt="Conversation">
-    </div>
-    <div class="image">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/643d521f69bf4a1d2e73c9c8_cute%20kiddos.jpg" alt="Cute Kiddos">
-    </div>
-  </div>
-</div>
-
+    
     
     <div class="bottom-section">
     <div class="bottom-header">YOUR METAVERSE PLATFORM</div>
@@ -788,13 +606,18 @@ nav li a:hover {
        <a href="Demo.html">
           <button class="demo-button">Book a Demo</button>
         </a>
+      <a href="contact.html">
       <button class="demo-button">Contact us</button>
+      </a>
     </div>
   </div>
 
+  
+
   <!-- Include your footer here -->
   <div class="footer-image"></div>
-
+  
+  
   <footer>
     <a href="index.html">
       <div class="footer-logo"> 
