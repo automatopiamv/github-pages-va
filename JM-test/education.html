@@ -119,7 +119,7 @@
   margin-top: -30px;
   object-fit: cover;
 }
-  .button {
+   .button {
   width: 150px;
   height: 50px;
   border-radius: 12px;
@@ -142,7 +142,7 @@
   background-color: white;
   color: #0082f3;
   border: none;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 10px;
   }
@@ -153,10 +153,11 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  z-index: 10;
 }
 
 nav li {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin-right: 50px;
   position: relative;
@@ -167,10 +168,8 @@ nav li a {
   margin-left: 10px;
 }
 
-nav li:hover {
-  background-color: #C8C8CA;
-  width:100px;
-  border-radius: 20px;
+nav li a:hover {
+  color: #9ea2a8;
   text-align: center;
 }
 
@@ -188,6 +187,7 @@ nav li:hover {
   margin-left: 20px;
   margin-right: 20px;
   position: relative;
+  margin-bottom:10px
 }
 
 .nav-container li ul {
@@ -204,13 +204,6 @@ nav li:hover {
 
 .nav-container li:hover ul {
   display: block;
-}
-
-.button-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 20px;
 }
 
 .demo-button {
@@ -442,13 +435,35 @@ nav li:hover {
   font-size: 12px;
 }
 
+@media (max-width: 768px) {
+  .tab-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .tab {
+    flex: 1;
+    margin: 5px;
+    width: calc(50% - 10px);
+  }
+
+  .tab-content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
 </style>
 </head>
 <body>
 <header>
     <div class="header">  
+      <a href="index.html">
       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
       <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
+      </a>
     </div>
     <div class="nav-container">
       <nav>
@@ -595,37 +610,6 @@ nav li:hover {
   </div>
   </div>
 
-  <script>
-    function openTab(evt, tabName) {
-      // Get all tab content elements
-      var tabContents = document.getElementsByClassName("tab-content");
-
-      // Hide all tab content elements
-      for (var i = 0; i < tabContents.length; i++) {
-        tabContents[i].style.display = "none";
-      }
-
-      // Remove the "active" class from all tabs
-      var tabs = document.getElementsByClassName("tab");
-      for (var i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove("active");
-      }
-
-      // Show the selected tab content and add "active" class to the clicked tab
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.classList.add("active");
-
-      // Apply fade-in animation to the tab content
-      setTimeout(function() {
-        document.getElementById(tabName).classList.add("fade-in");
-      }, 50);
-    }
-
-    // Show the "Teachers" tab by default
-    document.getElementById("teachers").style.display = "block";
-    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
-  </script>
- 
  
     <div class="bottom-section">
     <div class="bottom-header">REAL-TIME CONNECTION</div>
@@ -729,11 +713,6 @@ nav li:hover {
     </div>
   </div>
 </div>
-
-<script>
-    document.getElementById("k12").style.display = "block";
-    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
-  </script>
   
   <div class="bottom-section">
     <div class="bottom-header">USER TESTIMONIALS</div>
@@ -791,6 +770,56 @@ nav li:hover {
     </div>
   </div>
 
+
+  <script>
+  function openTab(evt, tabName) {
+  // Get all tab content elements
+  var tabContents = document.getElementsByClassName("tab-content");
+
+  // Hide all tab content elements
+  for (var i = 0; i < tabContents.length; i++) {
+    tabContents[i].style.display = "none";
+  }
+
+  // Remove the "active" class from all tabs
+  var tabs = document.getElementsByClassName("tab");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active");
+  }
+
+  // Show the selected tab content and add "active" class to the clicked tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.classList.add("active");
+
+  // Apply fade-in animation to the tab content
+  setTimeout(function() {
+    document.getElementById(tabName).classList.add("fade-in");
+  }, 50);
+}
+
+// Show all tab contents by default
+var defaultTab = "teachers"; // Change this to the desired default tab
+var defaultTabElement = document.querySelector(".tab[data-tab='" + defaultTab + "']");
+if (defaultTabElement) {
+  defaultTabElement.click();
+}
+
+var defaultTab = "k12"; // Change this to the desired default tab
+var defaultTabElement = document.querySelector(".tab[data-tab='" + defaultTab + "']");
+if (defaultTabElement) {
+  defaultTabElement.click();
+}
+
+    // Show the "Teachers" tab by default
+    document.getElementById("teachers").style.display = "block";
+    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
+    
+
+    document.getElementById("k12").style.display = "block";
+    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
+
+  </script>
+ 
   <!-- Include your footer here -->
   <div class="footer-image"></div>
   
