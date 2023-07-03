@@ -2,112 +2,48 @@
 <html>
 <head>
   <title>Website Title - Pricing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <style>
     /* Include the same CSS from your original file here */
-   
-      header {
-      background-color: #e6f7f4;
+ body {
+      font-family: Calibri, Arial, sans-serif;
+      margin: auto;
+    }
+        
+    header {
+      background-color: white;
       padding: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-   }
-   
-     .footer-image {
-      height: 150px;
-      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
-      background-size: cover;
-      }
+    }
       
-      footer {
-      left: 10%;   /* Update to match body margin */
-      right: 10%;  /* Update to match body margin */
+    footer {
+      left: 10%;
+      right: 10%;
       bottom: 0;
       background-color: gray;
-      text-align:left;
-      color: white;
-      padding:30px;
-    }
-    
-   
-    
-    .body-context {
-    font-family: Arial, serif;
-    font-size: 16px;
-    color: blue;
-    margin-top: 30px;
-    text-align: left;
-   
-    }
-    
-    .body-subtext {
-      font-family: Quicksand, sans-serif;
-      font-size: 24px;
-      color: black;
-      margin:0;
       text-align: left;
-   }
-   
-   .body-subtext2 {
-    font-family: Quicksand, sans-serif;
-    font-size: 16px; /* Updated font size */
-    color: black;
-    margin:0;
-    text-align: left;
-   }
-   
-   .body-container {
-    display: flex;
-    justify-content: space-between; /* Separates the text and video */
+      color: white;
+      padding: 50px;
+      }
+      
+       .footer-image {
+      height: 200px;
+      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+      background-size: cover;
     }
-
-    .text-content {
-      flex: 1; /* Takes up available space */
-    }
-
-   .video-content {
-    flex: 1.2; /* Increase size by 20% */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the video */
-    }
-
-  .video {
-    border: 2px solid blue; /* Add blue border */
-    border-radius: 10px; /* Makes edges curved */
-    width: 70%; /* Adjusts the width of the video to fill the container */
-    height: auto; /* Adjusts the height automatically based on the width */
-    margin-top: 20px;
-   }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    nav li {
-      margin-left: 10px;
-      color: black;
-      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    nav li a {
-      text-decoration: none;
-    }
-
-    .logo {
+      
+      .logo {
       width: 60px;
       height: 60px;
       background-image: url('logo.png');
       background-size: cover;
       display: flex;
+      margin-left: 20px;
     }
-
-    .logo-topia{
+  
+    .logo-topia {
       width: 150px;
       height: 120px;
       background-image: url('logo-topia.png');
@@ -115,151 +51,236 @@
       display: flex;
       align-items: right;
       margin-top: -70px;
-      margin-left: 30px;
-    }
-
-    .button {
-      width: 100px;
-      height: 50px;
-      border-radius: 12px;
-      background-color: #5c6cf6;
-      color: #fff;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-      margin-left: 20px;
-      font-family: Calibri, Arial, sans-serif; /* Updated font-family */
-      font-weight: normal; /* Removed font-weight */
-    }
-
-    /* Additional CSS */
-    .nav-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-container ul {
-      display: flex;
-      margin-left: 10px;
-    }
-
-    .nav-container li {
-      margin-left: 10px;
-      position: relative;
-    }
-
-    .nav-container li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #f1f1f1;
-      padding: 10px;
-      min-width: 150px;
-    }
-
-    .nav-container li:hover ul {
-      display: block;
+      margin-left: 50px;
     }
     
-      .button-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      }
+  
+   .button {
+  width: 150px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #2ecfb3;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top:-5px;
+  
+}
+  .button:hover {
+  background-color: #4457ff;
+  color:#fff;   
+  transform: scale3d(.95, .95, 1.01);
+  }
+ .button-sign {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  color: #0082f3;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top:-5px;
+  
+  }
 
-      .demo-button {
-       width: 200px; 
-       height: 50px; 
-       background-color: #5c6cf6; 
-       color: #ffffff; 
-       border: none;
-       border-radius: 25px; /* This will add curves to the button edges */
-       font-family: Arial, sans-serif;
-       font-size: 20px;
-       text-align: center;
-       cursor: pointer;
-       padding: 10px;
 
-    /* Mobile-friendly styles */
-    @media screen and (max-width: 480px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-      }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  z-index: 10;
+}
 
-      .logo {
-        margin-bottom: 10px;
-      }
+nav li {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-right: 50px;
+  position: relative;
+}
 
-      .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-      }
+nav li a {
+  text-decoration: none;
+  margin-left: 10px;
+}
 
-      .nav-container ul {
-        flex-direction: column;
-      }
+nav li a:hover {
+  color: #9ea2a8;
+  text-align: center;
+}
 
-      .button {
-        margin-left: 0;
-        margin-top: 10px;
-      }
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-container li {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  margin-bottom:10px
+}
+
+.nav-container li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  margin-left: -50px;
+}
+
+.nav-container li a {
+  color: black;
+}
+
+.nav-container li:hover ul {
+  display: block;
+}
+
+.menu-container {
+  padding: 20px;
+  margin-left:10%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between; /* Updated */
+  align-items: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.menu a:hover {
+  color: #9ea2a8;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+#search-input {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  margin-right: 20px; /* Updated */
+  text-transform: uppercase;
+  color:black;
+
+}
+
+#search-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  
+}
+
+#search-button i {
+  font-size: 18px;
+}
+  @media (max-width: 768px) {
+
+   .header {
+     flex-direction: column;
+     margin-top:-150px;
+     }
+     
+  nav {
+     flex-direction: column;
+     align-items: center;
+     margin-top:100px;
+     margin-left:-250px;
+    
+     }
+     
+  .nav-container{
+    flex-direction: column;
+     align-items: center;
+  }
+     
+
+  .button {
+   margin-top: 15px;
+   margin-left:-250px;
+   }
+  .button-sign{
+     margin-top: 15px;
+   margin-left:-250px;
+    
+  }
+}
+
+  
   </style>
 </head>
 <body>
   <!-- Include your header here -->
 
-  <header>
+<header>
     <div class="header">  
-     <a href="index.html">
-     <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo"> 
+    <a href="index.html">
+      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
       <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
       </a>
-      <h1 style="display: none;">My Website</h1>
     </div>
-    <div class="nav-container">
-      <nav>
-        <ul>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li class="dropdown">
-            <a href="#">Resources</a>
-            <ul>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="helpcenter.html">Help Center</a></li>
-              <li><a href="updates.html">Updates</a></li>
-              <li><a href="unconference.html">Unconference</a></li>
-            </ul>
-          </li>
-          <li><a href="Demo.html">Demo</a></li>
-          <li><a href="#" style="color: #5c6cf6;">Sign In</a></li> <!-- Added Sign In button with specific font color -->
-        </ul>
-      </nav>
-      <button class="button">Create World</button>
-    </div>
+      <button class="button-sign">Sign in</button>
   </header>
+
+  <div class="menu-container">
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">FEATURE REQUESTS</a></li>
+        <li><a href="#">CHANGELOG</a></li>
+      </ul>
+   
+     <div class="search-container">
+    <button id="search-button"><i class="fa fa-search"></i></button>
+    <input type="text" id="search-input" placeholder="Search...">
+  </div>
+   </nav>
+  </div>
+
 
   <!-- Add your Demo content here -->
 
-  <div class="body-container">
-    <div class="text-content">
-      <div class="body-context">Updates</div>
-      <h1 class="body-subtext"> Choose the plan that's right for you.</h1>
-      <!-- Add more content about pricing here -->
-    </div>
-
-  </div>
 
        
   <!-- Include your footer here -->
  <div class="footer-image"></div>
  
- 
   <footer>
-    &copy; Copyright 2023 All rights reserved.
+    &copy; 2023 All rights reserved.
   </footer>
 </body>
 </html>
