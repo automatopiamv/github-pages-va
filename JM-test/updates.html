@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <style>
     /* Include the same CSS from your original file here */
- body {
+    body {
       font-family: Calibri, Arial, sans-serif;
       margin: auto;
     }
@@ -22,265 +22,275 @@
       left: 10%;
       right: 10%;
       bottom: 0;
-      background-color: gray;
-      text-align: left;
-      color: white;
+      text-align: center;
+      color: gray;
       padding: 50px;
-      }
+      font-size: 18px;
+    }
       
-       .footer-image {
+    .footer-image {
       height: 200px;
       background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
       background-size: cover;
     }
-      
-      .logo {
-      width: 60px;
-      height: 60px;
-      background-image: url('logo.png');
-      background-size: cover;
-      display: flex;
-      margin-left: 20px;
+   
+   .name {
+      font-size: 30px;
+      letter-spacing: .03em;
+      font-weight: 600;
+      margin: 0 16px 0 0;
+      margin-left: 10%;
+      text-decoration: none;
+      color: black; /* Updated color */
     }
   
-    .logo-topia {
+    .button-sign {
       width: 150px;
-      height: 120px;
-      background-image: url('logo-topia.png');
-      background-size: cover;
+      height: 50px;
+      background-color: white;
+      color: gray;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 10px;
+      margin-right: 10%; /* Added */
+    }
+  
+    .button-sign:hover {
+      color: #9ea2a8;
+    }
+  
+    .menu-container {
+      margin-top: -30px;
+      padding: 20px;
+      margin-left: 10%;
+    }
+  
+    .menu {
       display: flex;
-      align-items: right;
-      margin-top: -70px;
-      margin-left: 50px;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex; /* Added */
+      align-items: center; /* Added */
+    }
+  
+    .menu li {
+      margin-right: 20px;
+    }
+  
+    .menu li:last-child {
+      margin-right: 0;
+    }
+  
+    .menu a {
+      text-decoration: none;
+      color: gray; /* Changed */
+      font-size: 18px;
+      display: flex; /* Added */
+      align-items: center; /* Added */
+    }
+  
+    .menu a:hover {
+      color: #9ea2a8;
+    }
+  
+    .menu a i {
+      margin-right: 5px; /* Added */
+    }
+  
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-right: 10%; /* Added */
+    }
+  
+    .search-icon {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+  
+    .search-icon i {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+  
+    .search-text {
+      color: gray;
+      font-size: 18px;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  
+    .search-input-container {
+      display: none;
+      margin-left: 10px;
+    }
+  
+    .search-input-container input {
+      width: 200px;
+      height: 30px;
+      padding: 5px;
+      border: none;
+      outline: none;
+      color: black;
+    }
+  
+    .search-input-container .exit-search-button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+  
+    .search-input-container .exit-search-button i {
+      font-size: 18px;
     }
     
+    .feedback {
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin-left: 10%;
+    }
   
-   .button {
-  width: 150px;
-  height: 50px;
-  border-radius: 12px;
-  background-color: #2ecfb3;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-top:-5px;
-  
-}
-  .button:hover {
-  background-color: #4457ff;
-  color:#fff;   
-  transform: scale3d(.95, .95, 1.01);
-  }
- .button-sign {
-  width: 150px;
-  height: 50px;
-  background-color: white;
-  color: #0082f3;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  border-radius: 10px;
-  margin-top:-5px;
-  
-  }
-
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  z-index: 10;
-}
-
-nav li {
-  font-size: 18px;
-  line-height: 1.5;
-  margin-right: 50px;
-  position: relative;
-}
-
-nav li a {
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-nav li a:hover {
-  color: #9ea2a8;
-  text-align: center;
-}
-
-.nav-container {
-  display: flex;
-  align-items: center;
-}
-
-.nav-container ul {
-  display: flex;
-  margin-right: 20px;
-}
-
-.nav-container li {
-  margin-left: 20px;
-  margin-right: 20px;
-  position: relative;
-  margin-bottom:10px
-}
-
-.nav-container li ul {
-  display: none;
-  position: absolute;
-  background-color: white;
-  padding: 20px;
-  margin-left: -50px;
-}
-
-.nav-container li a {
-  color: black;
-}
-
-.nav-container li:hover ul {
-  display: block;
-}
-
-.menu-container {
-  padding: 20px;
-  margin-left:10%;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between; /* Updated */
-  align-items: center;
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  margin-right: 20px;
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-
-.menu a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
-.menu a:hover {
-  color: #9ea2a8;
-}
-
-.search-container {
-  display: flex;
-  align-items: center;
-}
-
-#search-input {
-  width: 200px;
-  height: 30px;
-  padding: 5px;
-  border: none;
-  outline: none;
-  margin-right: 20px; /* Updated */
-  text-transform: uppercase;
-  color:black;
-
-}
-
-#search-button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  
-}
-
-#search-button i {
-  font-size: 18px;
-}
-  @media (max-width: 768px) {
-
-   .header {
-     flex-direction: column;
-     margin-top:-150px;
-     }
-     
-  nav {
-     flex-direction: column;
-     align-items: center;
-     margin-top:100px;
-     margin-left:-250px;
+    .feature-requests {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 200px;
+    }
     
-     }
-     
-  .nav-container{
-    flex-direction: column;
-     align-items: center;
-  }
-     
-
-  .button {
-   margin-top: 15px;
-   margin-left:-250px;
-   }
-  .button-sign{
-     margin-top: 15px;
-   margin-left:-250px;
-    
-  }
-}
-
+    .button {
+    text-align:left;
+    }
   
+    .feature-requests .button {
+      display: flex;
+      align-items: center;
+      padding: 10px 100px;
+      border-radius: 5px;
+      background-color: white;
+      color: gray;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s, border-color 0.3s;
+      border: 1px solid black;
+      justify-content: flex-start;
+    }
+  
+    .feature-requests .button:hover {
+      background-color: #f2f2f2; /* Update the background color on hover */
+      border-color: gray; /* Update the border color on hover */
+    }
+  
+    .search-line {
+      border-top: 1px solid #ccc;
+      margin-top: 10px;
+    }
+  
+    @media (max-width: 768px) {
+      .header {
+        margin-top: -150px;
+      }
+  
+      .menu-container {
+        margin-left: -250px;
+      }
+  
+      .button {
+        margin-top: 15px;
+        margin-left: -250px;
+      }
+  
+      .button-sign {
+        margin-top: 15px;
+        margin-left: -250px;
+      }
+    }
   </style>
+
 </head>
 <body>
   <!-- Include your header here -->
-
-<header>
-    <div class="header">  
-    <a href="index.html">
-      <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
-      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
-      </a>
-    </div>
-      <button class="button-sign">Sign in</button>
+  <header>
+    <div class="name">TOPIA</div>
+    <button class="button-sign">LOG IN / SIGN UP</button>
   </header>
-
-  <div class="menu-container">
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="#">FEATURE REQUESTS</a></li>
-        <li><a href="#">CHANGELOG</a></li>
-      </ul>
-   
-     <div class="search-container">
-    <button id="search-button"><i class="fa fa-search"></i></button>
-    <input type="text" id="search-input" placeholder="Search...">
-  </div>
-   </nav>
-  </div>
-
-
+  
   <!-- Add your Demo content here -->
+  <div class="menu-container">
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="index.html">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdDaOzASZkTu0JWbvNndWhVQSjKcQ7ZXeFw&usqp=CAU" alt="Change Log" width="24" height="20" style="margin-right: 5px;">Home
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://www.svgrepo.com/show/201886/light-bulb.svg" alt="Light Bulb" width="20" height="20" style="margin-right: 5px;">Feature Requests
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="https://icon-library.com/images/sparks-icon/sparks-icon-10.jpg" alt="Change Log" width="20" height="20" style="margin-right: 5px;">Changelog
+          </a>
+        </li>
+      </ul>
+      <div class="search-container">
+        <button class="search-icon" onclick="toggleSearchInput()"><i class="fa fa-search"></i></button>
+        <span class="search-text" onclick="toggleSearchInput()">Search</span>
+        <div class="search-input-container">
+          <input type="text" id="search-input" placeholder"">
+          <button class="exit-search-button" onclick="toggleSearchInput()"><i class="fa fa-times"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-line"></div>
+  
+  <div class="feedback">
+    <h3>Give Feedback</h3>   
+    <div class="feature-requests">
+      <a href="#" class="button">Feature Requests</a>
+    </div>
+  </div>
+  
+<script>
+  function toggleSearchInput() {
+    const searchText = document.querySelector('.search-text');
+    const searchInputContainer = document.querySelector('.search-input-container');
+    const searchInput = document.querySelector('#search-input');
+  
+    if (searchInputContainer.style.display === 'none') {
+      searchText.style.display = 'none';
+      searchInputContainer.style.display = 'flex';
+      searchInput.focus();
+    } else {
+      searchText.style.display = 'inline-block';
+      searchInputContainer.style.display = 'none';
+      searchInput.value = '';
+    }
+  }
+</script>
 
-
-       
+  
   <!-- Include your footer here -->
- <div class="footer-image"></div>
- 
   <footer>
-    &copy; 2023 All rights reserved.
+    Powered by Canny
   </footer>
 </body>
 </html>
