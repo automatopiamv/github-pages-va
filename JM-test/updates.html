@@ -129,10 +129,10 @@
     .search-text {
       color: gray;
       font-size: 18px;
-      margin-left: 5px;
+     margin-left: 5px; /* Added */
       cursor: pointer;
     }
-  
+
     .search-input-container {
       display: none;
       margin-left: 10px;
@@ -173,24 +173,27 @@
     }
     
     .button {
-    text-align:left;
+      text-align: left;
     }
   
-    .feature-requests .button {
-      display: flex;
-      align-items: center;
-      padding: 10px 100px;
-      border-radius: 5px;
-      background-color: white;
-      color: gray;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      transition: background-color 0.3s, border-color 0.3s;
-      border: 1px solid black;
-      justify-content: flex-start;
-    }
-  
+ .feature-requests .button {
+  display: flex;
+  align-items: center;
+  padding: 10px 50px;
+  border-radius: 5px;
+  background-color: white;
+  color: gray;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, border-color 0.3s;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+
+.feature-requests .button .count {
+  margin-left: 100px;
+}
     .feature-requests .button:hover {
       background-color: #f2f2f2; /* Update the background color on hover */
       border-color: gray; /* Update the border color on hover */
@@ -245,7 +248,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <ahref="#">
             <img src="https://icon-library.com/images/sparks-icon/sparks-icon-10.jpg" alt="Change Log" width="20" height="20" style="margin-right: 5px;">Changelog
           </a>
         </li>
@@ -254,7 +257,7 @@
         <button class="search-icon" onclick="toggleSearchInput()"><i class="fa fa-search"></i></button>
         <span class="search-text" onclick="toggleSearchInput()">Search</span>
         <div class="search-input-container">
-          <input type="text" id="search-input" placeholder"">
+          <input type="text" id="search-input" placeholder="">
           <button class="exit-search-button" onclick="toggleSearchInput()"><i class="fa fa-times"></i></button>
         </div>
       </div>
@@ -262,13 +265,13 @@
   </div>
   <div class="search-line"></div>
   
-  <div class="feedback">
-    <h3>Give Feedback</h3>   
-    <div class="feature-requests">
-      <a href="#" class="button">Feature Requests</a>
-    </div>
+<div class="feedback">
+  <h3>Give Feedback</h3>   
+  <div class="feature-requests">
+    <a href="#" class="button">Feature Requests <span class="count">196</span></a>
   </div>
-  
+</div>
+
 <script>
   function toggleSearchInput() {
     const searchText = document.querySelector('.search-text');
@@ -287,7 +290,7 @@
   }
 </script>
 
-  
+
   <!-- Include your footer here -->
   <footer>
     Powered by Canny
