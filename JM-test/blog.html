@@ -38,7 +38,7 @@
       margin-left: 50px;
     }
     
-  .button {
+    .button {
   width: 150px;
   height: 50px;
   border-radius: 12px;
@@ -48,6 +48,7 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 10px;
+  margin-top:-5px;
   
 }
   .button:hover {
@@ -61,9 +62,11 @@
   background-color: white;
   color: #0082f3;
   border: none;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 10px;
+  margin-top:-5px;
+  
   }
 
 
@@ -72,10 +75,11 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  z-index: 10;
 }
 
 nav li {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin-right: 50px;
   position: relative;
@@ -86,10 +90,8 @@ nav li a {
   margin-left: 10px;
 }
 
-nav li:hover {
-  background-color: #C8C8CA;
-  width:100px;
-  border-radius: 20px;
+nav li a:hover {
+  color: #9ea2a8;
   text-align: center;
 }
 
@@ -107,6 +109,7 @@ nav li:hover {
   margin-left: 20px;
   margin-right: 20px;
   position: relative;
+  margin-bottom:10px
 }
 
 .nav-container li ul {
@@ -124,6 +127,7 @@ nav li:hover {
 .nav-container li:hover ul {
   display: block;
 }
+ 
   
     footer {
       background-color: gray;
@@ -249,9 +253,8 @@ nav li:hover {
 </head>
 <body>
   <!-- Include your header here -->
-    <header>
+ <header>
     <div class="header">  
-        <a href="index.html">
       <img src="https://global-uploads.webflow.com/62e7004a0f9b3a63b980ac3c/62eaa2e8083f3035c3316429_Dance-Turquoise.gif" alt="Logo" class="logo">
       <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/d6vixpckv1pls1dwsgi9" alt="logo-topia" class="logo-topia">
     </div>
