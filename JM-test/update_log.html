@@ -105,74 +105,82 @@
       margin-right: 5px; /* Added */
     }
     
-    .sidebar {
-      margin-top: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      width: 200px;
-      height: 100%;
+        .search-line {
+      border-top: 1px solid #ccc;
+      margin-top: 10px;
     }
     
-    .sidebar ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .sidebar li {
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-    }
-    
-    .sidebar a {
-      text-decoration: none;
-      font-size: 16px;
-      margin-left: 5px;
-      color: gray;
-    }
-    
-    .sidebar a:hover {
-      color: black;
-    }
-    
-    .radio-container {
-      margin-right: 10px;
-    }
-    
-    .radio-container input[type="radio"] {
-      display: none;
-    }
-    
-    .radio-container label {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      margin-right: 5px;
-      cursor: pointer;
-      border: 2px solid gray;
-    }
-    
-    .radio-container input[type="radio"]:checked + label {
-      background-color: gray;
-      border-color: gray;
-      border-width: 4px;
-    }
-    
-    .radio-container.new input[type="radio"]:checked + label {
-      background-color: green;
-      border-color: green;
-      border-width: 4px;
-    }
-    
-    .radio-container.improved input[type="radio"]:checked + label {
-      background-color: blue;
-      border-color: blue;
-      border-width: 4px;
-    }
-  
-    
+.sidebar {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 200px;
+  height: 100%;
+  margin-left:10%;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 5px;
+  color: gray;
+}
+
+.sidebar a:hover {
+  color: black;
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.sidebar a:hover + .radio-container label {
+  background-color: #ccc;
+}
+
+.radio-container {
+  margin-right: 10px;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.radio-container input[type="radio"]:checked + label {
+  background-color: gray;
+}
+
+.radio-container.new label {
+  background-color: green;
+}
+
+.radio-container.improved label {
+  background-color: blue;
+}
+
+.radio-container.fixed label {
+  background-color: violet;
+}
   
     @media (max-width: 768px) {
       .header {
@@ -225,43 +233,43 @@
       </ul>
     </div>
   </div>
-  <div class="search-line"></div>
   
- <div class="sidebar">
+    <div class="search-line"></div>
+  
+  <div class="sidebar">
     <ul>
       <li>
         <div class="radio-container">
           <input type="radio" id="all-entries" name="entry-type" checked>
-          <label for="all-entries"></label>
+          <label for="all-entries" class="dot all"></label>
         </div>
         <a href="#">All entries</a>
       </li>
       <li>
         <div class="radio-container new">
           <input type="radio" id="new" name="entry-type">
-          <label for="new"></label>
+          <label for="new" class="dot new"></label>
         </div>
         <a href="#">New</a>
       </li>
       <li>
         <div class="radio-container improved">
           <input type="radio" id="improved" name="entry-type">
-          <label for="improved"></label>
+          <label for="improved" class="dot improved"></label>
         </div>
         <a href="#">Improved</a>
       </li>
-  
       <li>
         <div class="radio-container fixed">
-          <input type="radio" id="fixed" name="entry-type" checked>
-          <label for="fixed"></label>
+          <input type="radio" id="fixed" name="entry-type">
+          <label for="fixed" class="dot fixed"></label>
         </div>
         <a href="#">Fixed</a>
       </li>
     </ul>
   </div>
   
-<!-- Include your footer here -->
+  <!-- Include your footer here -->
   <footer>
     Powered by Canny
   </footer>
