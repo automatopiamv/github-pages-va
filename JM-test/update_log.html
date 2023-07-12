@@ -113,10 +113,9 @@
 .sidebar {
   margin-top: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
-  width: 200px;
+  width: 250px;
   height: 100%;
-  margin-left:10%;
+  margin-left: 10%;
 }
 
 .sidebar ul {
@@ -133,7 +132,7 @@
 
 .sidebar a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 5px;
   color: gray;
 }
@@ -141,19 +140,23 @@
 .sidebar a:hover {
   color: black;
   font-weight: bold;
-  background-color: #f9f9f9;
+  border-radius: 6px;
+  transition: all .1s ease-in-out;
 }
 
 .sidebar a:hover + .radio-container label {
-  background-color: #ccc;
+  background-color: var(--gray-40);
 }
 
 .radio-container {
   margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .radio-container input[type="radio"] {
   display: none;
+  margin-bottom: 10px;
 }
 
 .radio-container label {
@@ -164,6 +167,10 @@
   background-color: gray;
   cursor: pointer;
   margin-right: 5px;
+}
+
+.sidebar li .radio-container {
+  align-items: center;
 }
 
 .radio-container input[type="radio"]:checked + label {
@@ -181,26 +188,46 @@
 .radio-container.fixed label {
   background-color: violet;
 }
-  
-    @media (max-width: 768px) {
-      .header {
-        margin-top: -150px;
-      }
-  
-      .menu-container {
-        margin-left: -250px;
-      }
-  
-      .button {
-        margin-top: 15px;
-        margin-left: -250px;
-      }
-  
-      .button-sign {
-        margin-top: 15px;
-        margin-left: -250px;
-      }
-    }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  width:250px;
+}
+
+.search-bar i {
+  margin-right: 10px;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: -150px;
+  }
+
+  .menu-container {
+    margin-left: -250px;
+  }
+
+  .button {
+    margin-top: 15px;
+    margin-left: -250px;
+  }
+
+  .button-sign {
+    margin-top: 15px;
+    margin-left: -250px;
+  }
+}
   </style>
 
 </head>
@@ -267,7 +294,15 @@
         <a href="#">Fixed</a>
       </li>
     </ul>
+    
+      <div class="search-bar">
+    <i class="fas fa-search"></i>
+    <input type="text" placeholder="Search entries">
   </div>
+  
+  </div>
+  
+
   
   <!-- Include your footer here -->
   <footer>
