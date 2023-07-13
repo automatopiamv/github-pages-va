@@ -105,131 +105,91 @@
       margin-right: 5px; /* Added */
     }
     
-        .search-line {
+    .search-line {
       border-top: 1px solid #ccc;
       margin-top: 10px;
     }
     
-.sidebar {
-  margin-top: 20px;
-  padding: 20px;
-  width: 250px;
-  height: 100%;
-  margin-left: 10%;
-}
+    .grid-container {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      grid-gap: 50px;
+      margin-left: 10%;
+      margin-top: 20px;
+    }
+  
+    
+    .sidebar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      color: gray;
+      font-size: 20px;
+    }
+  
+    .left-sidebar {
+      display: flex;
+      flex-direction: column;
+    }
 
-.sidebar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.sidebar a {
-  text-decoration: none;
-  font-size: 18px;
-  margin-left: 5px;
-  color: gray;
-}
-
-.sidebar a:hover {
-  color: black;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: all .1s ease-in-out;
-}
-
-.sidebar a:hover + .radio-container label {
-  background-color: var(--gray-40);
-}
-
-.radio-container {
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.radio-container input[type="radio"] {
-  display: none;
-  margin-bottom: 10px;
-}
-
-.radio-container label {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: gray;
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.sidebar li .radio-container {
-  align-items: center;
-}
-
-.radio-container input[type="radio"]:checked + label {
-  background-color: gray;
-}
-
-.radio-container.new label {
-  background-color: green;
-}
-
-.radio-container.improved label {
-  background-color: blue;
-}
-
-.radio-container.fixed label {
-  background-color: violet;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid gray;
-  border-radius: 6px;
-  width:250px;
-}
-
-.search-bar i {
-  margin-right: 10px;
-}
-
-.search-bar input[type="text"] {
-  border: none;
-  outline: none;
-  flex-grow: 1;
-}
-
-@media (max-width: 768px) {
-  .header {
-    margin-top: -150px;
-  }
-
-  .menu-container {
-    margin-left: -250px;
-  }
-
-  .button {
-    margin-top: 15px;
-    margin-left: -250px;
-  }
-
-  .button-sign {
-    margin-top: 15px;
-    margin-left: -250px;
-  }
-}
+    .main-content {
+      font-size: 30px;
+      font-weight: bold;
+    }
+      
+    .new-label {
+      display: inline-block;
+      padding: 5px;
+      width:30px;
+      text-align:center;
+      background-color: #30a46c;
+      color: white;
+      font-size: 14px;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    
+    .search-bar {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 6px;
+      width: 200px;
+    }
+  
+    .search-bar i {
+      margin-right: 10px;
+    }
+  
+    .search-bar input[type="text"] {
+      border: none;
+      outline: none;
+      flex-grow: 1;
+    }
+  
+  
+    @media (max-width: 768px) {
+      .header {
+        margin-top: -150px;
+      }
+  
+      .menu-container {
+        margin-left: -250px;
+      }
+  
+      .button {
+        margin-top: 15px;
+        margin-left: -250px;
+      }
+  
+      .button-sign {
+        margin-top: 15px;
+        margin-left: -250px;
+      }
+    }
   </style>
-
 </head>
 <body>
   <!-- Include your header here -->
@@ -249,61 +209,41 @@
         </li>
         <li>
           <a href="#">
-           <i class="fa-regular fa-lightbulb fa-lg"></i>Feature Requests
+            <i class="fa-regular fa-lightbulb fa-lg"></i>Feature Requests
           </a>
         </li>
         <li>
           <a href="update_log.html" style="color: #0082f3;">
-          <i class="fa-solid fa-spinner fa-lg"></i>Changelog
+            <i class="fa-solid fa-spinner fa-lg"></i>Changelog
           </a>
         </li>
       </ul>
     </div>
   </div>
   
-    <div class="search-line"></div>
+  <div class="search-line"></div>
   
-  <div class="sidebar">
-    <ul>
-      <li>
-        <div class="radio-container">
-          <input type="radio" id="all-entries" name="entry-type" checked>
-          <label for="all-entries" class="dot all"></label>
-        </div>
-        <a href="#">All entries</a>
-      </li>
-      <li>
-        <div class="radio-container new">
-          <input type="radio" id="new" name="entry-type">
-          <label for="new" class="dot new"></label>
-        </div>
-        <a href="#">New</a>
-      </li>
-      <li>
-        <div class="radio-container improved">
-          <input type="radio" id="improved" name="entry-type">
-          <label for="improved" class="dot improved"></label>
-        </div>
-        <a href="#">Improved</a>
-      </li>
-      <li>
-        <div class="radio-container fixed">
-          <input type="radio" id="fixed" name="entry-type">
-          <label for="fixed" class="dot fixed"></label>
-        </div>
-        <a href="#">Fixed</a>
-      </li>
-    </ul>
+  <div class="grid-container">
+    <div class="left-sidebar">
+      <div class="sidebar">All Entries</div>
+      <div class="sidebar">New</div>
+      <div class="sidebar">Improved</div>
+      <div class="sidebar">Fixed</div>
+      
     
       <div class="search-bar">
-    <i class="fas fa-search"></i>
-    <input type="text" placeholder="Search entries">
-  </div>
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search entries">
+      </div>
+    </div>
   
+    <div class="main-content">Product Updates: Thursday, July 5, 2023
+    <br>
+     <p class="new-label">New</p>
+     <p>Updates</p>
   </div>
-  
+  </div>
 
-  
   <!-- Include your footer here -->
   <footer>
     Powered by Canny
