@@ -179,6 +179,7 @@
     .dropdown {
       text-align: center;
       margin-right:20%;
+       margin-bottom:20px;
     }
   
     .dropdown-content {
@@ -213,33 +214,41 @@
     .dropdown-link:focus + .dropdown-content {
       display: block;
     }
-    
-  .heart-icon {
-  color: gray;
-  border: 2px solid gray;
-  border-radius: 4px;
-  padding: 10px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 5px;
-  }
-.social-icons {
+  
+    .heart-icon {
+     color: rgba(128, 128, 128, 0.5); 
+      border: 1px solid gray;
+      border-radius: 4px;
+      padding: 10px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 5px;
+    }
+  
+    .social-icons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 10%;
+  margin-right: 20%;
+  margin-top: -30px;
+  margin-left: 30px;
 }
-
 .social-icons i {
-  margin-right: 30px;
-  color: gray;
-  font-size: 25px; /* Adjust the font size as desired */
+  margin-left: 20px;
+  color: rgba(128, 128, 128, 0.5); 
+  font-size: 25px;
 }
 
-   
+.social-icons i:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icons i:not(:last-child) {
+  margin-right: 10px;
+}
     @media (max-width: 768px) {
       .header {
         margin-top: -150px;
@@ -260,7 +269,6 @@
       }
     }
   </style>
-
 </head>
 <body>
   <!-- Include your header here -->
@@ -310,6 +318,7 @@
   
     <div class="main-content">
       Product Updates: Thursday, July 5, 2023
+       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">July 7, 2023</span>
       <br>
       <p class="new-label">New</p>
       <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
@@ -326,20 +335,25 @@
           <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">All analytics tables now have an export button, which exports the current dataset you’re viewing to a CSV.</p>
           <img src="https://canny.io/images/0add4e846796b520ba44f89001ef6f7c.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
           <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">Self-serve demo world creation is back!</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Click <span style="color:blue;">create world</span> from worlds or dashboard and choose "Demo" to create a free world at any time.</p>
+          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Click <span style="color:blue;">create world</span> from worlds or dashboard and choose "Demo" to create a free world at any time.</p>
         </div>
       </div>
-        <i class="fa-solid fa-heart fa-2xs heart-icon"></i>
+
+      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+    
             
       <div class="social-icons">
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fas fa-link"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-link"></i>
+      </div>
+      
+      <div class="search-line" style="margin-top:20px; margin-right:20%;"></div>
+      
     </div>
-    </div>
-   </div>
+  </div>
   
-    <script>
+  <script>
     window.addEventListener('DOMContentLoaded', (event) => {
       const dropdownLink = document.querySelector('.dropdown-link');
       const dropdownContent = document.querySelector('.dropdown-content');
