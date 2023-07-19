@@ -249,6 +249,25 @@
 .social-icons i:not(:last-child) {
   margin-right: 10px;
 }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-overlay .popup-image {
+  max-width: 90%;
+  max-height: 90%;
+  opacity: 1;
+}
     @media (max-width: 768px) {
       .header {
         margin-top: -150px;
@@ -300,6 +319,7 @@
     </div>
   </div>
   
+  
   <div class="search-line"></div>
   
   <div class="grid-container">
@@ -316,6 +336,9 @@
       </div>
     </div>
   
+  
+    <!-- Include latest content-->
+    
     <div class="main-content">
       Product Updates: Thursday, July 5, 2023
        <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">July 7, 2023</span>
@@ -348,23 +371,104 @@
         <i class="fas fa-link"></i>
       </div>
       
-      <div class="search-line" style="margin-top:20px; margin-right:20%;"></div>
+      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
       
+      
+        <!-- Include your second content -->
+        
+        
+         <div class="main-content">
+      Product Updates: Thursday, June 22, 2023
+       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">June 23, 2023</span>
+      <br>
+      <p class="new-label">New</p>
+      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">👯 Group messages in worlds</p>
+      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
+       Open the messages drawer and click Direct Messages to respond to existing messages or to start a new message. Click the plus (+) button and choose “New Group” to start a new group message.
+      </p>
+      <img src="https://canny.io/images/6e950dd1d38d571a0a47ff1e0ffba810.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
+      
+      <div class="dropdown">
+        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🚪 Close World </p>
+          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">World Owners and Moderators can go to Authentication (World Settings) to access the new “Close World” settings. When toggled on, guests will be removed from the world and unable to reenter. Admins can add a Description explaining why the world is closed for guests who try to enter the world.</p>
+           <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">- 🗒️ Note: World admins can still enter worlds that are closed. </p>
+          <img src="https://canny.io/images/2592164f95937f125e71ac4546d547c0.png" class="content-image" style="margin-bottom:20px; max-width: 100%; margin-right: 10%;">
+
+        </div>
+      </div>
+
+      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+    
+            
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fas fa-link"></i>
+      </div>
+      
+      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+      
+      
+    </div>
     </div>
   </div>
   
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      const dropdownLink = document.querySelector('.dropdown-link');
-      const dropdownContent = document.querySelector('.dropdown-content');
+  
+  
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const dropdownLinks = document.querySelectorAll('.dropdown-link');
+    const dropdownContents = document.querySelectorAll('.dropdown-content');
 
+    dropdownLinks.forEach((dropdownLink, index) => {
       dropdownLink.addEventListener('click', (event) => {
-        dropdownContent.style.display = 'block';
+        dropdownContents[index].style.display = 'block';
         dropdownLink.style.display = 'none';
+        event.preventDefault(); // Prevent default link behavior
       });
     });
-  </script>
+  });
+</script>
 
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const dropdownLinks = document.querySelectorAll('.dropdown-link');
+    const dropdownContents = document.querySelectorAll('.dropdown-content');
+    const contentImages = document.querySelectorAll('.content-image');
+
+    dropdownLinks.forEach((dropdownLink, index) => {
+      dropdownLink.addEventListener('click', (event) => {
+        dropdownContents[index].style.display = 'block';
+        dropdownLink.style.display = 'none';
+        event.preventDefault(); // Prevent default link behavior
+      });
+    });
+
+    contentImages.forEach((contentImage) => {
+      contentImage.addEventListener('click', (event) => {
+        const popupOverlay = document.createElement('div');
+        popupOverlay.classList.add('popup-overlay');
+
+        const popupImage = document.createElement('img');
+        popupImage.classList.add('popup-image');
+        popupImage.src = contentImage.src;
+
+        popupOverlay.appendChild(popupImage);
+        document.body.appendChild(popupOverlay);
+
+        popupOverlay.addEventListener('click', () => {
+          document.body.removeChild(popupOverlay);
+        });
+
+        event.stopPropagation(); // Prevent event bubbling to the parent elements
+      });
+    });
+  });
+</script>
+  
   <!-- Include your footer here -->
   <footer>
     Powered by Canny
