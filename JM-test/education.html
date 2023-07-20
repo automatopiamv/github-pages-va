@@ -512,13 +512,12 @@ nav li a:hover {
     <div class="bottom-header">IDEAL FOR</div>
     <p class="bottom-text">Topia is used by…</p>
   </div>
-   <div class="tab-container">
-    <div class="tab active" data-tab="teachers" onclick="openTab(event, 'teachers')">Teachers</div>
-    <div class="tab" data-tab="students" onclick="openTab(event, 'students')">Students</div>
-    <div class="tab" data-tab="administrators" onclick="openTab(event, 'administrators')">School Administrators</div>
-    <div class="tab" data-tab="companies" onclick="openTab(event, 'companies')">Ed Tech Product Companies</div>
-  </div>
-
+<div class="tab-container">
+  <div class="tab active" data-tab="teachers" onclick="openTab(event, 'teachers')">Teachers</div>
+  <div class="tab" data-tab="students" onclick="openTab(event, 'students')">Students</div>
+  <div class="tab" data-tab="administrators" onclick="openTab(event, 'administrators')">School Administrators</div>
+  <div class="tab" data-tab="companies" onclick="openTab(event, 'companies')">Ed Tech Product Companies</div>
+</div>
   <div id="teachers" class="tab-content">
       <div class="body-container">
     <div class="text-content">
@@ -617,8 +616,8 @@ nav li a:hover {
     <p style="color:black; font-size:30px; font-weight:bold;" >Your Custom Virtual Learning Platform for Real Time Connection</p>
   </div>
   
-  <div class="tab-container">
-  <div class="tab active" data-tab="k12" onclick="openTab(event, 'k12')">K-12</div>
+<div class="tab-container">
+  <div class="tab" data-tab="k12" onclick="openTab(event, 'k12')">K-12</div>
   <div class="tab" data-tab="higher-education" onclick="openTab(event, 'higher-education')">Higher Education</div>
   <div class="tab" data-tab="tutoring" onclick="openTab(event, 'tutoring')">Tutoring</div>
   <div class="tab" data-tab="learning-tech" onclick="openTab(event, 'learning-tech')">Learning Technology Companies</div>
@@ -767,20 +766,18 @@ nav li a:hover {
        <a href="Demo.html">
           <button class="demo-button">Book a Demo</button>
         </a>
+
       <button class="demo-button">Contact us</button>
     </div>
   </div>
 
+ <script>
+var lastClickedTabSet1 = "teachers";
+var lastClickedTabSet2 = "k12";
 
-  <script>
-  function openTab(evt, tabName) {
+function openTab(evt, tabName) {
   // Get all tab content elements
   var tabContents = document.getElementsByClassName("tab-content");
-
-  // Hide all tab content elements
-  for (var i = 0; i < tabContents.length; i++) {
-    tabContents[i].style.display = "none";
-  }
 
   // Remove the "active" class from all tabs
   var tabs = document.getElementsByClassName("tab");
@@ -796,30 +793,31 @@ nav li a:hover {
   setTimeout(function() {
     document.getElementById(tabName).classList.add("fade-in");
   }, 50);
+
+  // Update the last clicked tab for the respective set of tabs
+  if (evt.currentTarget.parentElement.classList.contains("tab-container")) {
+    lastClickedTabSet1 = tabName;
+  } else {
+    lastClickedTabSet2 = tabName;
+  }
 }
 
-// Show all tab contents by default
-var defaultTab = "teachers"; // Change this to the desired default tab
-var defaultTabElement = document.querySelector(".tab[data-tab='" + defaultTab + "']");
-if (defaultTabElement) {
-  defaultTabElement.click();
+// Show the default tab and its content for both sets of tabs
+var defaultTabSet1 = "teachers"; // Change this to the desired default tab for set 1
+var defaultTabSet2 = "k12"; // Change this to the desired default tab for set 2
+
+var defaultTabElementSet1 = document.querySelector(".tab[data-tab='" + defaultTabSet1 + "']");
+var defaultTabElementSet2 = document.querySelector(".tab[data-tab='" + defaultTabSet2 + "']");
+
+if (defaultTabElementSet1 && defaultTabElementSet2) {
+  defaultTabElementSet1.classList.add("active");
+  defaultTabElementSet2.classList.add("active");
 }
 
-var defaultTab = "k12"; // Change this to the desired default tab
-var defaultTabElement = document.querySelector(".tab[data-tab='" + defaultTab + "']");
-if (defaultTabElement) {
-  defaultTabElement.click();
-}
-
-    // Show the "Teachers" tab by default
-    document.getElementById("teachers").style.display = "block";
-    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
-    
-
-    document.getElementById("k12").style.display = "block";
-    document.querySelector(".tab[data-tab='teachers']").classList.add("active");
-
-  </script>
+// Show the last clicked tab for both sets of tabs
+openTab({ currentTarget: defaultTabElementSet1 }, lastClickedTabSet1);
+openTab({ currentTarget: defaultTabElementSet2 }, lastClickedTabSet2);
+</script>
  
   <!-- Include your footer here -->
   <div class="footer-image"></div>
@@ -834,4 +832,4 @@ if (defaultTabElement) {
     <p class="footer-text">&copy; 2023 All rights reserved.</p>
   </footer>
 </body>
-</html>,
+</html>
