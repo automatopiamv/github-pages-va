@@ -376,6 +376,16 @@ nav li a:hover {
       transition: background-color 0.3s ease;
       
     }
+    
+    .tab2:hover {
+    background-color: #fff;
+    color: #2ecfb3;
+  }
+  
+    .tab:hover {
+    background-color: #fff;
+    color: #2ecfb3;
+  }
 
     .tab:first-child {
       margin-left: 0;
@@ -386,27 +396,31 @@ nav li a:hover {
     }
 
     .tab.active {
-      background-color: #fff;
-      color: #2ecfb3;
-      
-    }
+  background-color: #2ecfb3; /* Or any color of your choosing */
+  color: #fff;
+}
+   .tab2.active {
+  background-color: #2ecfb3; /* Or any color of your choosing */
+  color: #fff;
+}
     
     .fade-in {
       animation: fadeIn 0.5s;
     }
 
-    .tab-content {
-      display: none;
-      padding: 20px;
-      background-color: #f1f1f1;
-      margin-top: -1px;
-      margin-left:10%;
-      margin-right:10%;
-    }
-    
-    .tab-content.initial {
-    display: block;
-  }
+  .tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin-top: -1px;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+
+.tab-content.initial {
+  display: block;
+}
 
     /* Add animations */
     .fade-in {
@@ -529,12 +543,13 @@ nav li a:hover {
     <p class="bottom-text">Topia is used by…</p>
   </div>
 <div class="tab-container">
-  <div class="tab" data-tab="teachers" data-tab-group="group1" onclick="openTab(event, 'teachers')">Teachers</div>
+    <div class="tab active" data-tab="teachers" data-tab-group="group1" onclick="openTab(event, 'teachers')">Teachers</div>
+
   <div class="tab" data-tab="students" data-tab-group="group1" onclick="openTab(event, 'students')">Students</div>
   <div class="tab" data-tab="administrators" data-tab-group="group1" onclick="openTab(event, 'administrators')">School Administrators</div>
   <div class="tab" data-tab="companies" data-tab-group="group1" onclick="openTab(event, 'companies')">Ed Tech Product Companies</div>
 </div>
-  <div id="teachers" class="tab-content" data-tab-group="group1">
+  <div id="teachers" class="tab-content initial" data-tab-group="group1">
       <div class="body-container">
     <div class="text-content">
     <h2 style="color:#4355e4; font-size: 30px;">Teachers</h2>
@@ -633,15 +648,14 @@ nav li a:hover {
   </div>
   
 <div class="tab-container">
-  <div class="tab2" data-tab="k12" data-tab-group="group2" onclick="openTab2(event, 'k12')">K-12</div>
+  <div class="tab2 active" data-tab="k12" data-tab-group="group2" onclick="openTab2(event, 'k12')">K-12</div>
   <div class="tab2" data-tab="higher-education" data-tab-group="group2" onclick="openTab2(event, 'higher-education')">Higher Education</div>
   <div class="tab2" data-tab="tutoring" data-tab-group="group2" onclick="openTab2(event, 'tutoring')">Tutoring</div>
   <div class="tab2" data-tab="learning-tech" data-tab-group="group2" onclick="openTab2(event, 'learning-tech')">Learning Technology Companies</div>
   <div class="tab2" data-tab="corporate-learning" data-tab-group="group2" onclick="openTab2(event, 'corporate-learning')">Corporate Learning</div>
 </div>
 
-
-<div id="k12" class="tab-content" data-tab-group="group2">
+ <div id="k12" class="tab-content initial" data-tab-group="group2">
   <div class="body-container">
     <div class="text-content">
       <h2 style="color:#4355e4; font-size: 30px;">K-12</h2>
@@ -793,43 +807,35 @@ var lastClickedTabSet1 = "teachers";
 var lastClickedTabSet2 = "k12";
 
 function openTab(evt, tabName) {
-  // Declare all variables
   var i, tabcontent, tablinks;
 
-  // Get all elements with class="tab-content" and hide them
   tabcontent = document.getElementsByClassName("tab-content");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    // Hide all tab contents that do not have the class "initial"
+    if (!tabcontent[i].classList.contains("initial")) {
+      tabcontent[i].style.display = "none";
+    }
   }
 
-  // Get all elements with class="tab" and remove the class "active"
-  tablinks = document.getElementsByClassName("tab");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+  // ...
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 
 function openTab2(evt, tabName) {
-  // Declare all variables
   var i, tabcontent, tablinks;
 
-  // Get all elements with class="tab-content" and hide them
   tabcontent = document.getElementsByClassName("tab-content");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    // Hide all tab contents that do not have the class "initial"
+    if (!tabcontent[i].classList.contains("initial")) {
+      tabcontent[i].style.display = "none";
+    }
   }
 
-  // Get all elements with class="tab2" and remove the class "active"
-  tablinks = document.getElementsByClassName("tab2");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
+  // ...
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
@@ -838,7 +844,14 @@ function openTab2(evt, tabName) {
 document.addEventListener("DOMContentLoaded", function(event) { 
   openTab({ currentTarget: document.querySelector(".tab[data-tab='" + lastClickedTabSet1 + "']") }, lastClickedTabSet1);
   openTab2({ currentTarget: document.querySelector(".tab2[data-tab='" + lastClickedTabSet2 + "']") }, lastClickedTabSet2);
+
+  // Remove the class "initial"
+  var initialTabs = document.getElementsByClassName("initial");
+  for (var i = 0; i < initialTabs.length; i++) {
+    initialTabs[i].classList.remove("initial");
+  }
 });
+
 </script>
  
   <!-- Include your footer here -->
