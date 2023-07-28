@@ -377,16 +377,6 @@ nav li a:hover {
       
     }
     
-    .tab2:hover {
-    background-color: #fff;
-    color: #2ecfb3;
-  }
-  
-    .tab:hover {
-    background-color: #fff;
-    color: #2ecfb3;
-  }
-
     .tab:first-child {
       margin-left: 0;
     }
@@ -408,7 +398,7 @@ nav li a:hover {
       animation: fadeIn 0.5s;
     }
 
-  .tab-content {
+  .tab-content1 {
   display: none;
   padding: 20px;
   background-color: #f1f1f1;
@@ -417,8 +407,16 @@ nav li a:hover {
   margin-right:10%;
 }
 
+ .tab-content2 {
+  display: none;
+  padding: 20px;
+  background-color: #f1f1f1;
+  margin-top: -1px;
+  margin-left:10%;
+  margin-right:10%;
+}
 
-.tab-content.initial {
+.tab-content1.initial {
   display: block;
 }
 
@@ -549,7 +547,7 @@ nav li a:hover {
   <div class="tab" data-tab="administrators" data-tab-group="group1" onclick="openTab(event, 'administrators')">School Administrators</div>
   <div class="tab" data-tab="companies" data-tab-group="group1" onclick="openTab(event, 'companies')">Ed Tech Product Companies</div>
 </div>
-  <div id="teachers" class="tab-content initial" data-tab-group="group1">
+  <div id="teachers" class="tab-content1" data-tab-group="group1">
       <div class="body-container">
     <div class="text-content">
     <h2 style="color:#4355e4; font-size: 30px;">Teachers</h2>
@@ -572,7 +570,7 @@ nav li a:hover {
   </div>
   </div>
 
-  <div id="students" class="tab-content" data-tab-group="group1">
+  <div id="students" class="tab-content1" data-tab-group="group1">
     <div class="body-container">
     <div class="text-content">
     <h2 style="color:#4355e4; font-size: 30px;">Students</h2>
@@ -592,7 +590,7 @@ nav li a:hover {
   </div>
   </div>
 
-  <div id="administrators" class="tab-content" data-tab-group="group1">
+  <div id="administrators" class="tab-content1" data-tab-group="group1">
     <div class="body-container">
     <div class="text-content">
     <h2 style="color:#4355e4; font-size: 30px;">School Administrators</h2>
@@ -618,7 +616,7 @@ nav li a:hover {
   </div>
   </div>
 
-  <div id="companies" class="tab-content" data-tab-group="group1">
+  <div id="companies" class="tab-content1" data-tab-group="group1">
  <div class="body-container">
     <div class="text-content">
     <h2 style="color:#4355e4; font-size: 30px;">Ed Tech Product Companies</h2>
@@ -655,7 +653,7 @@ nav li a:hover {
   <div class="tab2" data-tab="corporate-learning" data-tab-group="group2" onclick="openTab2(event, 'corporate-learning')">Corporate Learning</div>
 </div>
 
- <div id="k12" class="tab-content initial" data-tab-group="group2">
+ <div id="k12" class="tab-content2" data-tab-group="group2">
   <div class="body-container">
     <div class="text-content">
       <h2 style="color:#4355e4; font-size: 30px;">K-12</h2>
@@ -673,7 +671,7 @@ nav li a:hover {
   </div>
 </div>
 
-<div id="higher-education" class="tab-content" data-tab-group="group2">
+<div id="higher-education" class="tab-content2" data-tab-group="group2">
   <div class="body-container">
     <div class="text-content">
       <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Higher Education</span></h2>
@@ -691,7 +689,7 @@ nav li a:hover {
   </div>
 </div>
 
-<div id="tutoring" class="tab-content" data-tab-group="group2">
+<div id="tutoring" class="tab-content2" data-tab-group="group2">
   <div class="body-container">
     <div class="text-content">
       <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Tutoring</span></h2>
@@ -709,7 +707,7 @@ nav li a:hover {
   </div>
 </div>
 
-<div id="learning-tech" class="tab-content" data-tab-group="group2">
+<div id="learning-tech" class="tab-content2" data-tab-group="group2">
   <div class="body-container">
     <div class="text-content">
       <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Learning Technology Companies</span></h2>
@@ -727,7 +725,7 @@ nav li a:hover {
   </div>
 </div>
 
-<div id="corporate-learning" class="tab-content">
+<div id="corporate-learning" class="tab-content2">
   <div class="body-container">
      <div class="text-content">
       <h2 style="color:black; font-size: 30px;">Topia is for  <span style="color:#4355e4; font-size: 30px;" >Corporate Learning</span></h2>
@@ -801,6 +799,8 @@ nav li a:hover {
       <button class="demo-button">Contact us</button>
     </div>
   </div>
+
+
 <script>
 // Here we're setting some default tabs to be opened on page load
 var lastClickedTabSet1 = "teachers";
@@ -809,35 +809,51 @@ var lastClickedTabSet2 = "k12";
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
 
-  tabcontent = document.getElementsByClassName("tab-content");
+  tabcontent = document.getElementsByClassName("tab-content1");
   for (i = 0; i < tabcontent.length; i++) {
-    // Hide all tab contents that do not have the class "initial"
     if (!tabcontent[i].classList.contains("initial")) {
       tabcontent[i].style.display = "none";
     }
   }
 
-  // ...
+  // Get all the tabs
+  tablinks = document.getElementsByClassName("tab");
+  // Reset the background color and text color of all tabs
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+    tablinks[i].style.color = "";
+    tablinks[i].style.transition = "background-color 0.3s ease, color 0.3s ease";
+  }
 
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+  evt.currentTarget.style.backgroundColor = "white";
+  evt.currentTarget.style.color = "#2ecfb3";
 }
 
 function openTab2(evt, tabName) {
   var i, tabcontent, tablinks;
 
-  tabcontent = document.getElementsByClassName("tab-content");
+  tabcontent = document.getElementsByClassName("tab-content2");
   for (i = 0; i < tabcontent.length; i++) {
-    // Hide all tab contents that do not have the class "initial"
     if (!tabcontent[i].classList.contains("initial")) {
       tabcontent[i].style.display = "none";
     }
   }
 
-  // ...
+  // Get all the tabs
+  tablinks = document.getElementsByClassName("tab2");
+  // Reset the background color and text color of all tabs
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+    tablinks[i].style.color = "";
+    tablinks[i].style.transition = "background-color 0.3s ease, color 0.3s ease";
+  }
 
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+  evt.currentTarget.style.backgroundColor = "white";
+  evt.currentTarget.style.color = "#2ecfb3";
 }
 
 // Get the element with id="defaultOpen" and click on it
@@ -851,9 +867,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     initialTabs[i].classList.remove("initial");
   }
 });
-
 </script>
- 
+
+
+
   <!-- Include your footer here -->
   <div class="footer-image"></div>
   
