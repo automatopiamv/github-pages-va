@@ -1,711 +1,809 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Website Title - Updates</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <style>
-    /* Include the same CSS from your original file here */
-    body {
-      font-family: Calibri, Arial, sans-serif;
-      margin: auto;
-    }
-        
-    header {
-      background-color: white;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-      
-    footer {
-      left: 10%;
-      right: 10%;
-      bottom: 0;
-      text-align: center;
-      color: gray;
-      padding: 50px;
-      font-size: 18px;
-    }
-      
-    .footer-image {
-      height: 200px;
-      background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
-      background-size: cover;
-    }
-   
-   .name {
-      font-size: 30px;
-      letter-spacing: .03em;
-      font-weight: 600;
-      margin: 0 16px 0 0;
-      margin-left: 10%;
-      text-decoration: none;
-      color: black; /* Updated color */
-    }
-  
-    .button-sign {
-      width: 150px;
-      height: 50px;
-      background-color: white;
-      color: gray;
-      border: none;
-      font-size: 14px;
-      cursor: pointer;
-      border-radius: 10px;
-      margin-top: 10px;
-      margin-right: 10%; /* Added */
-    }
-  
-    .button-sign:hover {
-      color: #9ea2a8;
-    }
-  
-    .menu-container {
-      margin-top: -30px;
-      padding: 20px;
-      margin-left: 10%;
-    }
-  
-    .menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .menu ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex; /* Added */
-      align-items: center; /* Added */
-    }
-  
-    .menu li {
-      margin-right: 20px;
-    }
-  
-    .menu li:last-child {
-      margin-right: 0;
-    }
-  
-    .menu a {
-      text-decoration: none;
-      color: gray; /* Changed */
-      font-size: 18px;
-      display: flex; /* Added */
-      align-items: center; /* Added */
-    }
-  
-    .menu a:hover {
-      color: black;
-    }
-  
-    .menu a i {
-      margin-right: 5px; /* Added */
-    }
-    
-    .search-line {
-      border-top: 1px solid #ccc;
-      margin-top: 10px;
-    }
-    
-    .grid-container {
-      display: grid;
-      grid-template-columns: 250px 1fr;
-      grid-gap: 50px;
-      margin-left: 10%;
-      margin-top: 20px;
-    }
-  
-    
-    .sidebar {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      color: gray;
-      font-size: 20px;
-    }
-  
-    .left-sidebar {
-      display: flex;
-      flex-direction: column;
-    }
 
-    .main-content {
-      font-size: 30px;
-      font-weight: bold;
-    }
-    
-      
-    .new-label {
-      display: inline-block;
-      padding: 5px;
-      width:30px;
-      text-align:center;
-      background-color: #30a46c;
-      color: white;
-      font-size: 14px;
-      border-radius: 4px;
-      margin-top: 5px;
-    }
-    
-    .search-bar {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-      padding: 10px;
-      border: 1px solid gray;
-      border-radius: 6px;
-      width: 200px;
-    }
-  
-    .search-bar i {
-      margin-right: 10px;
-    }
-  
-    .search-bar input[type="text"] {
-      border: none;
-      outline: none;
-      flex-grow: 1;
-      font-size: 16px;
-    }
-  
-    .content-image {
-      max-width: 100%;
-      margin-top: 10px;
-      margin-right: 10%;
-    }
-    .dropdown {
-      text-align: center;
-      margin-right:20%;
-       margin-bottom:20px;
-    }
-  
-    .dropdown-content {
-      display: none;
-      font-size: 14px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-    
-    .dropdown-link {
-      color: blue;
-      font-size: 14px;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    
-    .dropdown-link:hover {
-      text-decoration: none;
-    }
-    
-    .dropdown-link:focus {
-      outline: none;
-    }
-    
-    .dropdown-link:active {
-      position: relative;
-      top: 1px;
-    }
-  
-    .dropdown-link:focus + .dropdown-content {
-      display: block;
-    }
-  
-    .heart-icon {
-     color: rgba(128, 128, 128, 0.5); 
-      border: 1px solid gray;
-      border-radius: 4px;
-      padding: 10px;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 5px;
-    }
-  
-    .social-icons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 20%;
-  margin-top: -30px;
-  margin-left: 30px;
-}
-.social-icons i {
-  margin-left: 20px;
-  color: rgba(128, 128, 128, 0.5); 
-  font-size: 25px;
-}
-
-.social-icons i:not(:last-child) {
-  margin-right: 10px;
-}
-
-.social-icons i:not(:last-child) {
-  margin-right: 10px;
-}
-
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-overlay .popup-image {
-  max-width: 90%;
-  max-height: 90%;
-  opacity: 1;
-}
-    @media (max-width: 768px) {
-      .header {
-        margin-top: -150px;
+  <head>
+    <title>Website Title - Updates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /* Include the same CSS from your original file here */
+      body {
+        font-family: Calibri, Arial, sans-serif;
+        margin: auto;
       }
-  
-      .menu-container {
-        margin-left: -250px;
+
+      header {
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
-  
-      .button {
-        margin-top: 15px;
-        margin-left: -250px;
+
+      footer {
+        left: 10%;
+        right: 10%;
+        bottom: 0;
+        text-align: center;
+        color: gray;
+        padding: 50px;
+        font-size: 18px;
       }
-  
+
+      .footer-image {
+        height: 200px;
+        background-image: url('https://pegasus.divi-den.com/wp-content/uploads/2018/03/header1-bottom-image.png');
+        background-size: cover;
+      }
+
+      .name {
+        font-size: 30px;
+        letter-spacing: .03em;
+        font-weight: 600;
+        margin: 0 16px 0 0;
+        margin-left: 10%;
+        text-decoration: none;
+        color: black;
+        /* Updated color */
+      }
+
       .button-sign {
-        margin-top: 15px;
-        margin-left: -250px;
+        width: 150px;
+        height: 50px;
+        background-color: white;
+        color: gray;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-right: 10%;
+        /* Added */
       }
-    }
-  </style>
-</head>
-<body>
-  <!-- Include your header here -->
-  <header>
-    <div class="name">TOPIA</div>
-    <button class="button-sign">LOG IN / SIGN UP</button>
-  </header>
-  
-  <!-- Add your Demo content here -->
-  <div class="menu-container">
-    <div class="menu">
-      <ul>
-        <li>
-          <a href="index.html">
-            <i class="fa-solid fa-house fa-lg"></i>Home
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="fa-regular fa-lightbulb fa-lg"></i>Feature Requests
-          </a>
-        </li>
-        <li>
-          <a href="update_log.html" style="color: #0082f3;">
-            <i class="fa-solid fa-spinner fa-lg"></i>Changelog
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  
-  <div class="search-line"></div>
-  
-  <div class="grid-container">
-    <div class="left-sidebar">
-      <div class="sidebar">All Entries</div>
-      <div class="sidebar">New</div>
-      <div class="sidebar">Improved</div>
-      <div class="sidebar">Fixed</div>
-      
-    
-      <div class="search-bar">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search entries">
+
+      .button-sign:hover {
+        color: #9ea2a8;
+      }
+
+      .menu-container {
+        margin-top: -30px;
+        padding: 20px;
+        margin-left: 10%;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        /* Added */
+        align-items: center;
+        /* Added */
+      }
+
+      .menu li {
+        margin-right: 20px;
+      }
+
+      .menu li:last-child {
+        margin-right: 0;
+      }
+
+      .menu a {
+        text-decoration: none;
+        color: gray;
+        /* Changed */
+        font-size: 18px;
+        display: flex;
+        /* Added */
+        align-items: center;
+        /* Added */
+      }
+
+      .menu a:hover {
+        color: black;
+      }
+
+      .menu a i {
+        margin-right: 5px;
+        /* Added */
+      }
+
+      .search-line {
+        border-top: 1px solid #ccc;
+        margin-top: 10px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-gap: 50px;
+        margin-left: 10%;
+        margin-top: 20px;
+      }
+
+
+      .sidebar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        color: gray;
+        font-size: 20px;
+      }
+
+      .left-sidebar {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-content {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+
+      .new-label {
+        display: inline-block;
+        padding: 5px;
+        width: 30px;
+        text-align: center;
+        background-color: #30a46c;
+        color: white;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-top: 5px;
+      }
+
+      .search-bar {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 6px;
+        width: 200px;
+      }
+
+      .search-bar i {
+        margin-right: 10px;
+      }
+
+      .search-bar input[type="text"] {
+        border: none;
+        outline: none;
+        flex-grow: 1;
+        font-size: 16px;
+      }
+
+      .content-image {
+        max-width: 100%;
+        margin-top: 10px;
+        margin-right: 10%;
+      }
+
+      .dropdown {
+        text-align: center;
+        margin-right: 20%;
+        margin-bottom: 20px;
+      }
+
+      .dropdown-content {
+        display: none;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .dropdown-link {
+        color: blue;
+        font-size: 14px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .dropdown-link:hover {
+        text-decoration: none;
+      }
+
+      .dropdown-link:focus {
+        outline: none;
+      }
+
+      .dropdown-link:active {
+        position: relative;
+        top: 1px;
+      }
+
+      .dropdown-link:focus+.dropdown-content {
+        display: block;
+      }
+
+      .heart-icon {
+        color: rgba(128, 128, 128, 0.5);
+        border: 1px solid gray;
+        border-radius: 4px;
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+      }
+
+      .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 20%;
+        margin-top: -30px;
+        margin-left: 30px;
+      }
+
+      .social-icons i {
+        margin-left: 20px;
+        color: rgba(128, 128, 128, 0.5);
+        font-size: 25px;
+      }
+
+      .social-icons i:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      .social-icons i:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .popup-overlay .popup-image {
+        max-width: 90%;
+        max-height: 90%;
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          margin-top: -150px;
+        }
+
+        .menu-container {
+          margin-left: -250px;
+        }
+
+        .button {
+          margin-top: 15px;
+          margin-left: -250px;
+        }
+
+        .button-sign {
+          margin-top: 15px;
+          margin-left: -250px;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Include your header here -->
+    <header>
+      <div class="name">TOPIA</div>
+      <button class="button-sign">LOG IN / SIGN UP</button>
+    </header>
+
+    <!-- Add your Demo content here -->
+    <div class="menu-container">
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="index.html">
+              <i class="fa-solid fa-house fa-lg"></i>Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-regular fa-lightbulb fa-lg"></i>Feature Requests
+            </a>
+          </li>
+          <li>
+            <a href="update_log.html" style="color: #0082f3;">
+              <i class="fa-solid fa-spinner fa-lg"></i>Changelog
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
-  
-  
-    <!-- Include latest content-->
-    
-    <div class="main-content">
-      Product Updates: Thursday, July 5, 2023
-       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">July 7, 2023</span>
-      <br>
-      <p class="new-label">New</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">📋 Reports in Dashboard</p>
-      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
-        World owners, Managers, Producers, and Moderators will have access to the Reports page in Dashboard. On the reports page, these users will see reports for worlds they own or have the previously mentioned admin permissions. Click the "View Report" action to see additional details about the report and users involved in the report.
-      </p>
-      <img src="https://canny.io/images/8c3f77c8b3bc7147472f33a21e60b7b7.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
-      
-      <div class="dropdown">
-        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">⬇️ Dashboard: Export analytics</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">All analytics tables now have an export button, which exports the current dataset you’re viewing to a CSV.</p>
-          <img src="https://canny.io/images/0add4e846796b520ba44f89001ef6f7c.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">Self-serve demo world creation is back!</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Click <span style="color:blue;">create world</span> from worlds or dashboard and choose "Demo" to create a free world at any time.</p>
+
+
+    <div class="search-line"></div>
+
+    <div class="grid-container">
+      <div class="left-sidebar">
+        <div class="sidebar">All Entries</div>
+        <div class="sidebar">New</div>
+        <div class="sidebar">Improved</div>
+        <div class="sidebar">Fixed</div>
+
+
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search entries">
         </div>
       </div>
 
-      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
-    
-            
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fas fa-link"></i>
-      </div>
-      
-      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
-      
-      
+
+      <!-- Include latest content-->
+
+      <div class="main-content">
+        Product Updates: Thursday, July 5, 2023
+        <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">July 7, 2023</span>
+        <br>
+        <p class="new-label">New</p>
+        <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+        <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">📋 Reports in Dashboard</p>
+        <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
+          World owners, Managers, Producers, and Moderators will have access to the Reports page in Dashboard. On the reports page, these users will see reports for worlds they own or have the previously mentioned admin permissions. Click the "View Report" action to see additional details about the report and users involved in the report.
+        </p>
+        <img src="https://canny.io/images/8c3f77c8b3bc7147472f33a21e60b7b7.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
+
+        <div class="dropdown">
+          <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-content">
+            <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">⬇️ Dashboard: Export analytics</p>
+            <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">All analytics tables now have an export button, which exports the current dataset you’re viewing to a CSV.</p>
+            <img src="https://canny.io/images/0add4e846796b520ba44f89001ef6f7c.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
+            <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">Self-serve demo world creation is back!</p>
+            <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Click <span style="color:blue;">create world</span> from worlds or dashboard and choose "Demo" to create a free world at any time.</p>
+          </div>
+        </div>
+
+        <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+
+
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fas fa-link"></i>
+        </div>
+
+        <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+
+
         <!-- Include your second content -->
-        
-        
-         <div class="main-content">
-      Product Updates: Thursday, June 22, 2023
-       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">June 23, 2023</span>
-      <br>
-      <p class="new-label">New</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">👯 Group messages in worlds</p>
-      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
-       Open the messages drawer and click Direct Messages to respond to existing messages or to start a new message. Click the plus (+) button and choose “New Group” to start a new group message.
-      </p>
-      <img src="https://canny.io/images/6e950dd1d38d571a0a47ff1e0ffba810.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
-      
-      <div class="dropdown">
-        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🚪 Close World </p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">World Owners and Moderators can go to Authentication (World Settings) to access the new “Close World” settings. When toggled on, guests will be removed from the world and unable to reenter. Admins can add a Description explaining why the world is closed for guests who try to enter the world.</p>
-           <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">- 🗒️ Note: World admins can still enter worlds that are closed. </p>
-          <img src="https://canny.io/images/2592164f95937f125e71ac4546d547c0.png" class="content-image" style="margin-bottom:20px; max-width: 100%; margin-right: 10%;">
 
-        </div>
-      </div>
 
-      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
-    
-            
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fas fa-link"></i>
-      </div>
-      
-      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
-      
-      
-       <!-- Include third content-->
-    
-    <div class="main-content">
-      Product Updates: Wednesday, June 7, 2023
-       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">June 7, 2023</span>
-      <br>
-      <p class="new-label">New</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🤝 View friends in Dashboard</p>
-      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
-       Go to Social Hub in Dashboard to manage friend requests, portal to, message, and remove friends.
-      </p>
-      <img src="https://canny.io/images/4fcbe0745826763a548eb9fe5c99e355.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
-      
-      <div class="dropdown">
-        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🧞‍♀️ Add friends by username in Dashboard</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Click the “Add Friend” button and enter a username to find someone by their username from Dashboard. Once found, you can send them a friend request.</p>
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Note: Username search supports an exact match only. Also, send friend request by email is not supported on Dashboard.</p>
-          <img src="https://canny.io/images/c761e193cad65741b44ff0201b505048.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👩‍🚀 View and edit profiles in Dashboard</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Users who have signed in to Dashboard can view your profile using your unique URL or the View Profile action if you’re friends.</p>
-           <img src="https://canny.io/images/055d49cb9a534b114fddbd3b5616d0b6.png" class="content-image" style="max-width: 100%; margin-right: 10%;"> 
-        <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Also, profile editing has moved to Dashboard. Click “View Profile” in the account dropdown (top-right hand corner of Dashboard) and then use the edit action to make changes.</p>
-         <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Note: Profile editing will no longer be available in worlds, though there will still be an option in My Account that redirects you to Dashboard.</p>
-         
-         <img src="https://canny.io/images/98439301d462ed997b99217fd638bb79.png" class="content-image" style="max-width: 100%; margin-right: 10%;"> 
-         
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">📫 Send friend requests from more places</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">The “Send Friend Request” action has been added to the profile summary (click a user’s name or profile picture to access this) in Current Guests and Channels. Also, you can now view your own profile by clicking “View Profile” from your own profile summary.</p>
-            <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🐃 Usernames and Profile Names for all</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Everyone who uses Dashboard or worlds will be given an auto-generated Username and Profile Name, which can be changed at any time from the Edit Profile page in Dashboard. These will be used as the primary labels to identify other users in Social Hub and Messages.</p>
-        </div>
-      </div>
+        <div class="main-content">
+          Product Updates: Thursday, June 22, 2023
+          <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">June 23, 2023</span>
+          <br>
+          <p class="new-label">New</p>
+          <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">👯 Group messages in worlds</p>
+          <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
+            Open the messages drawer and click Direct Messages to respond to existing messages or to start a new message. Click the plus (+) button and choose “New Group” to start a new group message.
+          </p>
+          <img src="https://canny.io/images/6e950dd1d38d571a0a47ff1e0ffba810.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
 
-      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
-    
-            
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fas fa-link"></i>
-      </div>
-      
-      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
-      
-      
-       <!-- Include fourth content-->
-    
-    <div class="main-content">
-      Product Updates: Tuesday, May 23, 2023
-       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">May 24, 2023</span>
-      <br>
-      <p class="new-label">New</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">💬 Create new messages in Dashboard</p>
-      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
-       Create a new message by clicking the new plus (+) button from Messages in Dashboard. This will give you a list of friends and users that you have previously direct messaged. Messages that you create from Dashboard will also be available in worlds.
-      </p>
-      <img src="https://canny.io/images/07502171fa44eaa69a033c867539815a.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
-      
-      <div class="dropdown">
-        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👯 Group messages in Dashboard</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Use the “New Group” option while creating a new message in Dashboard to create a new group message. Once in a group message, you can add or remove participants and close the group (if you're a Group Admin) and leave the group (if you're a participant).</p>
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Note: Group messages can only be created with friends.</p>
-          <img src="https://canny.io/images/1bbf8f43df7f1c4117809bdfc7607822.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
-        </div>
-      </div>
-      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fas fa-link"></i>
-      </div>
-      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
-      
-          <!-- Include fifth content-->
-    
-    <div class="main-content">
-     Product Updates: Tuesday, May 9, 2023
-       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">May 10, 2023</span>
-      <br>
-      <p class="new-label">New</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🦋 New Avatar: Butterfly</p>
-      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">Fly, soar, and sit on a flower as the Butterfly. Oh, and a plant will grow from the ground when you throw any emote!
-      </p>
-      <img src="https://canny.io/images/74250e2b2c64b2f1a08b826954b37700.gif" class="content-image" style="max-width: 80%; margin-right: 10%;">
-      
-      <div class="dropdown">
-        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">✋ New Emote: Raise Hand</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Use this new emote to let others know you have a question, or just have something to say! Note: This emote is only available with the Original Topi.</p>
-          <img src="https://canny.io/images/873292115d6b7bb30cba7b691cd0cebd.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
-           <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🖱️ [Beta] Interactive Layer</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">This new Modify Asset setting allows world builders to choose which layer (top, bottom, all) is interactive for guests. After you’ve chosen an option and added a Link, an outline will display around the interactive layer while in edit mode. You can use this to verify that the correct layer is interactive before you finish editing.</p>
-          <img src="https://canny.io/images/8a33be9115068d55e73bae88cb676085.png
+          <div class="dropdown">
+            <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+              <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🚪 Close World </p>
+              <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">World Owners and Moderators can go to Authentication (World Settings) to access the new “Close World” settings. When toggled on, guests will be removed from the world and unable to reenter. Admins can add a Description explaining why the world is closed for guests who try to enter the world.</p>
+              <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">- 🗒️ Note: World admins can still enter worlds that are closed. </p>
+              <img src="https://canny.io/images/2592164f95937f125e71ac4546d547c0.png" class="content-image" style="margin-bottom:20px; max-width: 100%; margin-right: 10%;">
+
+            </div>
+          </div>
+
+          <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+
+
+          <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fas fa-link"></i>
+          </div>
+
+          <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+
+
+          <!-- Include third content-->
+
+          <div class="main-content">
+            Product Updates: Wednesday, June 7, 2023
+            <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">June 7, 2023</span>
+            <br>
+            <p class="new-label">New</p>
+            <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+            <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🤝 View friends in Dashboard</p>
+            <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
+              Go to Social Hub in Dashboard to manage friend requests, portal to, message, and remove friends.
+            </p>
+            <img src="https://canny.io/images/4fcbe0745826763a548eb9fe5c99e355.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
+
+            <div class="dropdown">
+              <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+                <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🧞‍♀️ Add friends by username in Dashboard</p>
+                <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Click the “Add Friend” button and enter a username to find someone by their username from Dashboard. Once found, you can send them a friend request.</p>
+                <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Note: Username search supports an exact match only. Also, send friend request by email is not supported on Dashboard.</p>
+                <img src="https://canny.io/images/c761e193cad65741b44ff0201b505048.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👩‍🚀 View and edit profiles in Dashboard</p>
+                <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Users who have signed in to Dashboard can view your profile using your unique URL or the View Profile action if you’re friends.</p>
+                <img src="https://canny.io/images/055d49cb9a534b114fddbd3b5616d0b6.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Also, profile editing has moved to Dashboard. Click “View Profile” in the account dropdown (top-right hand corner of Dashboard) and then use the edit action to make changes.</p>
+                <p style="font-size: 14px; margin-top: 10px; margin-bottom: 30px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Note: Profile editing will no longer be available in worlds, though there will still be an option in My Account that redirects you to Dashboard.</p>
+
+                <img src="https://canny.io/images/98439301d462ed997b99217fd638bb79.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
+
+                <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">📫 Send friend requests from more places</p>
+                <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">The “Send Friend Request” action has been added to the profile summary (click a user’s name or profile picture to access this) in Current Guests and Channels. Also, you can now view your own profile by clicking “View Profile” from your own profile summary.</p>
+                <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🐃 Usernames and Profile Names for all</p>
+                <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Everyone who uses Dashboard or worlds will be given an auto-generated Username and Profile Name, which can be changed at any time from the Edit Profile page in Dashboard. These will be used as the primary labels to identify other users in Social Hub and Messages.</p>
+              </div>
+            </div>
+
+            <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+
+
+            <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fas fa-link"></i>
+            </div>
+
+            <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+
+
+            <!-- Include fourth content-->
+
+            <div class="main-content">
+              Product Updates: Tuesday, May 23, 2023
+              <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">May 24, 2023</span>
+              <br>
+              <p class="new-label">New</p>
+              <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+              <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">💬 Create new messages in Dashboard</p>
+              <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">
+                Create a new message by clicking the new plus (+) button from Messages in Dashboard. This will give you a list of friends and users that you have previously direct messaged. Messages that you create from Dashboard will also be available in worlds.
+              </p>
+              <img src="https://canny.io/images/07502171fa44eaa69a033c867539815a.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
+
+              <div class="dropdown">
+                <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                  <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👯 Group messages in Dashboard</p>
+                  <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Use the “New Group” option while creating a new message in Dashboard to create a new group message. Once in a group message, you can add or remove participants and close the group (if you're a Group Admin) and leave the group (if you're a participant).</p>
+                  <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Note: Group messages can only be created with friends.</p>
+                  <img src="https://canny.io/images/1bbf8f43df7f1c4117809bdfc7607822.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                </div>
+              </div>
+              <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fas fa-link"></i>
+              </div>
+              <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+
+              <!-- Include fifth content-->
+
+              <div class="main-content">
+                Product Updates: Tuesday, May 9, 2023
+                <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">May 10, 2023</span>
+                <br>
+                <p class="new-label">New</p>
+                <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+                <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🦋 New Avatar: Butterfly</p>
+                <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">Fly, soar, and sit on a flower as the Butterfly. Oh, and a plant will grow from the ground when you throw any emote!
+                </p>
+                <img src="https://canny.io/images/74250e2b2c64b2f1a08b826954b37700.gif" class="content-image" style="max-width: 80%; margin-right: 10%;">
+
+                <div class="dropdown">
+                  <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+                  <div class="dropdown-content">
+                    <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">✋ New Emote: Raise Hand</p>
+                    <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Use this new emote to let others know you have a question, or just have something to say! Note: This emote is only available with the Original Topi.</p>
+                    <img src="https://canny.io/images/873292115d6b7bb30cba7b691cd0cebd.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                    <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🖱️ [Beta] Interactive Layer</p>
+                    <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">This new Modify Asset setting allows world builders to choose which layer (top, bottom, all) is interactive for guests. After you’ve chosen an option and added a Link, an outline will display around the interactive layer while in edit mode. You can use this to verify that the correct layer is interactive before you finish editing.</p>
+                    <img src="https://canny.io/images/8a33be9115068d55e73bae88cb676085.png
 " class="content-image" style="max-width: 100%; margin-right: 10%;">
-        </div>
-      </div>
-      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fas fa-link"></i>
-      </div>
-      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
-      
-         <!-- Include sixth content-->
-    
-    <div class="main-content">
-     Product Updates: Wednesday, April 26, 2023
-       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">April 28, 2023</span>
-      <br>
-      <p class="new-label">New</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🗄️ Current Guests drawer view</p>
-      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">The Current Guests page has been replaced with a drawer. This means that you'll have full access to Current Guests and the canvas at the same time! Also, the Current Guests page in World Settings has been deprecated, and all admin actions have been migrated to the new drawer.
-      </p>
-      <img src="https://canny.io/images/89b22be42648eb51b0f28b5063f07517.gif" class="content-image" style="max-width: 80%; margin-right: 10%;">
-      
-      <div class="dropdown">
-        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👤 Profile Summary</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Clicking on a Display Name for a user who has a profile will show a summary of their profile details, an online indicator, and user actions. From here, you can view profile, send a message or friend request, report, or block. Admins have additional actions to ban from the world or chat channels and remove from the world.</p>
-          <img src="https://canny.io/images/f17d772a171ad6b152ab283e5d07c1ef.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
-           <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🧑 Refreshed profile drawer</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Use walk to, send message, and send friend request actions from the refreshed profile. Also, we added the online indicator and reorganized the layout.</p>
-          <img src="	https://canny.io/images/be0e78fb91d7dadb2e2b3a5736a56ebc.png
+                  </div>
+                </div>
+                <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+                <div class="social-icons">
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fas fa-link"></i>
+                </div>
+                <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+
+                <!-- Include sixth content-->
+
+                <div class="main-content">
+                  Product Updates: Wednesday, April 26, 2023
+                  <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">April 28, 2023</span>
+                  <br>
+                  <p class="new-label">New</p>
+                  <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+                  <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🗄️ Current Guests drawer view</p>
+                  <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">The Current Guests page has been replaced with a drawer. This means that you'll have full access to Current Guests and the canvas at the same time! Also, the Current Guests page in World Settings has been deprecated, and all admin actions have been migrated to the new drawer.
+                  </p>
+                  <img src="https://canny.io/images/89b22be42648eb51b0f28b5063f07517.gif" class="content-image" style="max-width: 80%; margin-right: 10%;">
+
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👤 Profile Summary</p>
+                      <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Clicking on a Display Name for a user who has a profile will show a summary of their profile details, an online indicator, and user actions. From here, you can view profile, send a message or friend request, report, or block. Admins have additional actions to ban from the world or chat channels and remove from the world.</p>
+                      <img src="https://canny.io/images/f17d772a171ad6b152ab283e5d07c1ef.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🧑 Refreshed profile drawer</p>
+                      <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Use walk to, send message, and send friend request actions from the refreshed profile. Also, we added the online indicator and reorganized the layout.</p>
+                      <img src="	https://canny.io/images/be0e78fb91d7dadb2e2b3a5736a56ebc.png
 " class="content-image" style="max-width: 100%; margin-right: 10%;">
-       <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🔘 New action organization</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Safety actions are grouped together as options within the new “Safety Actions” button. In addition, Similar actions are grouped together and have icons in current guests, channels, direct messages, and profiles.</p>
-          <img src="https://canny.io/images/f4f9afa51c035584be146562d2c8f379.png
+                      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🔘 New action organization</p>
+                      <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Safety actions are grouped together as options within the new “Safety Actions” button. In addition, Similar actions are grouped together and have icons in current guests, channels, direct messages, and profiles.</p>
+                      <img src="https://canny.io/images/f4f9afa51c035584be146562d2c8f379.png
 " class="content-image" style="max-width: 100%; margin-right: 10%;">
-<p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🚫 Ban from all channels</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Moderators can use the “Ban from channels” action in the channel message overflow menu, current guests page, and profile summary to ban a guest from using chat channels. A channel banned guest will be unable to send messages in chat channels until they are unbanned from the new “Channel Bans” table on the Banned Guests page in World Settings. </p>
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🖐️ Report after blocking</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">When you block a user, you’ll see a modal that asks you to fill out a report. This provides Moderators with critical information that they can use to potentially ban bad actors.</p>
-        </div>
-      </div>
-      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fas fa-link"></i>
-      </div>
-      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
-      
-        <!-- Include seventh content-->
-    
-    <div class="main-content">
-     Product Updates: April 13, 2023
-       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">April 13, 2023</span>
-      <br>
-      <p class="new-label">New</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">💬 Direct Messages in Dashboard</p>
-      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">View and reply to existing Direct Messages from Dashboard. All users will find a new “Messages” menu item that will take them to a list of all of their Direct Messages.
-      </p>
-      <img src="https://canny.io/images/a0e44f88afd43a56628d7494f8f71797.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
-      
-      <div class="dropdown">
-        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">📱 Dashboard mobile version</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Account Dashboard is now accessible from mobile devices! View and portal to your recently visited worlds and view and reply to existing Direct Messages.</p>
-           <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👯‍♀️ More social actions</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Send direct messages and view other users’ profiles from the Current Guests page, channel message overflow menu, and profile drawer. Also, you can now walk to another guest’s location by clicking “Walk To” from their profile drawer.</p>
-       <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🎙️ Mute microphone for all</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Selecting the “Mute” action on another guest’s video will now reveal a new action for admins: “Mute for all.” This action will turn off a guest’s microphone for everyone in the world. The guest can unmute themselves at any time. </p>
-        <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🙈 AFK turns off mic and camera</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Your microphone and camera will be automatically turned off if you are not connected to anyone and Topia is not in focus in your browser for more than 30 seconds. </p>
-        </div>
-      </div>
-      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fas fa-link"></i>
-      </div>
-      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
-      
-        <!-- Include eigth content-->
-    
-    <div class="main-content">
-     Product Updates: Tuesday, March 28, 2023
-       <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">March 29, 2023</span>
-      <br>
-      <p class="new-label">New</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
-      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🧱 Asset library menu redesign</p>
-      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">All lists of assets are now accessible from the “Assets” menu item. Both drawer and page views of assets are accessible from this menu item.
-      </p>
-      <img src="https://canny.io/images/267f43be4c59d6c2ccba3388cb01261a.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
-      
-      <div class="dropdown">
-        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
-        <div class="dropdown-content">
-          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👷 World Builder Mode</p>
-          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Clicking the new “Assets” Library menu option or "B" on your keyboard will start World Builder Mode. A list of asset images will display in the Library drawer, which can be filtered using the dropdown or filter results fields.</p>
-           <img src="https://canny.io/images/d89d30ce1c611dc69d8967c739af58c1.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Clicking the dropdown filter will show a list of options that will allow you to switch between all lists of assets. Also, the drawer will stay open while you’re making asset changes (for example, dropping an asset) in your world. </p>
-           <img src="https://canny.io/images/c4ebc28971552b820e2dc5deaa678c50.gif
+                      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🚫 Ban from all channels</p>
+                      <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Moderators can use the “Ban from channels” action in the channel message overflow menu, current guests page, and profile summary to ban a guest from using chat channels. A channel banned guest will be unable to send messages in chat channels until they are unbanned from the new “Channel Bans” table on the Banned Guests page in World Settings. </p>
+                      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🖐️ Report after blocking</p>
+                      <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">When you block a user, you’ll see a modal that asks you to fill out a report. This provides Moderators with critical information that they can use to potentially ban bad actors.</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+                  <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fas fa-link"></i>
+                  </div>
+                  <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+
+                  <!-- Include seventh content-->
+
+                  <div class="main-content">
+                    Product Updates: April 13, 2023
+                    <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">April 13, 2023</span>
+                    <br>
+                    <p class="new-label">New</p>
+                    <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+                    <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">💬 Direct Messages in Dashboard</p>
+                    <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">View and reply to existing Direct Messages from Dashboard. All users will find a new “Messages” menu item that will take them to a list of all of their Direct Messages.
+                    </p>
+                    <img src="https://canny.io/images/a0e44f88afd43a56628d7494f8f71797.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
+
+                    <div class="dropdown">
+                      <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+                      <div class="dropdown-content">
+                        <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">📱 Dashboard mobile version</p>
+                        <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Account Dashboard is now accessible from mobile devices! View and portal to your recently visited worlds and view and reply to existing Direct Messages.</p>
+                        <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👯‍♀️ More social actions</p>
+                        <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Send direct messages and view other users’ profiles from the Current Guests page, channel message overflow menu, and profile drawer. Also, you can now walk to another guest’s location by clicking “Walk To” from their profile drawer.</p>
+                        <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🎙️ Mute microphone for all</p>
+                        <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Selecting the “Mute” action on another guest’s video will now reveal a new action for admins: “Mute for all.” This action will turn off a guest’s microphone for everyone in the world. The guest can unmute themselves at any time. </p>
+                        <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🙈 AFK turns off mic and camera</p>
+                        <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Your microphone and camera will be automatically turned off if you are not connected to anyone and Topia is not in focus in your browser for more than 30 seconds. </p>
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+                    <div class="social-icons">
+                      <i class="fab fa-facebook-f"></i>
+                      <i class="fab fa-twitter"></i>
+                      <i class="fas fa-link"></i>
+                    </div>
+                    <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+
+                    <!-- Include eigth content-->
+
+                    <div class="main-content">
+                      Product Updates: Tuesday, March 28, 2023
+                      <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">March 29, 2023</span>
+                      <br>
+                      <p class="new-label">New</p>
+                      <p style="font-size: 22px; margin-top: 0; margin-bottom: 10px;">Updates</p>
+                      <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🧱 Asset library menu redesign</p>
+                      <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">All lists of assets are now accessible from the “Assets” menu item. Both drawer and page views of assets are accessible from this menu item.
+                      </p>
+                      <img src="https://canny.io/images/267f43be4c59d6c2ccba3388cb01261a.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
+
+                      <div class="dropdown">
+                        <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">👷 World Builder Mode</p>
+                          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Clicking the new “Assets” Library menu option or "B" on your keyboard will start World Builder Mode. A list of asset images will display in the Library drawer, which can be filtered using the dropdown or filter results fields.</p>
+                          <img src="https://canny.io/images/d89d30ce1c611dc69d8967c739af58c1.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Clicking the dropdown filter will show a list of options that will allow you to switch between all lists of assets. Also, the drawer will stay open while you’re making asset changes (for example, dropping an asset) in your world. </p>
+                          <img src="https://canny.io/images/c4ebc28971552b820e2dc5deaa678c50.gif
 " class="content-image" style="max-width: 80%; margin-right: 10%;">
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Clicking the “Table View” button will take you to a table view with additional columns of information on each asset. Similarly to World Builder Mode, you can use the filters at the top of the page to switch between lists and filter results.</p>
-           <img src="https://canny.io/images/da68b82f5f455f265ba0ace6c0c031d0.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
-     <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🔁 Drop an asset multiple times</p>
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Select an asset tile and then click the canvas multiple times to continue dropping the same asset. Pressing the escape key or clicking on the same tile or a new tile will stop this behavior.</p>
-           <img src="https://canny.io/images/fbcf7520282a56dae8f7e9b4cfce7d00.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
-           <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">♾️  Infinite scroll for lists</p>
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">The time is now to joyfully free fall through lists of assets, scenes, guests, and more. Make sure to use sorting to see the end of a list if needed.</p>
-           <img src="https://canny.io/images/7958425a76c511469dfe809073fc2b51.gif" class="content-image" style="max-width:100%; margin-right: 10%;">
-             <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">6️⃣ Sign in with a 6-digit codes</p>
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Email and sign in password has been replaced with 6-digit code sign in. When you enter your email to sign in, a verification code will be sent to your email inbox. Entering this in to Topia will allow you to enter the world with no need to reload the page.</p>
-           <img src="https://canny.io/images/b99307f0fda47dbab5158c010d72a78d.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
-           <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">⛔️ Block chat messages with banned words</p>
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Messages with banned words will be blocked from sending in chat channels and direct messages. Users will receive a notification letting them know that their message contains inappropriate language.</p>
-             <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🚫 More safety actions</p>
-             <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Guests can now block other guests that they’re not connected with by video and audio from the Current Guests page and Direct Messages. Also, moderators can now remove and ban guests from the world from the Current Guests page. </p>
+                          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Clicking the “Table View” button will take you to a table view with additional columns of information on each asset. Similarly to World Builder Mode, you can use the filters at the top of the page to switch between lists and filter results.</p>
+                          <img src="https://canny.io/images/da68b82f5f455f265ba0ace6c0c031d0.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🔁 Drop an asset multiple times</p>
+                          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Select an asset tile and then click the canvas multiple times to continue dropping the same asset. Pressing the escape key or clicking on the same tile or a new tile will stop this behavior.</p>
+                          <img src="https://canny.io/images/fbcf7520282a56dae8f7e9b4cfce7d00.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">♾️ Infinite scroll for lists</p>
+                          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">The time is now to joyfully free fall through lists of assets, scenes, guests, and more. Make sure to use sorting to see the end of a list if needed.</p>
+                          <img src="https://canny.io/images/7958425a76c511469dfe809073fc2b51.gif" class="content-image" style="max-width:100%; margin-right: 10%;">
+                          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">6️⃣ Sign in with a 6-digit codes</p>
+                          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Email and sign in password has been replaced with 6-digit code sign in. When you enter your email to sign in, a verification code will be sent to your email inbox. Entering this in to Topia will allow you to enter the world with no need to reload the page.</p>
+                          <img src="https://canny.io/images/b99307f0fda47dbab5158c010d72a78d.png" class="content-image" style="max-width: 100%; margin-right: 10%;">
+                          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">⛔️ Block chat messages with banned words</p>
+                          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Messages with banned words will be blocked from sending in chat channels and direct messages. Users will receive a notification letting them know that their message contains inappropriate language.</p>
+                          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🚫 More safety actions</p>
+                          <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">Guests can now block other guests that they’re not connected with by video and audio from the Current Guests page and Direct Messages. Also, moderators can now remove and ban guests from the world from the Current Guests page. </p>
+
+           </div>
+            </div>
+
+            <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+
+
+            <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fas fa-link"></i>
+            </div>
+
+            <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
+            
+            <!-- Include ninth content-->
+            
+           <div class="main-content">
+          Product Updates: March 15, 2023
+          <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">March 17, 2023</span>
+          <br>
+          <p class="new-label">New</p>
+          <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">⌨️ Keyboard only guest experience</p>
+          <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">The entire guest experience is navigable using only a keyboard. Any UI element can be navigated to using the keyboard commands below. Also, use hot 🔥 keys to turn of your microphone or video and open the expressions container.
+         <ul style="margin-top:0;">
+         <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">Tab:</span>Navigate focus through sections and indexable elements</li>
+        <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">Shift + Tab:</span> Reverse navigate focus through sections and indexable elements</li>
+          <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">Esc:</span>Removes focus from current element and closes modals, pages, and drawers if no element is in focus</li>
+          <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">Enter or Space: </span> Interact with an element</li>
+           <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">Up:</span> Navigate within an element group and move your avatar up</li>
+           <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">Left:</span> Navigate within an element group and move your avatar left</li>
+            <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">Down: </span>Navigate within an element group and move your avatar down</li>
+            <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">Right:</span>Navigate within an element group and move your avatar right</li>
+            <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">W:</span>Move your avatar up</li>
+            <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">A:</span>Move your avatar left</li>
+            <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">S:</span>Move your avatar down</li>
+             <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">D:</span>Move your avatar right</li>
+              <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">E:</span>:Open expressions container</li>
+              <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">M:</span>:Microphone on/off (Self)</li>
+              <li><p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;"><span style="font-weight: bold;">V:</span>:Video on/off (Self)</li>
+         </ul> 
+              <div class="dropdown">
+              <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-content">
+         <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🧑‍🚀 New Avatar: Astronaut</p>
+          <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">Both admins and guests can choose a new astronaut avatar when entering worlds! Yes, this avatar does drive a moon rover. 🌝
+            <img src="https://canny.io/images/1f892cb1778d0fd65cf6f0d70e7e5976.gif" class="content-image" style="max-width: 100%; margin-right: 10%;">
+       
+            </div>
+          </div>
+          <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+
+          <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fas fa-link"></i>
+          </div>
+          <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
           
-      </div>
-      <i class="fa-solid fa-heart fa-xs heart-icon"></i>
-      <div class="social-icons">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fas fa-link"></i>
-      </div>
-      <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
-          
-       </div>
-    </div>
-  </div>
-  
-  
-  
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const dropdownLinks = document.querySelectorAll('.dropdown-link');
-    const dropdownContents = document.querySelectorAll('.dropdown-content');
+            <!-- Include seventh content-->
 
-    dropdownLinks.forEach((dropdownLink, index) => {
-      dropdownLink.addEventListener('click', (event) => {
-        dropdownContents[index].style.display = 'block';
-        dropdownLink.style.display = 'none';
-        event.preventDefault(); // Prevent default link behavior
-      });
-    });
-  });
-</script>
+                  <div class="main-content">
+                   Product Updates: February 28, 2023
+                    <span style="float: right; font-size: 16px; color: gray; margin-right: 20%; margin-top:20px;border-style:none;">March 1, 2023</span>
+                    <br>
+                    <p class="new-label">New</p>
+                    <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;">🔗 Force Links to open in a drawer </p>
+                    <p style="font-size: 16px; margin-top: 0; margin-bottom: 0px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400; margin-right:20%;">This new setting is available in the Links page when modifying an asset (make sure “Open a Website, Tool, or Game” is selected). When on, links will be opened in a drawer iFrame that slides open from the left side of the screen.
+                    </p>
+                    <img src="https://canny.io/images/692c265805e42ddf7fd44460335daeb5.gif" class="content-image" style="max-width: 80%; margin-right: 10%;">
 
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const dropdownLinks = document.querySelectorAll('.dropdown-link');
-    const dropdownContents = document.querySelectorAll('.dropdown-content');
-    const contentImages = document.querySelectorAll('.content-image');
+                    <div class="dropdown">
+                      <a href="#" class="dropdown-link">Continue reading <i class="fas fa-chevron-down"></i></a>
+                      <div class="dropdown-content">
+                        <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🔑 Public Keys in my world</p>
+                        <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">A new table on the Integrations (previously labeled Webhooks & Notifications) page in World Settings provides visibility into what interactive assets are present in your world. Each table row specifies the public key, total number of assets where its attached, and total number of assets where the key is active (meaning, the "Add player session credentials" settings is on).</p>
+                         <img src="	https://canny.io/images/f54ccae183eb8b9ea12b37e9a58a1568.png" class="content-image" style="max-width: 80%; margin-right: 10%;">
+                        <p style="font-size: 22px; margin-top: 0; margin-bottom: 0px;text-align:left;">🌞 Tour for new users</p>
+                        <p style="font-size: 14px; margin-top: 10px; margin-bottom: 10px; word-break: break-word; line-height: 22px; white-space: pre-wrap; font-weight: 400;text-align:left;">For new users, an optional product tour will start after device permissions are given. The following topics will be covered in the tour: how to move, how to connect to others, where and what is the toolbar, and where and what is My Account.</p>
+                      
+                      </div>
+                    </div>
+                    <i class="fa-solid fa-heart fa-xs heart-icon"></i>
+                    <div class="social-icons">
+                      <i class="fab fa-facebook-f"></i>
+                      <i class="fab fa-twitter"></i>
+                      <i class="fas fa-link"></i>
+                    </div>
+                    <div class="search-line" style="margin-top:50px; margin-right:20%; margin-bottom:50px;"></div>
 
-    dropdownLinks.forEach((dropdownLink, index) => {
-      dropdownLink.addEventListener('click', (event) => {
-        dropdownContents[index].style.display = 'block';
-        dropdownLink.style.display = 'none';
-        event.preventDefault(); // Prevent default link behavior
-      });
-    });
 
-    contentImages.forEach((contentImage) => {
-      contentImage.addEventListener('click', (event) => {
-        const popupOverlay = document.createElement('div');
-        popupOverlay.classList.add('popup-overlay');
+                      </div>
+                    </div>
+                  </div>
 
-        const popupImage = document.createElement('img');
-        popupImage.classList.add('popup-image');
-        popupImage.src = contentImage.src;
 
-        popupOverlay.appendChild(popupImage);
-        document.body.appendChild(popupOverlay);
 
-        popupOverlay.addEventListener('click', () => {
-          document.body.removeChild(popupOverlay);
-        });
+                  <script>
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                      const dropdownLinks = document.querySelectorAll('.dropdown-link');
+                      const dropdownContents = document.querySelectorAll('.dropdown-content');
 
-        event.stopPropagation(); // Prevent event bubbling to the parent elements
-      });
-    });
-  });
-</script>
-  
-  <!-- Include your footer here -->
-  <footer>
-    Powered by Canny
-  </footer>
-</body>
+                      dropdownLinks.forEach((dropdownLink, index) => {
+                        dropdownLink.addEventListener('click', (event) => {
+                          dropdownContents[index].style.display = 'block';
+                          dropdownLink.style.display = 'none';
+                          event.preventDefault(); // Prevent default link behavior
+                        });
+                      });
+                    });
+
+                  </script>
+
+                  <script>
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                      const dropdownLinks = document.querySelectorAll('.dropdown-link');
+                      const dropdownContents = document.querySelectorAll('.dropdown-content');
+                      const contentImages = document.querySelectorAll('.content-image');
+
+                      dropdownLinks.forEach((dropdownLink, index) => {
+                        dropdownLink.addEventListener('click', (event) => {
+                          dropdownContents[index].style.display = 'block';
+                          dropdownLink.style.display = 'none';
+                          event.preventDefault(); // Prevent default link behavior
+                        });
+                      });
+
+                      contentImages.forEach((contentImage) => {
+                        contentImage.addEventListener('click', (event) => {
+                          const popupOverlay = document.createElement('div');
+                          popupOverlay.classList.add('popup-overlay');
+
+                          const popupImage = document.createElement('img');
+                          popupImage.classList.add('popup-image');
+                          popupImage.src = contentImage.src;
+
+                          popupOverlay.appendChild(popupImage);
+                          document.body.appendChild(popupOverlay);
+
+                          popupOverlay.addEventListener('click', () => {
+                            document.body.removeChild(popupOverlay);
+                          });
+
+                          event.stopPropagation(); // Prevent event bubbling to the parent elements
+                        });
+                      });
+                    });
+
+                  </script>
+
+                  <!-- Include your footer here -->
+                  <footer>
+                    Powered by Canny
+                  </footer>
+  </body>
+
 </html>
